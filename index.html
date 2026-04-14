@@ -1423,16 +1423,14 @@
     .fit-header .label { margin-bottom: var(--sp-3); }
     .fit-header h2 em { color: var(--teal); }
 
-    .fit-grid {
-      display: grid;
-      grid-template-columns: 1fr 1px 1fr;
-      gap: var(--sp-10);
-      align-items: start;
-      margin-bottom: var(--sp-10);
-    }
-
-    .fit-sep { background: var(--border); width: 1px; align-self: stretch; }
-
+  .fit-grid {
+  display: block;
+  margin-bottom: var(--sp-10);
+}
+.fit-qualifier {
+  border-top: none !important;
+  padding-top: 12px !important;
+}
     .fit-col-label {
       font-family: var(--font-mono);
       font-size: 0.6rem;
