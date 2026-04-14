@@ -751,49 +751,74 @@
     /* ─────────────────────────────────────────────────────────
        MARQUEE
     ───────────────────────────────────────────────────────── */
-    .marquee-wrap {
-      overflow: hidden;
-      background: var(--bg-base);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: var(--sp-3) 0;
-    }
+  .marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  background: var(--bg-base);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: var(--sp-3) 0;
+}
 
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      will-change: transform;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      animation: marquee 40s linear infinite;
-      -webkit-animation: marquee 40s linear infinite;
-    }
-    @keyframes marquee {
-      from { transform: translate3d(0, 0, 0); }
-      to   { transform: translate3d(-33.333%, 0, 0); }
-    }
-    @-webkit-keyframes marquee {
-      from { -webkit-transform: translate3d(0, 0, 0); }
-      to   { -webkit-transform: translate3d(-33.333%, 0, 0); }
-    }
-    .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  width: max-content;
+  min-width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  animation: marquee 24s linear infinite;
+  -webkit-animation: marquee 24s linear infinite;
+}
 
-    .marquee-item {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--fg-dim);
-      white-space: nowrap;
-      padding: 0;
-    }
-    .marquee-item span { color: var(--teal); margin: 0 var(--sp-3); }
+.marquee-pill,
+.marquee-dot {
+  flex: 0 0 auto;
+  display: inline-block;
+  white-space: nowrap;
+}
 
-    @media (max-width: 768px) {
-      .marquee-wrap { padding: var(--sp-2) 0; }
-      .marquee-item { font-size: 0.7rem; letter-spacing: 0.12em; color: var(--fg-muted); }
-    }
+.marquee-pill {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
 
+.marquee-dot {
+  opacity: 0.7;
+}
+
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+@-webkit-keyframes marquee {
+  from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+  to   { -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); }
+}
+
+@media (max-width: 768px) {
+  .marquee-wrap {
+    padding: 10px 0;
+  }
+
+  .marquee-track {
+    gap: 22px;
+    animation-duration: 18s;
+    -webkit-animation-duration: 18s;
+  }
+
+  .marquee-pill {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+}
     /* ─────────────────────────────────────────────────────────
        PROBLEM
     ───────────────────────────────────────────────────────── */
@@ -2129,14 +2154,36 @@
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee-wrap" aria-hidden="true">
-    <div class="marquee-track">
-      <div class="marquee-item"><span>◆</span> Business Process Reengineering <span>◆</span> AI Automation <span>◆</span> Operations Strategy <span>◆</span> Workflow Design <span>◆</span> Ops Partner <span>◆</span> Scale Without Chaos </div>
-      <div class="marquee-item"><span>◆</span> Business Process Reengineering <span>◆</span> AI Automation <span>◆</span> Operations Strategy <span>◆</span> Workflow Design <span>◆</span> Ops Partner <span>◆</span> Scale Without Chaos </div>
-      <div class="marquee-item"><span>◆</span> Business Process Reengineering <span>◆</span> AI Automation <span>◆</span> Operations Strategy <span>◆</span> Workflow Design <span>◆</span> Ops Partner <span>◆</span> Scale Without Chaos </div>
-    </div>
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-pill">BUSINESS PROCESS REENGINEERING</span>
+    <span class="marquee-dot">✦</span>
+    <span class="marquee-pill">AI AUTOMATION</span>
+    <span class="marquee-dot">✦</span>
+    <span class="marquee-pill">OPERATIONS STRATEGY</span>
+    <span class="marquee-dot">✦</span>
+    <span class="marquee-pill">WORKFLOW DESIGN</span>
+    <span class="marquee-dot">✦</span>
+    <span class="marquee-pill">OPS PARTNER</span>
+    <span class="marquee-dot">✦</span>
+    <span class="marquee-pill">SCALE WITHOUT CHAOS</span>
+    <span class="marquee-dot">✦</span>
+
+    <span class="marquee-pill">BUSINESS PROCESS REENGINEERING</span>
+    <span class="marquee-dot">✦</span>
+    <span class="marquee-pill">AI AUTOMATION</span>
+    <span class="marquee-dot">✦</span>
+    <span class="marquee-pill">OPERATIONS STRATEGY</span>
+    <span class="marquee-dot">✦</span>
+    <span class="marquee-pill">WORKFLOW DESIGN</span>
+    <span class="marquee-dot">✦</span>
+    <span class="marquee-pill">OPS PARTNER</span>
+    <span class="marquee-dot">✦</span>
+    <span class="marquee-pill">SCALE WITHOUT CHAOS</span>
+    <span class="marquee-dot">✦</span>
   </div>
+</div>
 
   <!-- PROBLEM -->
   <section id="problem" aria-labelledby="problem-heading">
