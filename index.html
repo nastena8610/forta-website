@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8HZ39T8JZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-Y8HZ39T8JZ');
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Forta – Operations Consulting for Scaling Founders</title>
   <meta name="description" content="I fix operations that slow your business down. BPR, AI automation, and Ops Partner for founders with 10–50 people. Book a free Ops Audit." />
-  <meta name="keywords" content="operations consulting, business process reengineering, BPR consulting, AI automation, ops partner, embedded COO, fractional COO, operational efficiency, startup operations, scale without hiring, AI implementation, process optimization, operations strategy, SME consulting, scaling operations, founder operations, systems design, workflow automation, operational bottlenecks, process redesign, operations consultant UK, operations consultant Europe, operations consultant UAE, operations consultant Belgium, operations consulting London, operations consulting Dubai, operations consulting Brussels, fractional COO UK, fractional COO UAE, startup operations Europe, AI operations consulting" />
+  <meta name="keywords" content="recruitment operations consulting, staffing operations, outsourcing operations, recruitment process reengineering, AI automation staffing, ops partner recruitment, operational efficiency recruitment agency, scaling recruitment firm, recruitment workflow automation, ATS optimisation, CRM hygiene recruitment, candidate pipeline management, submission process, client communication recruitment, recruitment consultant UK, recruitment consultant Europe, recruitment consultant UAE, recruitment consultant Belgium, recruitment consultant Netherlands, recruitment consultant Norway, recruitment consultant Sweden, recruitment consultant Denmark, recruitment consulting Nordics, operations consulting London, operations consulting Dubai, operations consulting Brussels, operations consulting Amsterdam, operations consulting Oslo, operations consulting Stockholm, fractional COO recruitment, recruitment agency operations, staffing firm operations, outsourcing firm operations, AI recruitment operations, recruitment systems design" />
   <meta property="og:title" content="Forta – Fix Operations. Automate What Matters." />
   <meta property="og:description" content="Operations consulting for scaling founders. Forta combines BPR with AI automation to redesign how your business runs – not just add tools. Book a free 30-min audit." />
   <meta property="og:type" content="website" />
@@ -47,7 +38,12 @@
   <meta name="geo.region" content="GB" />
   <meta name="geo.region" content="AE" />
   <meta name="geo.region" content="BE" />
-  <meta name="geo.placename" content="United Kingdom, United Arab Emirates, Belgium, Europe" />
+  <meta name="geo.region" content="NL" />
+  <meta name="geo.region" content="NO" />
+  <meta name="geo.region" content="SE" />
+  <meta name="geo.region" content="DK" />
+  <meta name="geo.region" content="FI" />
+  <meta name="geo.placename" content="United Kingdom, Belgium, Netherlands, Norway, Sweden, Denmark, Finland, United Arab Emirates, Dubai, Europe, Nordics" />
   <meta name="language" content="English" />
   <meta name="topic" content="Business Operations Consulting, BPR, AI Automation, Ops Partner" />
   <meta name="category" content="Business Consulting" />
@@ -100,11 +96,16 @@
         "slogan": "Fix operations. Automate what matters.",
         "areaServed": [
           { "@type": "Country", "name": "United Kingdom" },
-          { "@type": "Country", "name": "United Arab Emirates" },
           { "@type": "Country", "name": "Belgium" },
           { "@type": "Country", "name": "Netherlands" },
-          { "@type": "Country", "name": "Germany" },
-          { "@type": "AdministrativeArea", "name": "Europe" }
+          { "@type": "Country", "name": "Norway" },
+          { "@type": "Country", "name": "Sweden" },
+          { "@type": "Country", "name": "Denmark" },
+          { "@type": "Country", "name": "Finland" },
+          { "@type": "Country", "name": "United Arab Emirates" },
+          { "@type": "City",    "name": "Dubai" },
+          { "@type": "AdministrativeArea", "name": "Europe" },
+          { "@type": "AdministrativeArea", "name": "Nordics" }
         ],
         "founder": {
           "@type": "Person",
@@ -187,6 +188,39 @@
     ]
   }
   </script>
+  <!-- Google Analytics GA4 — G-Y8HZ39T8JZ -->
+  <!-- Consent mode defaults (denied until user accepts cookie notice) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8HZ39T8JZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-Y8HZ39T8JZ', {
+      anonymize_ip: true,
+      send_page_view: true
+    });
+
+    /* Conversion: Ops Audit booking click */
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('a[href*="zohobookings"]');
+      if (el) gtag('event', 'booking_click', { event_category: 'conversion', event_label: 'ops_audit' });
+    });
+
+    /* Conversion: contact form submitted */
+    document.addEventListener('submit', function(e) {
+      if (e.target && e.target.id === 'forta-contact-form') {
+        gtag('event', 'form_submit', { event_category: 'conversion', event_label: 'contact_form' });
+      }
+    });
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -411,7 +445,7 @@
       text-decoration: none;
       letter-spacing: 0.04em;
       transition: color var(--dur-fast);
-      align-self: center;
+      align-self: flex-start;
     }
     .hero-text-link:hover { color: var(--teal); }
 
@@ -434,15 +468,12 @@
     }
 
     .nav-logo {
-      font-family: var(--font-sans);
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--fg);
+      display: inline-flex;
+      align-items: center;
       cursor: pointer;
+      text-decoration: none;
     }
-    .nav-logo span { color: var(--teal); }
+    .nav-logo svg { display: block; }
     .nav-logo:focus-visible {
       outline: 2px solid var(--teal);
       outline-offset: 4px;
@@ -751,74 +782,49 @@
     /* ─────────────────────────────────────────────────────────
        MARQUEE
     ───────────────────────────────────────────────────────── */
-  .marquee-wrap {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  white-space: nowrap;
-  background: var(--bg-base);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: var(--sp-3) 0;
-}
+    .marquee-wrap {
+      overflow: hidden;
+      background: var(--bg-base);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: var(--sp-3) 0;
+    }
 
-.marquee-track {
-  display: inline-flex;
-  align-items: center;
-  gap: 28px;
-  width: max-content;
-  min-width: max-content;
-  white-space: nowrap;
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  animation: marquee 24s linear infinite;
-  -webkit-animation: marquee 24s linear infinite;
-}
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      animation: marquee 40s linear infinite;
+      -webkit-animation: marquee 40s linear infinite;
+    }
+    @keyframes marquee {
+      from { transform: translate3d(0, 0, 0); }
+      to   { transform: translate3d(-33.333%, 0, 0); }
+    }
+    @-webkit-keyframes marquee {
+      from { -webkit-transform: translate3d(0, 0, 0); }
+      to   { -webkit-transform: translate3d(-33.333%, 0, 0); }
+    }
+    .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
 
-.marquee-pill,
-.marquee-dot {
-  flex: 0 0 auto;
-  display: inline-block;
-  white-space: nowrap;
-}
+    .marquee-item {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      white-space: nowrap;
+      padding: 0;
+    }
+    .marquee-item span { color: var(--teal); margin: 0 var(--sp-3); }
 
-.marquee-pill {
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
+    @media (max-width: 768px) {
+      .marquee-wrap { padding: var(--sp-2) 0; }
+      .marquee-item { font-size: 0.7rem; letter-spacing: 0.12em; color: var(--fg-muted); }
+    }
 
-.marquee-dot {
-  opacity: 0.7;
-}
-
-@keyframes marquee {
-  from { transform: translate3d(0, 0, 0); }
-  to   { transform: translate3d(-50%, 0, 0); }
-}
-
-@-webkit-keyframes marquee {
-  from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-  to   { -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); }
-}
-
-@media (max-width: 768px) {
-  .marquee-wrap {
-    padding: 10px 0;
-  }
-
-  .marquee-track {
-    gap: 22px;
-    animation-duration: 18s;
-    -webkit-animation-duration: 18s;
-  }
-
-  .marquee-pill {
-    font-size: 11px;
-    letter-spacing: 0.14em;
-  }
-}
     /* ─────────────────────────────────────────────────────────
        PROBLEM
     ───────────────────────────────────────────────────────── */
@@ -1065,7 +1071,7 @@
 
     .case-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1px 1fr;
       gap: 0;
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -1423,14 +1429,16 @@
     .fit-header .label { margin-bottom: var(--sp-3); }
     .fit-header h2 em { color: var(--teal); }
 
-  .fit-grid {
-  display: block;
-  margin-bottom: var(--sp-10);
-}
-.fit-qualifier {
-  border-top: none !important;
-  padding-top: 24px !important;
-}
+    .fit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: var(--sp-10);
+      align-items: start;
+      margin-bottom: var(--sp-10);
+    }
+
+    .fit-sep { background: var(--border); width: 1px; align-self: stretch; }
+
     .fit-col-label {
       font-family: var(--font-mono);
       font-size: 0.6rem;
@@ -1974,15 +1982,16 @@
 
       .hero-inner {
         grid-template-columns: 1fr;
-        gap: var(--sp-8);
+        gap: var(--sp-2);
       }
       .hero-right {
         padding-left: 0;
         border-left: none;
         border-top: 1px solid var(--border);
-        padding-top: var(--sp-6);
+        padding-top: var(--sp-2);
       }
-      #hero { min-height: auto; padding: 120px var(--sp-6) var(--sp-12); }
+      .hero-h1 { margin-bottom: 0; }
+      #hero { min-height: auto; padding: 76px var(--sp-5) var(--sp-5); }
 
       .problem-layout { grid-template-columns: 1fr; gap: var(--sp-8); }
       .problem-left { position: static; }
@@ -2054,9 +2063,151 @@
 
     @media (max-width: 480px) {
       .findings-grid { grid-template-columns: 1fr; }
-      h1 { font-size: 2.5rem; }
-      h2 { font-size: 1.9rem; }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.7rem; }
     }
+
+    /* ─────────────────────────────────────────────────────────
+       TIGHTER VERTICAL RHYTHM — page density pass
+    ───────────────────────────────────────────────────────── */
+
+    /* Section padding: from sp-16 (128px) down to sp-10 (80px) */
+    #chaos        { padding-top: var(--sp-8);  padding-bottom: var(--sp-8); }
+    #problem      { padding-top: var(--sp-10); padding-bottom: var(--sp-10); }
+    #results-strip{ padding-top: var(--sp-4);  padding-bottom: var(--sp-4); }
+    #findings     { padding-top: var(--sp-10); padding-bottom: var(--sp-8); }
+    #case         { padding-top: var(--sp-10); padding-bottom: var(--sp-10); }
+    #services     { padding-top: var(--sp-10); padding-bottom: var(--sp-10); }
+    #process      { padding-top: var(--sp-10); padding-bottom: var(--sp-10); }
+    #fit          { padding-top: var(--sp-10); padding-bottom: var(--sp-10); }
+    #about        { padding-top: var(--sp-10); padding-bottom: var(--sp-10); }
+    #faq          { padding-top: var(--sp-10); padding-bottom: var(--sp-10); }
+    #cta          { padding-top: var(--sp-12); padding-bottom: var(--sp-8);  }
+    #contact      { padding-top: var(--sp-12); padding-bottom: var(--sp-8);  }
+    footer        { padding-top: var(--sp-5);  padding-bottom: var(--sp-3); }
+    .footer-inner { padding-bottom: var(--sp-4); margin-bottom: var(--sp-3); }
+    .footer-col h5 { margin-bottom: var(--sp-2); }
+    .footer-col ul { gap: var(--sp-1); }
+    .footer-col ul li a { min-height: 22px; line-height: 22px; }
+
+    /* Reduce internal section gaps */
+    .services-header  { margin-bottom: var(--sp-6); }
+    .findings-header  { margin-bottom: var(--sp-5); }
+    .case-header      { margin-bottom: var(--sp-6); }
+    .fit-header       { margin-bottom: var(--sp-6); }
+    .fit-qualifier    { padding-top: var(--sp-4); }
+    .fit-grid         { margin-bottom: var(--sp-6); }
+    .about-body       { margin-bottom: var(--sp-5); }
+    .process-steps h2 { margin-bottom: var(--sp-5); }
+
+    /* Tighter service cards */
+    .service-row { padding: var(--sp-5) var(--sp-6); }
+
+    /* Tighter process card */
+    .process-card { padding: var(--sp-5); }
+    .process-card > p { margin-bottom: var(--sp-4); }
+
+    /* Tighter CTA */
+    .cta-sub    { margin-bottom: var(--sp-5); }
+    .cta-inner  { max-width: 580px; }
+
+    /* Tighter contact */
+    .contact-channels { gap: var(--sp-2); }
+
+    /* Marquee tighter */
+    .marquee-wrap { padding: 10px 0; }
+
+    /* Findings grid tighter internal */
+    .finding-item { padding: var(--sp-4); }
+
+    /* Case example tighter spacing */
+    .case-header      { margin-bottom: var(--sp-5); }
+    .case-list        { gap: var(--sp-2); }
+    .case-list li     { padding: var(--sp-2) 0; }
+    .case-col         { padding: var(--sp-5) var(--sp-5); }
+    .case-result      { margin-top: var(--sp-4); padding: var(--sp-3) var(--sp-4); }
+
+    /* CTA tighter internal */
+    .cta-inner        { gap: var(--sp-4); }
+    .cta-sub          { margin-top: 0; margin-bottom: var(--sp-4); }
+
+    /* Contact tighter internal */
+    .contact-left     { gap: var(--sp-3); }
+    .contact-channels { margin-top: var(--sp-3); gap: var(--sp-2); }
+
+    /* Case list — replace border-left lines with symbols */
+    .case-list li {
+      border-left: none;
+      padding-left: 0;
+      display: flex;
+      gap: var(--sp-2);
+      align-items: flex-start;
+    }
+    .case-list li::before {
+      content: '–';
+      color: var(--fg-muted);
+      flex-shrink: 0;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+    .case-after .case-list li::before {
+      content: '✓';
+      color: var(--teal);
+    }
+
+    /* Process steps — tighter vertical spacing */
+    .process-step { padding: var(--sp-3) 0; }
+
+    /* ── LIGHTER WEIGHT PASS — match logo style ── */
+    /* Global */
+    strong                          { font-weight: 400; }
+    h4                              { font-weight: 400; }
+
+    /* Buttons */
+    .btn                            { font-weight: 400; }
+    .btn-primary                    { font-weight: 400; }
+    .mobile-cta                     { font-weight: 400; }
+
+    /* Nav active state */
+    .nav-links a[aria-current="page"] { font-weight: 400 !important; }
+
+    /* Hero */
+    .hero-h1                        { font-weight: 300; }
+    .hero-desc strong               { font-weight: 400; }
+
+    /* Chaos section */
+    .chaos-em                       { font-weight: 400; }
+
+    /* Results strip */
+    .strip-list li span             { font-weight: 400; }
+    .result-value                   { font-weight: 400; }
+
+    /* Services */
+    .svc-cta                        { font-weight: 400; }
+
+    /* Process aside metrics */
+    .metric-value-sm                { font-weight: 400; }
+
+    /* FIT section arrows */
+    .fit-for .fit-list li::before   { font-weight: 400; }
+
+    /* FAQ */
+    summary h4                      { font-weight: 400; }
+
+    /* CTA */
+    .cta-list li span               { font-weight: 400; }
+
+    /* Contact form */
+    .contact-form label             { font-weight: 400; }
+    .contact-submit                 { font-weight: 400; }
+
+    /* Hero desc paragraphs — no extra gap */
+    .hero-right .hero-desc          { margin-top: 0; margin-bottom: 0; }
+    .hero-right .hero-desc + .hero-desc { margin-top: 0; }
+
+    /* Chaos text slightly tighter */
+    .chaos-inner { gap: var(--sp-2); }
+    .chaos-sub   { margin-top: var(--sp-1); }
   </style>
 </head>
 <body>
@@ -2065,13 +2216,14 @@
 
   <!-- NAV -->
   <nav aria-label="Main navigation">
-    <a href="https://forta.partners" class="nav-logo" aria-label="Forta homepage">FOR<span>T</span>A</a>
+    <a href="https://forta.partners" class="nav-logo" aria-label="Forta homepage"><svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forta" role="img"><text y="22" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#EDE8DF">FOR<tspan fill="#4BBFCF">T</tspan>A</text></svg></a>
     <ul class="nav-links" role="list">
       <li><a href="#services">Services</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="/blog/">Insights</a></li>
     </ul>
     <a href="https://forta.zohobookings.eu/#/254933000000048005"
        class="nav-cta"
@@ -2122,9 +2274,11 @@
 
       <div class="hero-right fade-up d3">
         <p class="hero-desc">
-          When operations can't keep up with growth, founders get pulled back into execution.<br/>
+          When staffing and recruitment operations can't keep up with growth, founders get pulled back into delivery.<br/>
           Things break. No one knows why.<br/>
-          It's not a people problem. It's a system problem.<br/>
+          It's not a people problem. It's a system problem.
+        </p>
+        <p class="hero-desc">
           <strong>I redesign how your business runs and add AI where it creates real leverage.</strong>
         </p>
         <div class="hero-actions">
@@ -2152,42 +2306,20 @@
     </div>
   </section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-track">
-    <span class="marquee-pill">BUSINESS PROCESS REENGINEERING</span>
-    <span class="marquee-dot">✦</span>
-    <span class="marquee-pill">AI AUTOMATION</span>
-    <span class="marquee-dot">✦</span>
-    <span class="marquee-pill">OPERATIONS STRATEGY</span>
-    <span class="marquee-dot">✦</span>
-    <span class="marquee-pill">WORKFLOW DESIGN</span>
-    <span class="marquee-dot">✦</span>
-    <span class="marquee-pill">OPS PARTNER</span>
-    <span class="marquee-dot">✦</span>
-    <span class="marquee-pill">SCALE WITHOUT CHAOS</span>
-    <span class="marquee-dot">✦</span>
-
-    <span class="marquee-pill">BUSINESS PROCESS REENGINEERING</span>
-    <span class="marquee-dot">✦</span>
-    <span class="marquee-pill">AI AUTOMATION</span>
-    <span class="marquee-dot">✦</span>
-    <span class="marquee-pill">OPERATIONS STRATEGY</span>
-    <span class="marquee-dot">✦</span>
-    <span class="marquee-pill">WORKFLOW DESIGN</span>
-    <span class="marquee-dot">✦</span>
-    <span class="marquee-pill">OPS PARTNER</span>
-    <span class="marquee-dot">✦</span>
-    <span class="marquee-pill">SCALE WITHOUT CHAOS</span>
-    <span class="marquee-dot">✦</span>
+  <!-- MARQUEE -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item"><span>◆</span> Recruitment Operations <span>◆</span> AI Implementation <span>◆</span> Workflow Redesign <span>◆</span> Placement Process <span>◆</span> Ops Partner <span>◆</span> Scale Without Chaos </div>
+      <div class="marquee-item"><span>◆</span> Recruitment Operations <span>◆</span> AI Implementation <span>◆</span> Workflow Redesign <span>◆</span> Placement Process <span>◆</span> Ops Partner <span>◆</span> Scale Without Chaos </div>
+      <div class="marquee-item"><span>◆</span> Recruitment Operations <span>◆</span> AI Implementation <span>◆</span> Workflow Redesign <span>◆</span> Placement Process <span>◆</span> Ops Partner <span>◆</span> Scale Without Chaos </div>
+    </div>
   </div>
-</div>
 
   <!-- PROBLEM -->
   <section id="problem" aria-labelledby="problem-heading">
     <div class="problem-layout">
       <div class="problem-left">
-        <span class="label">Why operations break</span>
+        <span class="label">Why recruitment operations break</span>
         <h2 id="problem-heading">
           The patterns<br/>are <em>always</em><br/>the same.
         </h2>
@@ -2203,7 +2335,7 @@
             <span class="p-num" aria-hidden="true">01</span>
             <h3>Your team is doing work a system should handle</h3>
           </div>
-          <p>Copying data. Chasing updates. Sending the same email again. Every hour spent on this is runway burned.</p>
+          <p>Updating ATS/CRM manually. Screening and chasing candidates. Sending the same email again. Every hour spent on this is billable time burned.</p>
         </div>
         <div class="problem-card" role="listitem">
           <div class="problem-card-header">
@@ -2224,7 +2356,7 @@
             <span class="p-num" aria-hidden="true">04</span>
             <h3>You don't have real visibility</h3>
           </div>
-          <p>Data in five places. Decisions on gut feel. By the time you see what went wrong, the damage is done.</p>
+          <p>Pipeline data in five places. Decisions on gut feel. By the time you see what went wrong, the placement is lost.</p>
         </div>
       </div>
     </div>
@@ -2236,7 +2368,7 @@
       <span class="strip-label">What I typically see within the first 30–90 days</span>
       <ul class="strip-list" role="list">
         <li><span aria-hidden="true">→</span> 10–20+ hours/week removed from manual work</li>
-        <li><span aria-hidden="true">→</span> Fewer tools. Clear workflows. Less friction.</li>
+        <li><span aria-hidden="true">→</span> Fewer tools. Clear workflows. Faster placements.</li>
         <li><span aria-hidden="true">→</span> Founder out of day-to-day execution.</li>
       </ul>
     </div>
@@ -2250,23 +2382,23 @@
       </div>
       <div class="findings-grid" role="list">
         <div class="finding-item" role="listitem">
-          <span class="finding-stat" aria-label="20 to 40 percent">20–40%</span>
-          <p class="finding-desc">of team time lost to manual updates, status chasing, and coordination that should run itself</p>
+          <span class="finding-stat" aria-label="20 to 50 percent">20–50%</span>
+          <p class="finding-desc">of recruiter time consumed by manual ATS/CRM updates, status chasing, and admin between systems – not in front of candidates or clients</p>
         </div>
         <div class="finding-item" role="listitem">
           <span class="finding-stat" aria-label="3 to 5 tools">3–5</span>
-          <p class="finding-desc">tools doing overlapping work – each requiring a human to bridge the gaps between them</p>
+          <p class="finding-desc">tools across job intake, screening, submissions, and client comms – none of them connected to each other</p>
         </div>
         <div class="finding-item" role="listitem">
-          <span class="finding-stat finding-stat--text" aria-label="No ownership">No ownership</span>
-          <p class="finding-desc">across core workflows – decisions stall, handoffs break, founders get pulled back in</p>
+          <span class="finding-stat finding-stat--text" aria-label="No standard process">No standard process</span>
+          <p class="finding-desc">for job intake, candidate submission, or client handoff that runs the same way twice – every recruiter improvises</p>
         </div>
         <div class="finding-item" role="listitem">
-          <span class="finding-stat finding-stat--text" aria-label="One person">One person</span>
-          <p class="finding-desc">who knows how everything actually works – and it's usually the founder. That's the bottleneck.</p>
+          <span class="finding-stat finding-stat--text" aria-label="One person holds">One person</span>
+          <p class="finding-desc">holds the business together because they're the only one who knows how everything is really working. Usually the founder. That's the risk.</p>
         </div>
       </div>
-      <p class="findings-closer">This isn't a people problem. It's a system problem.</p>
+      
     </div>
   </section>
 
@@ -2276,29 +2408,29 @@
       <div class="case-header">
         <span class="case-tag">Example engagement</span>
         <h2 id="case-heading">What this looks like<br/><em>in practice.</em></h2>
-        <p class="case-meta">18-person B2B team · €2M+ revenue · scaling fast. Operations not keeping up.</p>
+        <p class="case-meta">18-person recruitment agency · €2M+ revenue · growing fast.</p>
       </div>
       <div class="case-grid">
         <div class="case-col case-before">
           <span class="case-col-label">Before</span>
           <ul class="case-list" role="list">
-            <li>Weekly reporting took 6+ hours of manual work</li>
-            <li>Sales and delivery teams not aligned – deals closed without ops being ready</li>
-            <li>4 tools used for the same process, none connected</li>
-            <li>Founder approving everything because no one knew who owned what</li>
+            <li>Recruiters spent 2+ hours/day on manual ATS updates after every call</li>
+            <li>No standard submission process – every recruiter sent CVs differently</li>
+            <li>Client feedback and follow-ups managed in personal email – no team visibility</li>
+            <li>Founder approving every placement because no one knew who owned the decision</li>
           </ul>
         </div>
         <div class="case-sep" aria-hidden="true"></div>
         <div class="case-col case-after">
           <span class="case-col-label">After</span>
           <ul class="case-list" role="list">
-            <li>Reporting fully automated – runs without anyone touching it</li>
-            <li>Clear handover process between sales and delivery from day one</li>
-            <li>Stack reduced to 2 connected tools. No more manual bridging.</li>
-            <li>Ownership defined across all core workflows</li>
+            <li>ATS updates automated via email integrations – zero manual data entry</li>
+            <li>One standardised submission workflow across the whole team</li>
+            <li>Client communication centralised – full pipeline visibility for the founder</li>
+            <li>Ownership defined at every stage: sourcing, submission, interview, placement</li>
           </ul>
           <div class="case-result">
-            10+ hours saved per week across the team.<br/>Founder back to leading – not stuck in operations.
+            8+ hours saved per recruiter per week.<br/>Founder back to business development – not stuck in delivery approvals.
           </div>
         </div>
       </div>
@@ -2313,7 +2445,7 @@
           <span class="label">How we work together</span>
           <h2 id="services-heading">Three ways<br/>to engage.</h2>
         </div>
-        <p>Depending on where you are and how fast you need to move.</p>
+        <p>Pick where you need to start.</p>
       </div>
 
       <div class="services-list" role="list">
@@ -2326,7 +2458,7 @@
             <ul class="svc-deliverables" role="list">
               <li>Clear process map</li>
               <li>Bottleneck analysis</li>
-              <li>AI/automation opportunities</li>
+              <li>Automation opportunities – only where they earn their place</li>
               <li>Action plan with priorities</li>
             </ul>
             <div class="svc-meta">
@@ -2377,7 +2509,7 @@
             <ul class="svc-deliverables" role="list">
               <li>Weekly ops review: priorities, blockers, decisions</li>
               <li>Ongoing process redesign as your business changes</li>
-              <li>AI tools and automations maintained and improved</li>
+              <li>Workflow automations maintained and improved</li>
               <li>Available for leadership calls, hiring, and vendor decisions</li>
             </ul>
             <div class="svc-meta">
@@ -2402,7 +2534,7 @@
       <div class="process-steps">
         <span class="label">The engagement</span>
         <h2 id="process-heading">
-          Designed for<br/><em>speed</em> and<br/><strong>permanence.</strong>
+          How the<br/><em>engagement</em><br/>works.
         </h2>
 
         <div class="process-timeline" role="list">
@@ -2410,7 +2542,7 @@
             <div class="step-num" aria-hidden="true">1</div>
             <div class="step-content">
               <h4>Free Operations Audit</h4>
-              <p>30 minutes. I map your biggest bottlenecks. No pitch. Useful whether we work together or not.</p>
+              <p>30 minutes. I map your biggest operational bottlenecks and where to start.</p>
             </div>
           </div>
           <div class="process-step" role="listitem">
@@ -2470,22 +2602,25 @@
     <div class="fit-inner">
       <div class="fit-header">
         <span class="label">Is this for you?</span>
-        <h2 id="fit-heading">Built for founders <em>who are scaling.</em></h2>
+        <h2 id="fit-heading">Built for staffing and recruitment <em>firms that are scaling fast.</em></h2>
       </div>
 
+      <div class="fit-grid">
         <div class="fit-for">
           <span class="fit-col-label">This is for you if</span>
           <ul class="fit-list" role="list">
-            <li>You're scaling beyond early stage</li>
-            <li>Execution is slowing down</li>
+            <li>You're growing beyond the early stage</li>
+            <li>Your recruiters are busy but results are inconsistent</li>
             <li>You have revenue, but operations are messy</li>
             <li>You're making decisions reactively, not by design</li>
+            <li>You have tools that nobody actually connected</li>
           </ul>
         </div>
-      
+      </div>
+
       <div class="fit-qualifier">
         <span class="label">Typically works best for</span>
-        <p>Startups and SMEs &nbsp;·&nbsp; Teams of 10–50 people with growing complexity &nbsp;·&nbsp; Businesses with €1M–€20M in revenue</p>
+        <p>Staffing, recruitment &amp; outsourcing firms &nbsp;·&nbsp; Teams of 10–50 people &nbsp;·&nbsp; €1M+ in revenue</p>
       </div>
     </div>
   </section>
@@ -2522,15 +2657,15 @@
             It's why I can see exactly where AI creates real leverage –
             and where it just makes a broken system fail faster.
           </p>
-          <p>I don't guess – I map how your business actually runs and fix what's slowing it down.</p>
-          <p>You work directly with me.<br/>When needed, I bring in specialists.</p>
+          <p>I've spent 7+ years inside recruitment and outsourcing operations. I know the bottlenecks, the tool sprawl, the delivery chaos that grows with every new hire. I don't guess – I map how your operation actually works and fix what's slowing it down.</p>
+          <p>You work directly with me. When needed, I bring in specialists.</p>
           <p><em>Forta means strength.</em> Structure that holds as you grow.</p>
         </div>
 
         <div class="about-credentials" role="table" aria-label="Anastasia's credentials">
           <div class="cred-row" role="row">
             <span class="cred-key" role="rowheader">Experience</span>
-            <span class="cred-val" role="cell">13+ years in business<br/>7+ years in operations</span>
+            <span class="cred-val" role="cell">13+ years in operations<br/>7+ years in recruitment &amp; outsourcing</span>
           </div>
           <div class="cred-row" role="row">
             <span class="cred-key" role="rowheader">Track record</span>
@@ -2538,7 +2673,7 @@
           </div>
           <div class="cred-row" role="row">
             <span class="cred-key" role="rowheader">Expertise</span>
-            <span class="cred-val" role="cell">B2B services and professional services firms scaling through operational complexity</span>
+            <span class="cred-val" role="cell">Staffing, recruitment, and outsourcing firms scaling through operational complexity</span>
           </div>
           <div class="cred-row" role="row">
             <span class="cred-key" role="rowheader">Approach</span>
@@ -2554,17 +2689,17 @@
     <div class="faq-inner">
       <div class="faq-intro">
         <span class="label">Common questions</span>
-        <h2 id="faq-heading">What founders ask me.</h2>
+        <h2 id="faq-heading">What owners &amp; founders ask me.</h2>
         <p>Straight answers. No jargon.</p>
       </div>
 
       <div class="faq-list">
         <details open>
           <summary>
-            <h4>How is this different from hiring a regular consultant?</h4>
+            <h4>How is this different from hiring a regular advisor?</h4>
             <span class="faq-icon" aria-hidden="true">+</span>
           </summary>
-          <p class="faq-answer">Most consultants hand over a report.<br/>I stay through implementation.<br/>I work with your leadership team, not around them. And every engagement is measured against a real baseline – not a slide deck.</p>
+          <p class="faq-answer">Most advisors hand over a report.<br/>I stay through implementation.<br/>I work with your leadership team, not around them. And every engagement is measured against a real baseline – not a slide deck.</p>
         </details>
         <details>
           <summary>
@@ -2582,10 +2717,10 @@
         </details>
         <details>
           <summary>
-            <h4>What size business is Forta right for?</h4>
+            <h4>What size operation is Forta right for?</h4>
             <span class="faq-icon" aria-hidden="true">+</span>
           </summary>
-          <p class="faq-answer">Startups and SMEs.<br/>Teams of 10–50 people with growing complexity.<br/>Businesses with €1M–€20M in revenue.</p>
+          <p class="faq-answer">Staffing, recruitment and outsourcing firms.<br/>Teams of 10–50 people with growing complexity.<br/>€1M+ in revenue.</p>
         </details>
         <details>
           <summary>
@@ -2634,7 +2769,7 @@
       <div class="contact-left">
         <span class="label">Get in touch</span>
         <h2 id="contact-heading">Let's talk<br/>on your<br/><em>terms.</em></h2>
-        <p>Prefer not to book a call? Send a WhatsApp.</p>
+        <p>Prefer not to book a call? Drop a WhatsApp or send an email.</p>
         <div class="contact-channels">
           <a href="mailto:hello@forta.partners" class="contact-channel" aria-label="Email Forta">
             <span class="contact-channel-icon" aria-hidden="true">✉</span>
@@ -2642,12 +2777,9 @@
           </a>
           <a href="https://wa.me/447883104378" class="contact-channel" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Anastasia">
             <span class="contact-channel-icon" aria-hidden="true">💬</span>
-            WhatsApp: +44 7883 104 378
+            +44 7883 104 378 &nbsp;(WhatsApp)
           </a>
-          <a href="tel:+447883104378" class="contact-channel" aria-label="Call Anastasia">
-            <span class="contact-channel-icon" aria-hidden="true">📞</span>
-            +44 7883 104 378
-          </a>
+
         </div>
       </div>
 
@@ -2694,8 +2826,8 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="https://forta.partners" class="nav-logo" aria-label="Forta homepage">FOR<span>T</span>A</a>
-        <p>Forta combines BPR with strategic automation and AI implementation.</p>
+        <a href="https://forta.partners" class="nav-logo" aria-label="Forta homepage"><svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forta" role="img"><text y="22" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#EDE8DF">FOR<tspan fill="#4BBFCF">T</tspan>A</text></svg></a>
+        <p>Forta helps staffing, recruitment and outsourcing firms fix the systems behind growth.</p>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
@@ -2709,7 +2841,6 @@
         <h5>Contact</h5>
         <ul role="list">
           <li><a href="mailto:hello@forta.partners">hello@forta.partners</a></li>
-          <li><a href="tel:+447883104378">+44 7883 104 378</a></li>
           <li><a href="https://wa.me/447883104378" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
           <li>
             <a href="https://forta.zohobookings.eu/#/254933000000048005"
@@ -2789,7 +2920,7 @@
         btn.setAttribute('aria-expanded', 'false');
       }
 
-      /* Primary handler for touch screens — fires instantly on tap */
+      /* Primary handler for touch screens – fires instantly on tap */
       btn.addEventListener('touchstart', function(e) {
         e.preventDefault();
         menu.classList.contains('open') ? closeMenu() : openMenu();
@@ -2805,6 +2936,53 @@
       for (var i = 0; i < links.length; i++) {
         links[i].addEventListener('click', closeMenu);
       }
+    })();
+  </script>
+
+  <!-- ── COOKIE CONSENT BANNER ── -->
+  <div id="cookie-banner" role="dialog" aria-label="Cookie consent" style="
+    display:none;
+    position:fixed; bottom:0; left:0; right:0; z-index:9999;
+    background:#0D1628; border-top:1px solid rgba(237,232,223,0.1);
+    padding:16px 32px; display:flex; align-items:center;
+    justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-family:'Inter',system-ui,sans-serif; font-size:0.8rem;
+    color:rgba(237,232,223,0.65);">
+    <p style="margin:0; max-width:560px; line-height:1.55;">
+      This site uses cookies to understand how visitors find and use it (Google Analytics).
+      No ads. No third-party tracking. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:#4BBFCF;">Privacy policy</a>.
+    </p>
+    <div style="display:flex; gap:10px; flex-shrink:0;">
+      <button id="cookie-decline" style="
+        background:transparent; border:1px solid rgba(237,232,223,0.2);
+        color:rgba(237,232,223,0.55); padding:8px 16px; border-radius:6px;
+        cursor:pointer; font-size:0.8rem; font-family:inherit;">
+        Decline
+      </button>
+      <button id="cookie-accept" style="
+        background:#4BBFCF; border:none; color:#050A14;
+        padding:8px 18px; border-radius:6px;
+        cursor:pointer; font-size:0.8rem; font-family:inherit; font-weight:400;">
+        Accept
+      </button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var banner  = document.getElementById('cookie-banner');
+      var consent = localStorage.getItem('forta_cookie_consent');
+      if (!consent) { banner.style.display = 'flex'; }
+      if (consent === 'granted') { gtag('consent', 'update', { analytics_storage: 'granted' }); }
+
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('forta_cookie_consent', 'granted');
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+        banner.style.display = 'none';
+      });
+      document.getElementById('cookie-decline').addEventListener('click', function() {
+        localStorage.setItem('forta_cookie_consent', 'denied');
+        banner.style.display = 'none';
+      });
     })();
   </script>
 </body>

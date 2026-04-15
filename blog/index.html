@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights – Forta | Recruitment & Staffing Operations</title>
+  <meta name="description" content="Practical insights on recruitment operations, AI in staffing, and how growing agencies fix the systems behind their growth. By Anastasia Vihodtev, Forta." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Anastasia Vihodtev, Forta" />
+  <link rel="canonical" href="https://forta.partners/blog/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Insights – Forta | Recruitment & Staffing Operations" />
+  <meta property="og:description" content="Practical insights on recruitment operations, AI in staffing, and fixing the systems behind growth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://forta.partners/blog/" />
+  <meta property="og:image" content="https://forta.partners/images/og-image.png" />
+  <meta property="og:site_name" content="Forta" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Insights – Forta" />
+  <meta name="twitter:description" content="Practical insights on recruitment operations, AI in staffing, and fixing the systems behind growth." />
+  <meta name="twitter:image" content="https://forta.partners/images/og-image.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+
+  <!-- GA4 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', wait_for_update: 500 });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8HZ39T8JZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-Y8HZ39T8JZ', { anonymize_ip: true });
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-deep:    #050A14;
+      --bg-raised:  #080F1E;
+      --bg-card:    #0D1628;
+      --fg:         #EDE8DF;
+      --fg-dim:     rgba(237,232,223,0.75);
+      --fg-muted:   rgba(237,232,223,0.45);
+      --teal:       #4BBFCF;
+      --border:     rgba(237,232,223,0.08);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+      --font-mono:  'DM Mono', monospace;
+      --max-w:      1140px;
+      --r-lg:       12px;
+      --sp-1: 8px; --sp-2: 16px; --sp-3: 24px; --sp-4: 32px;
+      --sp-5: 40px; --sp-6: 48px; --sp-8: 64px; --sp-10: 80px; --sp-12: 96px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body {
+      background: var(--bg-deep);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 var(--sp-8); height: 64px;
+      background: rgba(5,10,20,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: inline-flex; align-items: center; }
+    .nav-links { display: flex; gap: var(--sp-5); list-style: none; }
+    .nav-links a { font-size: 0.8rem; color: var(--fg-muted); letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--fg); }
+    .nav-cta {
+      font-size: 0.8rem; color: var(--teal);
+      border: 1px solid rgba(75,191,207,0.4);
+      padding: 8px 18px; border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover { background: rgba(75,191,207,0.08); }
+
+    /* PAGE HEADER */
+    .blog-header {
+      padding: calc(64px + var(--sp-10)) var(--sp-8) var(--sp-8);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
+    .blog-header .label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      display: block;
+      margin-bottom: var(--sp-3);
+    }
+    .blog-header h1 {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      line-height: 1.1;
+      color: var(--fg);
+    }
+    .blog-header h1 em { color: var(--teal); font-style: italic; }
+    .blog-header p {
+      margin-top: var(--sp-3);
+      color: var(--fg-dim);
+      max-width: 56ch;
+      font-size: 0.975rem;
+    }
+
+    /* POST GRID */
+    .blog-main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: var(--sp-8) var(--sp-8) var(--sp-12);
+    }
+
+    /* EMPTY STATE */
+    .blog-empty {
+      padding: var(--sp-12) 0;
+      text-align: center;
+    }
+    .blog-empty p {
+      color: var(--fg-muted);
+      font-size: 0.975rem;
+      max-width: 44ch;
+      margin: 0 auto var(--sp-5);
+      line-height: 1.7;
+    }
+    .blog-empty .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px;
+      font-size: 0.875rem;
+      background: var(--teal);
+      color: var(--bg-deep);
+      border-radius: 6px;
+      transition: opacity 0.2s;
+    }
+    .blog-empty .btn:hover { opacity: 0.85; }
+
+    /* POST CARDS (used once posts exist) */
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: var(--sp-5);
+    }
+    .post-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: var(--sp-5);
+      transition: border-color 0.2s;
+      display: flex; flex-direction: column;
+    }
+    .post-card:hover { border-color: rgba(75,191,207,0.25); }
+    .post-meta {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      margin-bottom: var(--sp-3);
+    }
+    .post-card h2 {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: 1.45rem;
+      line-height: 1.2;
+      color: var(--fg);
+      margin-bottom: var(--sp-2);
+    }
+    .post-card p {
+      font-size: 0.875rem;
+      color: var(--fg-dim);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: var(--sp-4);
+    }
+    .post-link {
+      font-size: 0.8rem;
+      color: var(--teal);
+      letter-spacing: 0.04em;
+      align-self: flex-start;
+    }
+    .post-link:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      padding: var(--sp-5) var(--sp-8) var(--sp-3);
+      border-top: 1px solid var(--border);
+    }
+    .footer-bar {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: var(--sp-2);
+    }
+    .footer-bar p { font-size: 0.75rem; color: var(--fg-muted); }
+    .footer-bar a { font-size: 0.75rem; color: var(--fg-muted); transition: color 0.2s; }
+    .footer-bar a:hover { color: var(--teal); }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 var(--sp-3); }
+      .nav-links { display: none; }
+      .blog-header, .blog-main { padding-left: var(--sp-4); padding-right: var(--sp-4); }
+      footer { padding-left: var(--sp-4); padding-right: var(--sp-4); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Main navigation">
+    <a href="https://forta.partners" class="nav-logo" aria-label="Forta homepage">
+      <svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forta" role="img">
+        <text y="22" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#EDE8DF">FOR<tspan fill="#4BBFCF">T</tspan>A</text>
+      </svg>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="https://forta.partners/#services">Services</a></li>
+      <li><a href="https://forta.partners/#process">Process</a></li>
+      <li><a href="https://forta.partners/#about">About</a></li>
+      <li><a href="https://forta.partners/blog/" aria-current="page">Insights</a></li>
+      <li><a href="https://forta.partners/#contact">Contact</a></li>
+    </ul>
+    <a href="https://forta.zohobookings.eu/#/254933000000048005"
+       class="nav-cta"
+       target="_blank" rel="noopener noreferrer">
+      Book Free Ops Audit →
+    </a>
+  </nav>
+
+  <header class="blog-header">
+    <span class="label">Insights</span>
+    <h1>Recruitment ops,<br/><em>straight talk.</em></h1>
+    <p>Practical writing on how staffing, recruitment and outsourcing firms fix the systems behind their growth. No fluff, no theory — just what works.</p>
+  </header>
+
+  <main class="blog-main" id="main-content">
+
+    <!-- ── EMPTY STATE — remove this block once first post is live ── -->
+    <div class="blog-empty">
+      <p>First posts coming soon. In the meantime, book a free Ops Audit and see what's slowing your business down.</p>
+      <a href="https://forta.zohobookings.eu/#/254933000000048005"
+         class="btn"
+         target="_blank" rel="noopener noreferrer">
+        Book Your Free Ops Audit →
+      </a>
+    </div>
+
+    <!-- ── POST GRID — paste post cards below once posts exist ──
+    <div class="post-grid">
+
+      EXAMPLE POST CARD — copy & paste this block for each new post:
+
+      <article class="post-card">
+        <p class="post-meta">16 Apr 2026 · Recruitment Operations</p>
+        <h2><a href="/blog/post-slug/">Post Title Here</a></h2>
+        <p>Short excerpt — 1–2 sentences describing what the post covers.</p>
+        <a href="/blog/post-slug/" class="post-link">Read more →</a>
+      </article>
+
+    </div>
+    ── END POST GRID ── -->
+
+  </main>
+
+  <footer>
+    <div class="footer-bar">
+      <p>© 2026 Forta. All rights reserved.</p>
+      <a href="https://forta.partners">forta.partners</a>
+    </div>
+  </footer>
+
+</body>
+</html>

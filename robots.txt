@@ -1,0 +1,32 @@
+# robots.txt — forta.partners
+# Allow all crawlers by default
+
+User-agent: *
+Allow: /
+Disallow: /private/
+
+# --- AI / LLM search crawlers (explicit allow for indexing visibility) ---
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- Sitemap ---
+Sitemap: https://forta.partners/sitemap.xml
