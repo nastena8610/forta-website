@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insights — FORTA</title>
-  <meta name="description" content="Practical writing on how staffing, recruitment and outsourcing firms fix the systems behind their growth. No fluff, no theory — just what works." />
-  <meta property="og:title" content="Insights — FORTA" />
+  <title>Insights | FORTA</title>
+  <meta name="description" content="Practical writing on how staffing, recruitment and outsourcing firms fix the systems behind their growth. No fluff, no theory, just what works." />
+  <meta property="og:title" content="Insights | FORTA" />
   <meta property="og:description" content="Practical writing on how staffing, recruitment and outsourcing firms fix the systems behind their growth." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://forta.partners/blog/" />
@@ -22,14 +22,14 @@
       --navy:       #0D1B2E;
       --navy-card:  #132236;
       --navy-hover: #1a2d44;
-      --teal:       #4EABB5;
-      --teal-soft:  rgba(78,171,181,0.12);
+      --teal:       #4BBFCF;
+      --teal-soft:  rgba(75,191,207,0.12);
       --gold:       #C9A84C;
       --gold-soft:  rgba(201,168,76,0.10);
-      --white:      #F5F0E8;
-      --white-70:   rgba(245,240,232,0.70);
-      --white-45:   rgba(245,240,232,0.45);
-      --border:     rgba(245,240,232,0.10);
+      --white:      #EDE8DF;
+      --white-70:   rgba(237,232,223,0.70);
+      --white-45:   rgba(237,232,223,0.45);
+      --border:     rgba(237,232,223,0.10);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -47,11 +47,7 @@
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
-    .nav-logo {
-      font-family: 'Inter', sans-serif; font-weight: 500;
-      font-size: 17px; letter-spacing: 0.2em;
-      color: var(--white); text-decoration: none;
-    }
+    .nav-logo { display: inline-flex; align-items: center; text-decoration: none; }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
       font-size: 13px; font-weight: 400; letter-spacing: 0.05em;
@@ -60,7 +56,7 @@
     .nav-links a:hover, .nav-links a.active { color: var(--white); }
     .nav-cta {
       font-size: 13px; font-weight: 400; letter-spacing: 0.06em;
-      color: var(--white); border: 1px solid rgba(245,240,232,0.28);
+      color: var(--white); border: 1px solid rgba(237,232,223,0.28);
       padding: 8px 18px; border-radius: 3px; text-decoration: none;
       transition: all 0.2s;
     }
@@ -99,7 +95,7 @@
       background: transparent; color: var(--white-45);
       transition: all 0.2s;
     }
-    .filter-btn:hover { border-color: rgba(245,240,232,0.3); color: var(--white); }
+    .filter-btn:hover { border-color: rgba(237,232,223,0.3); color: var(--white); }
     .filter-btn.active {
       background: var(--teal); border-color: var(--teal);
       color: var(--navy); font-weight: 500;
@@ -123,7 +119,7 @@
       cursor: pointer; text-decoration: none; color: inherit;
     }
     .featured-card:hover {
-      border-color: rgba(78,171,181,0.35);
+      border-color: rgba(75,191,207,0.35);
       transform: translateY(-2px);
     }
     .featured-content { padding: 44px 44px; display: flex; flex-direction: column; gap: 16px; }
@@ -137,7 +133,7 @@
     .featured-tag-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
     .tag {
       font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--teal); border: 1px solid rgba(78,171,181,0.3);
+      color: var(--teal); border: 1px solid rgba(75,191,207,0.3);
       padding: 3px 10px; border-radius: 2px;
     }
     .post-date { font-size: 12px; color: var(--white-45); }
@@ -158,13 +154,13 @@
     }
     .featured-card:hover .read-link { gap: 10px; }
     .featured-image {
-      background: linear-gradient(135deg, rgba(78,171,181,0.15) 0%, rgba(13,27,46,0.6) 100%);
+      background: linear-gradient(135deg, rgba(75,191,207,0.15) 0%, rgba(13,27,46,0.6) 100%);
       display: flex; align-items: center; justify-content: center; position: relative;
       overflow: hidden; min-height: 280px;
     }
     .featured-image-inner {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 80px; font-weight: 300; color: rgba(78,171,181,0.2);
+      font-size: 80px; font-weight: 300; color: rgba(75,191,207,0.2);
       user-select: none; line-height: 1;
     }
     .featured-image::after {
@@ -195,7 +191,7 @@
       cursor: pointer;
     }
     .post-card:hover {
-      border-color: rgba(78,171,181,0.3);
+      border-color: rgba(75,191,207,0.3);
       background: var(--navy-hover);
       transform: translateY(-2px);
     }
@@ -233,8 +229,8 @@
       padding: 0 56px;
     }
     .newsletter-inner {
-      background: linear-gradient(135deg, var(--navy-card), rgba(78,171,181,0.05));
-      border: 1px solid rgba(78,171,181,0.18);
+      background: linear-gradient(135deg, var(--navy-card), rgba(75,191,207,0.05));
+      border: 1px solid rgba(75,191,207,0.18);
       border-radius: 6px; padding: 48px 52px;
       display: flex; align-items: center; justify-content: space-between; gap: 40px;
     }
@@ -249,12 +245,12 @@
     .newsletter-form { display: flex; gap: 10px; flex-shrink: 0; }
     .newsletter-input {
       font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 300;
-      background: rgba(245,240,232,0.06); border: 1px solid var(--border);
+      background: rgba(237,232,223,0.06); border: 1px solid var(--border);
       color: var(--white); padding: 12px 18px; border-radius: 3px;
       width: 240px; outline: none; transition: border-color 0.2s;
     }
     .newsletter-input::placeholder { color: var(--white-45); }
-    .newsletter-input:focus { border-color: rgba(78,171,181,0.5); }
+    .newsletter-input:focus { border-color: rgba(75,191,207,0.5); }
     .btn-teal {
       font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500;
       letter-spacing: 0.06em; background: var(--teal); color: var(--navy);
@@ -267,11 +263,7 @@
       padding: 36px 56px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .footer-logo {
-      font-family: 'Inter', sans-serif; font-weight: 500;
-      font-size: 16px; letter-spacing: 0.2em; color: var(--white);
-      text-decoration: none;
-    }
+    .footer-logo { display: inline-flex; align-items: center; text-decoration: none; }
     .footer-copy { font-size: 12px; color: var(--white-45); }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -295,22 +287,23 @@
 </head>
 <body>
 
-<nav>
-  <a href="/" class="nav-logo">FORTA</a>
-  <ul class="nav-links">
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Forta homepage"><svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forta" role="img"><text y="22" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#EDE8DF">FOR<tspan fill="#4BBFCF">T</tspan>A</text></svg></a>
+  <ul class="nav-links" role="list">
     <li><a href="/#services">Services</a></li>
     <li><a href="/#process">Process</a></li>
     <li><a href="/#about">About</a></li>
-    <li><a href="/blog/" class="active">Insights</a></li>
+    <li><a href="/#faq">FAQ</a></li>
     <li><a href="/#contact">Contact</a></li>
+    <li><a href="/blog/" class="active">Insights</a></li>
   </ul>
-  <a href="/audit.html" class="nav-cta">Book Free Ops Audit →</a>
+  <a href="https://forta.zohobookings.eu/#/254933000000048049" class="nav-cta" target="_blank" rel="noopener noreferrer">Book Free Ops Audit →</a>
 </nav>
 
 <div class="page-header">
   <p class="page-label">Insights</p>
   <h1 class="page-title">Recruitment ops,<br><em>straight talk.</em></h1>
-  <p class="page-desc">Practical writing on how staffing, recruitment and outsourcing firms fix the systems behind their growth. No fluff, no theory — just what works.</p>
+  <p class="page-desc">Practical writing on how staffing, recruitment and outsourcing firms fix the systems behind their growth. No fluff, no theory, just what works.</p>
 </div>
 
 <div class="filter-bar">
@@ -325,16 +318,16 @@
 <hr class="section-divider" />
 
 <div class="featured-wrap">
-  <a href="forbes-ai-50-2025.html" class="featured-card" data-tags="ai-strategy industry-news">
+  <a href="forbes-ai-50-2026.html" class="featured-card" data-tags="ai-strategy industry-news">
     <div class="featured-content">
       <span class="featured-badge">★ Featured</span>
       <div class="featured-tag-row">
         <span class="tag">AI Strategy</span>
         <span class="tag">Industry News</span>
-        <span class="post-date">April 23, 2025</span>
+        <span class="post-date">April 23, 2026</span>
       </div>
-      <h2 class="featured-title">Forbes AI 50 2025:<br><em>What it actually means</em> for ops leaders</h2>
-      <p class="featured-excerpt">Nearly 2,000 companies applied. 50 made the list. Here's what the signal beneath the noise tells you about where AI is really going — and what your operations team should be doing about it right now.</p>
+      <h2 class="featured-title">Forbes AI 50 2026:<br><em>What it actually means</em> for ops leaders</h2>
+      <p class="featured-excerpt">The 2026 list dropped this month. 50 companies. The real signal is what your clients now expect from you, and most ops teams haven't caught up.</p>
       <span class="read-link">Read article →</span>
     </div>
     <div class="featured-image">
@@ -344,15 +337,15 @@
 </div>
 
 <div class="posts-wrap">
-  <p class="month-label">April 2025</p>
+  <p class="month-label">April 2026</p>
   <div class="post-grid">
     <a href="hiring-process-slower.html" class="post-card" data-tags="operations">
       <div class="post-tag-row">
         <span class="tag">Operations</span>
-        <span class="post-date">April 18, 2025</span>
+        <span class="post-date">April 18, 2026</span>
       </div>
-      <h3 class="post-title">Why your hiring process is slower than your competitors' — and how to fix it</h3>
-      <p class="post-excerpt">Most recruitment bottlenecks aren't caused by bad people. They're caused by processes designed for a different era. Here's where to look first.</p>
+      <h3 class="post-title">Why your hiring process is slower than your competitors', and how to fix it</h3>
+      <p class="post-excerpt">Most recruitment slowdowns get blamed on the team. Look closer and the team is fine. The process behind them was built for a smaller version of the firm.</p>
       <div class="post-footer">
         <span class="post-read-time">5 min read</span>
         <span class="post-arrow">→</span>
@@ -362,10 +355,10 @@
     <a href="three-workflows-staffing.html" class="post-card" data-tags="automation">
       <div class="post-tag-row">
         <span class="tag">Automation</span>
-        <span class="post-date">April 12, 2025</span>
+        <span class="post-date">April 12, 2026</span>
       </div>
       <h3 class="post-title">The 3 workflows every staffing firm should automate before hiring another coordinator</h3>
-      <p class="post-excerpt">Adding headcount to a broken process just scales the problem. These three automations remove the root cause instead.</p>
+      <p class="post-excerpt">Adding people to a broken process scales the friction across more salaries. These three automations remove the root cause and pay back inside a quarter.</p>
       <div class="post-footer">
         <span class="post-read-time">4 min read</span>
         <span class="post-arrow">→</span>
@@ -375,9 +368,9 @@
     <a href="ai-hiring-audit.html" class="post-card" data-tags="recruitment">
       <div class="post-tag-row">
         <span class="tag">Recruitment</span>
-        <span class="post-date">April 7, 2025</span>
+        <span class="post-date">April 7, 2026</span>
       </div>
-      <h3 class="post-title">What a real AI hiring audit looks like — and what it finds</h3>
+      <h3 class="post-title">What a real AI hiring audit looks like, and what it finds</h3>
       <p class="post-excerpt">We ran audits on 6 SME recruitment operations in Q1. The same three problems appeared in all of them. Here's what they were.</p>
       <div class="post-footer">
         <span class="post-read-time">6 min read</span>
@@ -386,21 +379,21 @@
     </a>
   </div>
 
-  <p class="month-label">May 2025 — Coming Soon</p>
+  <p class="month-label">May 2026, coming soon</p>
   <div class="post-grid">
     <div class="post-card coming-soon" data-tags="ai-strategy automation">
-      <span class="coming-label">Coming May 2025</span>
+      <span class="coming-label">Coming May 2026</span>
       <h3 class="post-title">How to build an AI agent for candidate screening without a dev team</h3>
-      <p class="post-excerpt">Step-by-step. No-code tools. Real business logic.</p>
+      <p class="post-excerpt">Step by step. No-code tools. Real business logic.</p>
     </div>
     <div class="post-card coming-soon" data-tags="operations">
-      <span class="coming-label">Coming May 2025</span>
+      <span class="coming-label">Coming May 2026</span>
       <h3 class="post-title">The outsourcing firm ops audit: what $1M/year companies get wrong</h3>
-      <p class="post-excerpt">Where the leakage happens and how to stop it.</p>
+      <p class="post-excerpt">Where the leakage happens, and how to stop it.</p>
     </div>
     <div class="post-card coming-soon" data-tags="ai-strategy industry-news">
-      <span class="coming-label">Coming May 2025</span>
-      <h3 class="post-title">AI in recruitment: hype vs. what's actually deployed in 2025</h3>
+      <span class="coming-label">Coming May 2026</span>
+      <h3 class="post-title">AI in recruitment: hype vs. what's actually deployed in 2026</h3>
       <p class="post-excerpt">Cutting through vendor claims with real deployment data.</p>
     </div>
   </div>
@@ -410,9 +403,9 @@
   <div class="newsletter-inner">
     <div class="newsletter-text">
       <h3>Get new posts when they land.</h3>
-      <p>One or two articles a month. Only published when there's something worth saying. No newsletter padding, no AI-generated filler.</p>
+      <p>One or two articles a month. Only published when there's something worth saying. No newsletter padding. No AI-generated filler.</p>
     </div>
-    <form class="newsletter-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Newsletter signup coming soon — connect to your email tool.');">
+    <form class="newsletter-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Newsletter signup coming soon. Connect to your email tool.');">
       <input class="newsletter-input" type="email" placeholder="your@email.com" required />
       <button type="submit" class="btn-teal">Subscribe →</button>
     </form>
@@ -420,8 +413,8 @@
 </div>
 
 <footer>
-  <a href="/" class="footer-logo">FORTA</a>
-  <span class="footer-copy">© 2025 FORTA. Operations & AI Consulting.</span>
+  <a href="/" class="footer-logo" aria-label="Forta homepage"><svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forta" role="img"><text y="22" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#EDE8DF">FOR<tspan fill="#4BBFCF">T</tspan>A</text></svg></a>
+  <span class="footer-copy">© 2026 FORTA. Operations & AI Consulting.</span>
 </footer>
 
 <script>

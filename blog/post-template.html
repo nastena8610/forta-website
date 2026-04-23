@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- ────────── REPLACE PER ARTICLE ────────── -->
-  <title>Article Title — FORTA Insights</title>
+  <title>Article Title | FORTA Insights</title>
   <meta name="description" content="One-sentence article summary for search and social previews." />
-  <meta property="og:title" content="Article Title — FORTA Insights" />
+  <meta property="og:title" content="Article Title | FORTA Insights" />
   <meta property="og:description" content="One-sentence article summary for search and social previews." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://forta.partners/blog/article-slug.html" />
@@ -18,7 +18,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Article Title",
-    "datePublished": "2025-04-23",
+    "datePublished": "2026-04-23",
     "author": {
       "@type": "Person",
       "name": "Anastasia Vihodtev",
@@ -46,15 +46,15 @@
       --navy:       #0D1B2E;
       --navy-card:  #132236;
       --navy-hover: #1a2d44;
-      --teal:       #4EABB5;
-      --teal-soft:  rgba(78,171,181,0.12);
+      --teal:       #4BBFCF;
+      --teal-soft:  rgba(75,191,207,0.12);
       --gold:       #C9A84C;
       --gold-soft:  rgba(201,168,76,0.10);
-      --white:      #F5F0E8;
-      --white-70:   rgba(245,240,232,0.70);
-      --white-55:   rgba(245,240,232,0.55);
-      --white-45:   rgba(245,240,232,0.45);
-      --border:     rgba(245,240,232,0.10);
+      --white:      #EDE8DF;
+      --white-70:   rgba(237,232,223,0.70);
+      --white-55:   rgba(237,232,223,0.55);
+      --white-45:   rgba(237,232,223,0.45);
+      --border:     rgba(237,232,223,0.10);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -75,11 +75,7 @@
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
-    .nav-logo {
-      font-family: 'Inter', sans-serif; font-weight: 500;
-      font-size: 17px; letter-spacing: 0.2em;
-      color: var(--white); text-decoration: none;
-    }
+    .nav-logo { display: inline-flex; align-items: center; text-decoration: none; }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
       font-size: 13px; font-weight: 400; letter-spacing: 0.05em;
@@ -88,7 +84,7 @@
     .nav-links a:hover, .nav-links a.active { color: var(--white); }
     .nav-cta {
       font-size: 13px; font-weight: 400; letter-spacing: 0.06em;
-      color: var(--white); border: 1px solid rgba(245,240,232,0.28);
+      color: var(--white); border: 1px solid rgba(237,232,223,0.28);
       padding: 8px 18px; border-radius: 3px; text-decoration: none;
       transition: all 0.2s;
     }
@@ -118,7 +114,7 @@
     }
     .tag {
       font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--teal); border: 1px solid rgba(78,171,181,0.3);
+      color: var(--teal); border: 1px solid rgba(75,191,207,0.3);
       padding: 3px 10px; border-radius: 2px;
     }
     .meta-text { font-size: 12px; color: var(--white-45); }
@@ -164,7 +160,7 @@
     article.body em { color: var(--white); font-style: italic; }
     article.body a {
       color: var(--teal); text-decoration: none;
-      border-bottom: 1px solid rgba(78,171,181,0.3);
+      border-bottom: 1px solid rgba(75,191,207,0.3);
       transition: border-color 0.2s;
     }
     article.body a:hover { border-color: var(--teal); }
@@ -200,7 +196,7 @@
       padding: 0 32px;
     }
     .mid-cta-inner {
-      background: linear-gradient(135deg, rgba(201,168,76,0.10), rgba(78,171,181,0.06));
+      background: linear-gradient(135deg, rgba(201,168,76,0.10), rgba(75,191,207,0.06));
       border: 1px solid rgba(201,168,76,0.30);
       border-radius: 6px;
       padding: 32px 36px;
@@ -237,7 +233,7 @@
     .author-photo {
       width: 80px; height: 80px; border-radius: 50%;
       object-fit: cover; flex-shrink: 0;
-      border: 1px solid rgba(78,171,181,0.3);
+      border: 1px solid rgba(75,191,207,0.3);
     }
     .author-text { flex: 1; }
     .author-label {
@@ -284,7 +280,7 @@
       transition: border-color 0.25s, transform 0.25s, background 0.25s;
     }
     .related-card:hover {
-      border-color: rgba(78,171,181,0.3);
+      border-color: rgba(75,191,207,0.3);
       background: var(--navy-hover);
       transform: translateY(-2px);
     }
@@ -307,11 +303,7 @@
       padding: 36px 56px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .footer-logo {
-      font-family: 'Inter', sans-serif; font-weight: 500;
-      font-size: 16px; letter-spacing: 0.2em; color: var(--white);
-      text-decoration: none;
-    }
+    .footer-logo { display: inline-flex; align-items: center; text-decoration: none; }
     .footer-copy { font-size: 12px; color: var(--white-45); }
 
     /* ── ANIM ── */
@@ -336,16 +328,17 @@
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="/" class="nav-logo">FORTA</a>
-  <ul class="nav-links">
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Forta homepage"><svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forta" role="img"><text y="22" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#EDE8DF">FOR<tspan fill="#4BBFCF">T</tspan>A</text></svg></a>
+  <ul class="nav-links" role="list">
     <li><a href="/#services">Services</a></li>
     <li><a href="/#process">Process</a></li>
     <li><a href="/#about">About</a></li>
-    <li><a href="/blog/" class="active">Insights</a></li>
+    <li><a href="/#faq">FAQ</a></li>
     <li><a href="/#contact">Contact</a></li>
+    <li><a href="/blog/" class="active">Insights</a></li>
   </ul>
-  <a href="/audit.html" class="nav-cta">Book Free Ops Audit →</a>
+  <a href="https://forta.zohobookings.eu/#/254933000000048049" class="nav-cta" target="_blank" rel="noopener noreferrer">Book Free Ops Audit →</a>
 </nav>
 
 <!-- BREADCRUMB -->
@@ -361,7 +354,7 @@
     <span class="meta-text">X min read</span>
   </div>
   <h1 class="article-title">Article headline with an <em>italic accent.</em></h1>
-  <p class="article-dek">A 1–2 sentence dek that gives the reader a reason to keep going. Tight, no fluff.</p>
+  <p class="article-dek">A 1 to 2 sentence dek that gives the reader a reason to keep going. Tight, no fluff.</p>
 </header>
 
 <!-- ARTICLE BODY -->
@@ -369,7 +362,7 @@
   <p>Opening paragraph here. State the problem the reader feels, fast.</p>
 
   <h2>A subheading <em>that earns its space</em></h2>
-  <p>Body paragraph. Use <strong>bold</strong> for the load-bearing claim, and <em>italic</em> sparingly. Keep paragraphs to 3–4 sentences max.</p>
+  <p>Body paragraph. Use <strong>bold</strong> for the load-bearing claim, and <em>italic</em> sparingly. Keep paragraphs to 3 sentences max.</p>
 
   <ul>
     <li>List items work for parallel structures only.</li>
@@ -391,7 +384,7 @@
 <div class="mid-cta">
   <div class="mid-cta-inner">
     <div class="mid-cta-text">Want to see <em>where this is happening</em> in your own ops?</div>
-    <a href="/audit.html" class="btn-gold">Book Free Ops Audit →</a>
+    <a href="https://forta.zohobookings.eu/#/254933000000048049" class="btn-gold" target="_blank" rel="noopener noreferrer">Book Free Ops Audit →</a>
   </div>
 </div>
 
@@ -402,7 +395,7 @@
     <div class="author-text">
       <p class="author-label">Written by</p>
       <h4 class="author-name">Anastasia Vihodtev</h4>
-      <p class="author-blurb">Founder of FORTA. I help staffing, recruitment and outsourcing firms redesign how their operations run — and add AI where it creates real leverage, not noise.</p>
+      <p class="author-blurb">Founder of FORTA. I help staffing, recruitment and outsourcing firms redesign how their operations actually run, and add AI where it creates real impact.</p>
       <a href="https://www.linkedin.com/in/anastasiavihodtev/" target="_blank" rel="noopener" class="author-link">Connect on LinkedIn →</a>
     </div>
   </div>
@@ -410,7 +403,7 @@
 
 <!-- RELATED POSTS -->
 <section class="related">
-  <h3>Keep reading <em>—</em></h3>
+  <h3>Keep reading.</h3>
   <div class="related-grid">
     <a href="#" class="related-card">
       <span class="tag">Category</span>
@@ -432,8 +425,8 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="/" class="footer-logo">FORTA</a>
-  <span class="footer-copy">© 2025 FORTA. Operations & AI Consulting.</span>
+  <a href="/" class="footer-logo" aria-label="Forta homepage"><svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forta" role="img"><text y="22" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#EDE8DF">FOR<tspan fill="#4BBFCF">T</tspan>A</text></svg></a>
+  <span class="footer-copy">© 2026 FORTA. Operations & AI Consulting.</span>
 </footer>
 
 </body>
