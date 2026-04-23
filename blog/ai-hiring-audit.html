@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What a real AI hiring audit looks like — and what it finds — FORTA</title>
+  <meta name="description" content="What a structured AI hiring audit actually looks at, and the three problems that show up in almost every SME recruitment operation we audit." />
+  <meta property="og:title" content="What a real AI hiring audit looks like — and what it finds" />
+  <meta property="og:description" content="What a structured AI hiring audit actually looks at, and the three problems that show up in almost every SME recruitment operation we audit." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://forta.partners/blog/ai-hiring-audit.html" />
+  <meta property="og:image" content="https://forta.partners/images/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://forta.partners/blog/ai-hiring-audit.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What a real AI hiring audit looks like — and what it finds",
+    "datePublished": "2025-04-07",
+    "author": { "@type": "Person", "name": "Anastasia Vihodtev", "url": "https://www.linkedin.com/in/anastasiavihodtev/", "sameAs": "https://www.linkedin.com/in/anastasiavihodtev/" },
+    "publisher": { "@type": "Organization", "name": "FORTA", "logo": { "@type": "ImageObject", "url": "https://forta.partners/logo_horizontal_dark.png" } },
+    "image": "https://forta.partners/images/og-image.png",
+    "mainEntityOfPage": "https://forta.partners/blog/ai-hiring-audit.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_32px.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="../favicon_64px.png" />
+  <style>
+    :root {
+      --navy: #0D1B2E; --navy-card: #132236; --navy-hover: #1a2d44;
+      --teal: #4EABB5; --teal-soft: rgba(78,171,181,0.12);
+      --gold: #C9A84C; --gold-soft: rgba(201,168,76,0.10);
+      --white: #F5F0E8; --white-70: rgba(245,240,232,0.70);
+      --white-55: rgba(245,240,232,0.55); --white-45: rgba(245,240,232,0.45);
+      --border: rgba(245,240,232,0.10);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--navy); color: var(--white); font-family: 'Inter', sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 56px; height: 68px; background: rgba(13,27,46,0.95); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 17px; letter-spacing: 0.2em; color: var(--white); text-decoration: none; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.05em; color: var(--white-45); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-cta { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: var(--white); border: 1px solid rgba(245,240,232,0.28); padding: 8px 18px; border-radius: 3px; text-decoration: none; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--white); color: var(--navy); }
+    .breadcrumb { max-width: 760px; margin: 0 auto; padding: 110px 32px 0; font-size: 12px; letter-spacing: 0.06em; color: var(--white-45); animation: fadeUp 0.5s ease both; }
+    .breadcrumb a { color: var(--white-45); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--teal); }
+    .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+    .article-hero { max-width: 760px; margin: 0 auto; padding: 28px 32px 40px; animation: fadeUp 0.7s ease both; }
+    .article-meta { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 22px; }
+    .tag { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); border: 1px solid rgba(78,171,181,0.3); padding: 3px 10px; border-radius: 2px; }
+    .meta-text { font-size: 12px; color: var(--white-45); }
+    .article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 400; line-height: 1.1; color: var(--white); margin-bottom: 22px; }
+    .article-title em { font-style: italic; color: var(--teal); }
+    .article-dek { font-size: 18px; font-weight: 300; line-height: 1.6; color: var(--white-70); max-width: 640px; }
+    article.body { max-width: 700px; margin: 0 auto; padding: 30px 32px 60px; font-size: 17px; line-height: 1.8; color: var(--white-70); animation: fadeUp 0.7s 0.1s ease both; }
+    article.body > * + * { margin-top: 26px; }
+    article.body h2 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 400; line-height: 1.2; color: var(--white); margin-top: 52px; }
+    article.body h2 em { font-style: italic; color: var(--teal); }
+    article.body h3 { font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 500; letter-spacing: 0.03em; color: var(--white); margin-top: 36px; }
+    article.body p { font-size: 17px; }
+    article.body p strong { color: var(--white); font-weight: 500; }
+    article.body em { color: var(--white); font-style: italic; }
+    article.body a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(78,171,181,0.3); transition: border-color 0.2s; }
+    article.body a:hover { border-color: var(--teal); }
+    article.body ul, article.body ol { padding-left: 22px; margin-top: 18px; }
+    article.body li { margin-top: 10px; padding-left: 8px; }
+    article.body li::marker { color: var(--teal); }
+    article.body hr { border: none; border-top: 1px solid var(--border); margin: 44px 0; }
+    article.body .pullquote { font-family: 'Cormorant Garamond', serif; font-size: 26px; line-height: 1.35; color: var(--white); text-align: center; padding: 36px 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 44px 0; }
+    article.body .pullquote em { color: var(--teal); }
+    .mid-cta { max-width: 720px; margin: 60px auto; padding: 0 32px; }
+    .mid-cta-inner { background: linear-gradient(135deg, rgba(201,168,76,0.10), rgba(78,171,181,0.06)); border: 1px solid rgba(201,168,76,0.30); border-radius: 6px; padding: 32px 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .mid-cta-text { font-family: 'Cormorant Garamond', serif; font-size: 22px; line-height: 1.35; color: var(--white); flex: 1; }
+    .mid-cta-text em { font-style: italic; color: var(--gold); }
+    .btn-gold { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; background: var(--gold); color: var(--navy); border: none; padding: 12px 22px; border-radius: 3px; cursor: pointer; white-space: nowrap; text-decoration: none; transition: all 0.2s; }
+    .btn-gold:hover { background: var(--white); }
+    .author-bio { max-width: 720px; margin: 60px auto 40px; padding: 36px 32px; }
+    .author-inner { display: flex; gap: 24px; align-items: flex-start; padding: 32px; background: var(--navy-card); border: 1px solid var(--border); border-radius: 6px; }
+    .author-photo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 1px solid rgba(78,171,181,0.3); }
+    .author-text { flex: 1; }
+    .author-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+    .author-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--white); margin-bottom: 10px; }
+    .author-blurb { font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--white-70); margin-bottom: 14px; }
+    .author-link { font-size: 12px; font-weight: 500; letter-spacing: 0.05em; color: var(--teal); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+    .author-link:hover { gap: 10px; }
+    .related { max-width: 1100px; margin: 40px auto 80px; padding: 0 56px; }
+    .related h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: var(--white); margin-bottom: 24px; }
+    .related h3 em { font-style: italic; color: var(--teal); }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .related-card { background: var(--navy-card); border: 1px solid var(--border); border-radius: 5px; padding: 26px 24px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: inherit; transition: border-color 0.25s, transform 0.25s, background 0.25s; }
+    .related-card:hover { border-color: rgba(78,171,181,0.3); background: var(--navy-hover); transform: translateY(-2px); }
+    .related-title { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 400; line-height: 1.3; color: var(--white); flex: 1; }
+    .related-meta { font-size: 11px; color: var(--white-45); letter-spacing: 0.05em; display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid var(--border); }
+    .related-arrow { color: var(--teal); transition: transform 0.2s; }
+    .related-card:hover .related-arrow { transform: translateX(4px); }
+    footer { border-top: 1px solid var(--border); padding: 36px 56px; display: flex; align-items: center; justify-content: space-between; }
+    .footer-logo { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 0.2em; color: var(--white); text-decoration: none; }
+    .footer-copy { font-size: 12px; color: var(--white-45); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .breadcrumb, .article-hero, article.body, .mid-cta, .author-bio { padding-left: 24px; padding-right: 24px; }
+      .related { padding-left: 24px; padding-right: 24px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .mid-cta-inner { flex-direction: column; align-items: flex-start; }
+      .author-inner { flex-direction: column; align-items: flex-start; }
+      footer { flex-direction: column; gap: 10px; padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">FORTA</a>
+  <ul class="nav-links">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#process">Process</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/blog/" class="active">Insights</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/audit.html" class="nav-cta">Book Free Ops Audit →</a>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">Home</a><span class="sep">/</span><a href="/blog/">Insights</a><span class="sep">/</span><span>What a real AI hiring audit finds</span>
+</div>
+
+<header class="article-hero">
+  <div class="article-meta">
+    <span class="tag">Recruitment</span>
+    <span class="meta-text">April 7, 2025 · 6 min read</span>
+  </div>
+  <h1 class="article-title">What a real AI hiring audit looks like — <em>and what it finds.</em></h1>
+  <p class="article-dek">Most "AI audits" are a vendor pitch in disguise. Here's what an honest one actually examines, and the three problems that show up in almost every SME recruitment operation I look at.</p>
+</header>
+
+<article class="body">
+  <p>"AI audit" is becoming one of the most diluted phrases in the recruitment industry. Half the vendors offering them are running a structured product demo with the conclusion already written. The other half hand back a 40-page deck full of generic recommendations the operations team has no chance of executing on.</p>
+
+  <p>An honest AI hiring audit isn't either of those. It's a structured look at how your operations actually work today, where time and money are leaking, and which of those leaks AI can credibly close — and, just as importantly, which ones it can't.</p>
+
+  <p>Here's what one looks like when you do it properly.</p>
+
+  <h2>What we actually <em>look at</em></h2>
+
+  <p>A real audit examines four things in this order. The order matters — most audits get it backwards.</p>
+
+  <h3>1. Process before tooling</h3>
+  <p>Map the end-to-end hiring process for one representative role: timestamps, owners, handoffs, decision points, exceptions. We do this <em>before</em> looking at any tool, because tools are downstream of process. Most of what gets blamed on "the ATS is bad" is actually a process that doesn't fit the tool — or a tool being used to do work it was never designed to do.</p>
+
+  <h3>2. Data hygiene</h3>
+  <p>Pull a sample from the ATS and CRM and look for the basics: are candidates tagged consistently, are pipeline stages defined the same way across recruiters, are time-to-fill and cost-per-hire calculated identically, are notes structured or free-text? AI runs on data. If the data is messy, no AI tool will save you — it will just confidently produce messy output faster.</p>
+
+  <h3>3. Real cost mapping</h3>
+  <p>For each role, where is the time going? Coordinator hours, recruiter hours, manager review hours, client-side hours. Most SME recruitment leaders are surprised at how concentrated the cost is — usually two or three workflow steps consume 60–70% of the labour. AI investment that doesn't target those steps is wasted spend.</p>
+
+  <h3>4. The human part nobody automates</h3>
+  <p>Where in the process does the firm actually <em>add judgement</em>? Match quality, candidate sell, client positioning, negotiation. These are the parts AI shouldn't touch directly — but should support. The audit needs to surface them clearly so they don't accidentally end up in the "automate this" bucket.</p>
+
+  <div class="pullquote">AI runs on data. If your data is messy, no tool will save you — it will just produce <em>messy output, faster.</em></div>
+
+  <h2>The three problems we find <em>almost every time</em></h2>
+
+  <p>Across the SME recruitment operations I've audited, three patterns appear so consistently that I now expect them on day one. They're not glamorous. They're not what vendors want to talk about. They're where almost all the value lives.</p>
+
+  <h3>Problem 1: The pipeline is a fiction</h3>
+  <p>"Stage 2: Phone Screen" means something different to every recruiter on the team. One person uses it for "scheduled," another for "completed," a third treats it as a wastebasket for candidates they're not sure what to do with. The pipeline reports management looks at every Monday are, in practice, made up of categories nobody agrees on.</p>
+  <p>You cannot deploy AI ranking, scoring or routing on top of this. You'll just get sophisticated guesses that are pointed at the wrong stage. The fix is unglamorous: define stages in writing, train the team, audit weekly until everyone's pipeline reads the same way.</p>
+
+  <h3>Problem 2: The same candidate exists three times</h3>
+  <p>Duplicate candidate records. Wildly common, almost universally underestimated. Most ATS deployments have anywhere from 8% to 25% duplication once you actually look. This destroys your ability to track candidate history, trains AI matching on noise, and silently frustrates candidates who get re-contacted by different recruiters at the same firm.</p>
+  <p>Deduplication isn't sexy and it isn't AI. It's the prerequisite to any AI you'd want to deploy.</p>
+</article>
+
+<div class="mid-cta">
+  <div class="mid-cta-inner">
+    <div class="mid-cta-text">Want to see <em>which of these three are happening</em> in your operation?</div>
+    <a href="/audit.html" class="btn-gold">Book Free Ops Audit →</a>
+  </div>
+</div>
+
+<article class="body">
+  <h3>Problem 3: Nobody owns the metrics</h3>
+  <p>Time-to-fill, cost-per-hire, source quality, client conversion — these are the numbers that should be steering the firm. In most operations I audit, they exist in three different spreadsheets, calculated three different ways, with nobody clearly responsible for keeping them current. By the time leadership sees them, they're stale, contradictory, or both.</p>
+  <p>AI that depends on these metrics — anything that ranks roles, flags risks, predicts time-to-fill — will inherit all that ambiguity. Step one is always: pick the canonical version, assign an owner, automate the calculation. Then, and only then, layer AI on top.</p>
+
+  <hr />
+
+  <h2>What the audit gives you</h2>
+
+  <p>A proper audit ends with three things, not 40 slides:</p>
+
+  <ol>
+    <li><strong>A map of where time and money are leaking</strong>, by workflow, with rough numbers.</li>
+    <li><strong>A short list of fixes</strong> ordered by impact-per-week-of-effort. Usually 3–5 items, not 30.</li>
+    <li><strong>A clear separation</strong> between what should be redesigned, what should be automated, and what should genuinely use AI. They are not the same.</li>
+  </ol>
+
+  <p>The most useful thing an audit does is stop you from buying the wrong AI tool. The second most useful thing is showing you the redesign you can do this quarter that will pay for itself before any AI gets deployed.</p>
+
+  <p><strong>Bottom line:</strong> if an AI hiring audit doesn't start with your process and end with a fixed-scope, prioritised list of changes, it's not an audit — it's a sales deck. Ask for the audit that gives you the list. Then run it.</p>
+</article>
+
+<div class="author-bio">
+  <div class="author-inner">
+    <img src="../images/anastasia.jpg" alt="Anastasia Vihodtev" class="author-photo" />
+    <div class="author-text">
+      <p class="author-label">Written by</p>
+      <h4 class="author-name">Anastasia Vihodtev</h4>
+      <p class="author-blurb">Founder of FORTA. I help staffing, recruitment and outsourcing firms redesign how their operations run — and add AI where it creates real leverage, not noise.</p>
+      <a href="https://www.linkedin.com/in/anastasiavihodtev/" target="_blank" rel="noopener" class="author-link">Connect on LinkedIn →</a>
+    </div>
+  </div>
+</div>
+
+<section class="related">
+  <h3>Keep reading <em>—</em></h3>
+  <div class="related-grid">
+    <a href="hiring-process-slower.html" class="related-card">
+      <span class="tag">Operations</span>
+      <h4 class="related-title">Why your hiring process is slower than your competitors' — and how to fix it.</h4>
+      <div class="related-meta"><span>5 min read</span><span class="related-arrow">→</span></div>
+    </a>
+    <a href="three-workflows-staffing.html" class="related-card">
+      <span class="tag">Automation</span>
+      <h4 class="related-title">The 3 workflows every staffing firm should automate before hiring another coordinator.</h4>
+      <div class="related-meta"><span>4 min read</span><span class="related-arrow">→</span></div>
+    </a>
+    <a href="forbes-ai-50-2025.html" class="related-card">
+      <span class="tag">AI Strategy</span>
+      <h4 class="related-title">Forbes AI 50 2025: what it actually means for ops leaders.</h4>
+      <div class="related-meta"><span>7 min read</span><span class="related-arrow">→</span></div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <a href="/" class="footer-logo">FORTA</a>
+  <span class="footer-copy">© 2025 FORTA. Operations & AI Consulting.</span>
+</footer>
+
+</body>
+</html>

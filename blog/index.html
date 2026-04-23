@@ -1,293 +1,445 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insights – Forta | Recruitment & Staffing Operations</title>
-  <meta name="description" content="Practical insights on recruitment operations, AI in staffing, and how growing agencies fix the systems behind their growth. By Anastasia Vihodtev, Forta." />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Anastasia Vihodtev, Forta" />
-  <link rel="canonical" href="https://forta.partners/blog/" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Insights – Forta | Recruitment & Staffing Operations" />
-  <meta property="og:description" content="Practical insights on recruitment operations, AI in staffing, and fixing the systems behind growth." />
+  <title>Insights — FORTA</title>
+  <meta name="description" content="Practical writing on how staffing, recruitment and outsourcing firms fix the systems behind their growth. No fluff, no theory — just what works." />
+  <meta property="og:title" content="Insights — FORTA" />
+  <meta property="og:description" content="Practical writing on how staffing, recruitment and outsourcing firms fix the systems behind their growth." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://forta.partners/blog/" />
   <meta property="og:image" content="https://forta.partners/images/og-image.png" />
-  <meta property="og:site_name" content="Forta" />
-
-  <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Insights – Forta" />
-  <meta name="twitter:description" content="Practical insights on recruitment operations, AI in staffing, and fixing the systems behind growth." />
-  <meta name="twitter:image" content="https://forta.partners/images/og-image.png" />
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
-
-  <!-- GA4 -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', wait_for_update: 500 });
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8HZ39T8JZ"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-Y8HZ39T8JZ', { anonymize_ip: true });
-  </script>
-
+  <link rel="canonical" href="https://forta.partners/blog/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_32px.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="../favicon_64px.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-deep:    #050A14;
-      --bg-raised:  #080F1E;
-      --bg-card:    #0D1628;
-      --fg:         #EDE8DF;
-      --fg-dim:     rgba(237,232,223,0.75);
-      --fg-muted:   rgba(237,232,223,0.45);
-      --teal:       #4BBFCF;
-      --border:     rgba(237,232,223,0.08);
-      --font-serif: 'Cormorant Garamond', Georgia, serif;
-      --font-sans:  'Inter', system-ui, sans-serif;
-      --font-mono:  'DM Mono', monospace;
-      --max-w:      1140px;
-      --r-lg:       12px;
-      --sp-1: 8px; --sp-2: 16px; --sp-3: 24px; --sp-4: 32px;
-      --sp-5: 40px; --sp-6: 48px; --sp-8: 64px; --sp-10: 80px; --sp-12: 96px;
+      --navy:       #0D1B2E;
+      --navy-card:  #132236;
+      --navy-hover: #1a2d44;
+      --teal:       #4EABB5;
+      --teal-soft:  rgba(78,171,181,0.12);
+      --gold:       #C9A84C;
+      --gold-soft:  rgba(201,168,76,0.10);
+      --white:      #F5F0E8;
+      --white-70:   rgba(245,240,232,0.70);
+      --white-45:   rgba(245,240,232,0.45);
+      --border:     rgba(245,240,232,0.10);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
     body {
-      background: var(--bg-deep);
-      color: var(--fg);
-      font-family: var(--font-sans);
-      font-weight: 300;
-      line-height: 1.65;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
-
-    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 var(--sp-8); height: 64px;
-      background: rgba(5,10,20,0.92);
-      backdrop-filter: blur(12px);
+      padding: 0 56px; height: 68px;
+      background: rgba(13,27,46,0.95);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
-    .nav-logo { display: inline-flex; align-items: center; }
-    .nav-links { display: flex; gap: var(--sp-5); list-style: none; }
-    .nav-links a { font-size: 0.8rem; color: var(--fg-muted); letter-spacing: 0.04em; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--fg); }
+    .nav-logo {
+      font-family: 'Inter', sans-serif; font-weight: 500;
+      font-size: 17px; letter-spacing: 0.2em;
+      color: var(--white); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-size: 13px; font-weight: 400; letter-spacing: 0.05em;
+      color: var(--white-45); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
     .nav-cta {
-      font-size: 0.8rem; color: var(--teal);
-      border: 1px solid rgba(75,191,207,0.4);
-      padding: 8px 18px; border-radius: 6px;
+      font-size: 13px; font-weight: 400; letter-spacing: 0.06em;
+      color: var(--white); border: 1px solid rgba(245,240,232,0.28);
+      padding: 8px 18px; border-radius: 3px; text-decoration: none;
       transition: all 0.2s;
     }
-    .nav-cta:hover { background: rgba(75,191,207,0.08); }
-
-    /* PAGE HEADER */
-    .blog-header {
-      padding: calc(64px + var(--sp-10)) var(--sp-8) var(--sp-8);
-      max-width: var(--max-w);
-      margin: 0 auto;
-      border-bottom: 1px solid var(--border);
+    .nav-cta:hover { background: var(--white); color: var(--navy); }
+    .page-header {
+      padding: 130px 56px 60px;
+      max-width: 1100px; margin: 0 auto;
+      animation: fadeUp 0.7s ease both;
     }
-    .blog-header .label {
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--fg-muted);
-      display: block;
-      margin-bottom: var(--sp-3);
+    .page-label {
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 18px;
     }
-    .blog-header h1 {
-      font-family: var(--font-serif);
-      font-weight: 300;
-      font-size: clamp(2.4rem, 4vw, 3.6rem);
-      line-height: 1.1;
-      color: var(--fg);
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 5.5vw, 68px);
+      font-weight: 400; line-height: 1.08; color: var(--white);
     }
-    .blog-header h1 em { color: var(--teal); font-style: italic; }
-    .blog-header p {
-      margin-top: var(--sp-3);
-      color: var(--fg-dim);
-      max-width: 56ch;
-      font-size: 0.975rem;
+    .page-title em { font-style: italic; color: var(--teal); }
+    .page-desc {
+      margin-top: 20px; max-width: 560px;
+      font-size: 15px; font-weight: 300; line-height: 1.75;
+      color: var(--white-70);
     }
-
-    /* POST GRID */
-    .blog-main {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: var(--sp-8) var(--sp-8) var(--sp-12);
+    .filter-bar {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 56px 48px;
+      display: flex; gap: 10px; flex-wrap: wrap;
+      animation: fadeUp 0.7s 0.1s ease both;
     }
-
-    /* EMPTY STATE */
-    .blog-empty {
-      padding: var(--sp-12) 0;
-      text-align: center;
+    .filter-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px; font-weight: 400; letter-spacing: 0.08em;
+      padding: 7px 16px; border-radius: 100px; cursor: pointer;
+      border: 1px solid var(--border);
+      background: transparent; color: var(--white-45);
+      transition: all 0.2s;
     }
-    .blog-empty p {
-      color: var(--fg-muted);
-      font-size: 0.975rem;
-      max-width: 44ch;
-      margin: 0 auto var(--sp-5);
-      line-height: 1.7;
+    .filter-btn:hover { border-color: rgba(245,240,232,0.3); color: var(--white); }
+    .filter-btn.active {
+      background: var(--teal); border-color: var(--teal);
+      color: var(--navy); font-weight: 500;
     }
-    .blog-empty .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 28px;
-      font-size: 0.875rem;
-      background: var(--teal);
-      color: var(--bg-deep);
-      border-radius: 6px;
-      transition: opacity 0.2s;
+    .section-divider {
+      max-width: 1100px; margin: 0 auto 36px;
+      padding: 0 56px;
+      border: none; border-top: 1px solid var(--border);
     }
-    .blog-empty .btn:hover { opacity: 0.85; }
-
-    /* POST CARDS (used once posts exist) */
+    .featured-wrap {
+      max-width: 1100px; margin: 0 auto 16px;
+      padding: 0 56px;
+      animation: fadeUp 0.7s 0.15s ease both;
+    }
+    .featured-card {
+      display: grid; grid-template-columns: 1fr 380px;
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: 6px; overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s;
+      cursor: pointer; text-decoration: none; color: inherit;
+    }
+    .featured-card:hover {
+      border-color: rgba(78,171,181,0.35);
+      transform: translateY(-2px);
+    }
+    .featured-content { padding: 44px 44px; display: flex; flex-direction: column; gap: 16px; }
+    .featured-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      background: var(--gold-soft); color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.25);
+      padding: 4px 12px; border-radius: 2px; width: fit-content;
+    }
+    .featured-tag-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--teal); border: 1px solid rgba(78,171,181,0.3);
+      padding: 3px 10px; border-radius: 2px;
+    }
+    .post-date { font-size: 12px; color: var(--white-45); }
+    .featured-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 400; line-height: 1.2; color: var(--white);
+    }
+    .featured-title em { font-style: italic; color: var(--teal); }
+    .featured-excerpt {
+      font-size: 14px; font-weight: 300; line-height: 1.75;
+      color: var(--white-70); flex: 1;
+    }
+    .read-link {
+      font-size: 13px; font-weight: 500; color: var(--teal);
+      letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 6px;
+      transition: gap 0.2s;
+    }
+    .featured-card:hover .read-link { gap: 10px; }
+    .featured-image {
+      background: linear-gradient(135deg, rgba(78,171,181,0.15) 0%, rgba(13,27,46,0.6) 100%);
+      display: flex; align-items: center; justify-content: center; position: relative;
+      overflow: hidden; min-height: 280px;
+    }
+    .featured-image-inner {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 80px; font-weight: 300; color: rgba(78,171,181,0.2);
+      user-select: none; line-height: 1;
+    }
+    .featured-image::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--navy-card) 0%, transparent 30%);
+    }
+    .posts-wrap {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 56px 100px;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .month-label {
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--white-45); margin-bottom: 16px; padding-top: 20px;
+    }
     .post-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: var(--sp-5);
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 14px; margin-bottom: 48px;
     }
     .post-card {
-      background: var(--bg-card);
+      background: var(--navy-card);
       border: 1px solid var(--border);
-      border-radius: var(--r-lg);
-      padding: var(--sp-5);
-      transition: border-color 0.2s;
-      display: flex; flex-direction: column;
+      border-radius: 5px; padding: 30px 28px;
+      display: flex; flex-direction: column; gap: 14px;
+      text-decoration: none; color: inherit;
+      transition: border-color 0.25s, transform 0.25s, background 0.25s;
+      cursor: pointer;
     }
-    .post-card:hover { border-color: rgba(75,191,207,0.25); }
-    .post-meta {
-      font-family: var(--font-mono);
-      font-size: 0.58rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--fg-muted);
-      margin-bottom: var(--sp-3);
+    .post-card:hover {
+      border-color: rgba(78,171,181,0.3);
+      background: var(--navy-hover);
+      transform: translateY(-2px);
     }
-    .post-card h2 {
-      font-family: var(--font-serif);
-      font-weight: 300;
-      font-size: 1.45rem;
-      line-height: 1.2;
-      color: var(--fg);
-      margin-bottom: var(--sp-2);
+    .post-tag-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .post-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 400; line-height: 1.25;
+      color: var(--white); flex: 1;
     }
-    .post-card p {
-      font-size: 0.875rem;
-      color: var(--fg-dim);
-      line-height: 1.65;
-      flex: 1;
-      margin-bottom: var(--sp-4);
+    .post-excerpt {
+      font-size: 13px; font-weight: 300; line-height: 1.7;
+      color: var(--white-45);
     }
-    .post-link {
-      font-size: 0.8rem;
-      color: var(--teal);
-      letter-spacing: 0.04em;
-      align-self: flex-start;
-    }
-    .post-link:hover { text-decoration: underline; }
-
-    /* FOOTER */
-    footer {
-      padding: var(--sp-5) var(--sp-8) var(--sp-3);
-      border-top: 1px solid var(--border);
-    }
-    .footer-bar {
-      max-width: var(--max-w);
-      margin: 0 auto;
+    .post-footer {
       display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: var(--sp-2);
+      padding-top: 14px; border-top: 1px solid var(--border);
     }
-    .footer-bar p { font-size: 0.75rem; color: var(--fg-muted); }
-    .footer-bar a { font-size: 0.75rem; color: var(--fg-muted); transition: color 0.2s; }
-    .footer-bar a:hover { color: var(--teal); }
-
-    @media (max-width: 768px) {
-      nav { padding: 0 var(--sp-3); }
+    .post-read-time { font-size: 11px; color: var(--white-45); letter-spacing: 0.05em; }
+    .post-arrow { font-size: 14px; color: var(--teal); transition: transform 0.2s; }
+    .post-card:hover .post-arrow { transform: translateX(4px); }
+    .post-card.coming-soon {
+      border-style: dashed;
+      opacity: 0.45; cursor: default;
+    }
+    .post-card.coming-soon:hover {
+      transform: none; border-color: var(--border);
+      background: var(--navy-card);
+    }
+    .coming-label {
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--white-45);
+    }
+    .newsletter {
+      max-width: 1100px; margin: 0 auto 80px;
+      padding: 0 56px;
+    }
+    .newsletter-inner {
+      background: linear-gradient(135deg, var(--navy-card), rgba(78,171,181,0.05));
+      border: 1px solid rgba(78,171,181,0.18);
+      border-radius: 6px; padding: 48px 52px;
+      display: flex; align-items: center; justify-content: space-between; gap: 40px;
+    }
+    .newsletter-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; font-weight: 400; color: var(--white); margin-bottom: 8px;
+    }
+    .newsletter-text p {
+      font-size: 14px; font-weight: 300; color: var(--white-70); max-width: 420px;
+      line-height: 1.65;
+    }
+    .newsletter-form { display: flex; gap: 10px; flex-shrink: 0; }
+    .newsletter-input {
+      font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 300;
+      background: rgba(245,240,232,0.06); border: 1px solid var(--border);
+      color: var(--white); padding: 12px 18px; border-radius: 3px;
+      width: 240px; outline: none; transition: border-color 0.2s;
+    }
+    .newsletter-input::placeholder { color: var(--white-45); }
+    .newsletter-input:focus { border-color: rgba(78,171,181,0.5); }
+    .btn-teal {
+      font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500;
+      letter-spacing: 0.06em; background: var(--teal); color: var(--navy);
+      border: none; padding: 12px 22px; border-radius: 3px;
+      cursor: pointer; white-space: nowrap; transition: all 0.2s;
+    }
+    .btn-teal:hover { background: var(--white); }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: 'Inter', sans-serif; font-weight: 500;
+      font-size: 16px; letter-spacing: 0.2em; color: var(--white);
+      text-decoration: none;
+    }
+    .footer-copy { font-size: 12px; color: var(--white-45); }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
       .nav-links { display: none; }
-      .blog-header, .blog-main { padding-left: var(--sp-4); padding-right: var(--sp-4); }
-      footer { padding-left: var(--sp-4); padding-right: var(--sp-4); }
+      .page-header, .filter-bar, .featured-wrap,
+      .posts-wrap, .newsletter { padding-left: 24px; padding-right: 24px; }
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-content { padding: 32px 28px; }
+      .featured-image { min-height: 160px; }
+      .post-grid { grid-template-columns: 1fr; }
+      .newsletter-inner { flex-direction: column; padding: 36px 28px; }
+      .newsletter-form { flex-direction: column; width: 100%; }
+      .newsletter-input { width: 100%; }
+      footer { flex-direction: column; gap: 10px; padding: 28px 24px; }
     }
   </style>
 </head>
 <body>
 
-  <nav aria-label="Main navigation">
-    <a href="https://forta.partners" class="nav-logo" aria-label="Forta homepage">
-      <svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forta" role="img">
-        <text y="22" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#EDE8DF">FOR<tspan fill="#4BBFCF">T</tspan>A</text>
-      </svg>
+<nav>
+  <a href="/" class="nav-logo">FORTA</a>
+  <ul class="nav-links">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#process">Process</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/blog/" class="active">Insights</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/audit.html" class="nav-cta">Book Free Ops Audit →</a>
+</nav>
+
+<div class="page-header">
+  <p class="page-label">Insights</p>
+  <h1 class="page-title">Recruitment ops,<br><em>straight talk.</em></h1>
+  <p class="page-desc">Practical writing on how staffing, recruitment and outsourcing firms fix the systems behind their growth. No fluff, no theory — just what works.</p>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="ai-strategy">AI Strategy</button>
+  <button class="filter-btn" data-filter="operations">Operations</button>
+  <button class="filter-btn" data-filter="recruitment">Recruitment</button>
+  <button class="filter-btn" data-filter="automation">Automation</button>
+  <button class="filter-btn" data-filter="industry-news">Industry News</button>
+</div>
+
+<hr class="section-divider" />
+
+<div class="featured-wrap">
+  <a href="forbes-ai-50-2025.html" class="featured-card" data-tags="ai-strategy industry-news">
+    <div class="featured-content">
+      <span class="featured-badge">★ Featured</span>
+      <div class="featured-tag-row">
+        <span class="tag">AI Strategy</span>
+        <span class="tag">Industry News</span>
+        <span class="post-date">April 23, 2025</span>
+      </div>
+      <h2 class="featured-title">Forbes AI 50 2025:<br><em>What it actually means</em> for ops leaders</h2>
+      <p class="featured-excerpt">Nearly 2,000 companies applied. 50 made the list. Here's what the signal beneath the noise tells you about where AI is really going — and what your operations team should be doing about it right now.</p>
+      <span class="read-link">Read article →</span>
+    </div>
+    <div class="featured-image">
+      <div class="featured-image-inner">AI<br>50</div>
+    </div>
+  </a>
+</div>
+
+<div class="posts-wrap">
+  <p class="month-label">April 2025</p>
+  <div class="post-grid">
+    <a href="hiring-process-slower.html" class="post-card" data-tags="operations">
+      <div class="post-tag-row">
+        <span class="tag">Operations</span>
+        <span class="post-date">April 18, 2025</span>
+      </div>
+      <h3 class="post-title">Why your hiring process is slower than your competitors' — and how to fix it</h3>
+      <p class="post-excerpt">Most recruitment bottlenecks aren't caused by bad people. They're caused by processes designed for a different era. Here's where to look first.</p>
+      <div class="post-footer">
+        <span class="post-read-time">5 min read</span>
+        <span class="post-arrow">→</span>
+      </div>
     </a>
-    <ul class="nav-links" role="list">
-      <li><a href="https://forta.partners/#services">Services</a></li>
-      <li><a href="https://forta.partners/#process">Process</a></li>
-      <li><a href="https://forta.partners/#about">About</a></li>
-      <li><a href="https://forta.partners/blog/" aria-current="page">Insights</a></li>
-      <li><a href="https://forta.partners/#contact">Contact</a></li>
-    </ul>
-    <a href="https://forta.zohobookings.eu/#/254933000000048005"
-       class="nav-cta"
-       target="_blank" rel="noopener noreferrer">
-      Book Free Ops Audit →
+
+    <a href="three-workflows-staffing.html" class="post-card" data-tags="automation">
+      <div class="post-tag-row">
+        <span class="tag">Automation</span>
+        <span class="post-date">April 12, 2025</span>
+      </div>
+      <h3 class="post-title">The 3 workflows every staffing firm should automate before hiring another coordinator</h3>
+      <p class="post-excerpt">Adding headcount to a broken process just scales the problem. These three automations remove the root cause instead.</p>
+      <div class="post-footer">
+        <span class="post-read-time">4 min read</span>
+        <span class="post-arrow">→</span>
+      </div>
     </a>
-  </nav>
 
-  <header class="blog-header">
-    <span class="label">Insights</span>
-    <h1>Recruitment ops,<br/><em>straight talk.</em></h1>
-    <p>Practical writing on how staffing, recruitment and outsourcing firms fix the systems behind their growth. No fluff, no theory — just what works.</p>
-  </header>
+    <a href="ai-hiring-audit.html" class="post-card" data-tags="recruitment">
+      <div class="post-tag-row">
+        <span class="tag">Recruitment</span>
+        <span class="post-date">April 7, 2025</span>
+      </div>
+      <h3 class="post-title">What a real AI hiring audit looks like — and what it finds</h3>
+      <p class="post-excerpt">We ran audits on 6 SME recruitment operations in Q1. The same three problems appeared in all of them. Here's what they were.</p>
+      <div class="post-footer">
+        <span class="post-read-time">6 min read</span>
+        <span class="post-arrow">→</span>
+      </div>
+    </a>
+  </div>
 
-  <main class="blog-main" id="main-content">
-
-    <!-- ── EMPTY STATE — remove this block once first post is live ── -->
-    <div class="blog-empty">
-      <p>First posts coming soon. In the meantime, book a free Ops Audit and see what's slowing your business down.</p>
-      <a href="https://forta.zohobookings.eu/#/254933000000048005"
-         class="btn"
-         target="_blank" rel="noopener noreferrer">
-        Book Your Free Ops Audit →
-      </a>
+  <p class="month-label">May 2025 — Coming Soon</p>
+  <div class="post-grid">
+    <div class="post-card coming-soon" data-tags="ai-strategy automation">
+      <span class="coming-label">Coming May 2025</span>
+      <h3 class="post-title">How to build an AI agent for candidate screening without a dev team</h3>
+      <p class="post-excerpt">Step-by-step. No-code tools. Real business logic.</p>
     </div>
-
-    <!-- ── POST GRID — paste post cards below once posts exist ──
-    <div class="post-grid">
-
-      EXAMPLE POST CARD — copy & paste this block for each new post:
-
-      <article class="post-card">
-        <p class="post-meta">16 Apr 2026 · Recruitment Operations</p>
-        <h2><a href="/blog/post-slug/">Post Title Here</a></h2>
-        <p>Short excerpt — 1–2 sentences describing what the post covers.</p>
-        <a href="/blog/post-slug/" class="post-link">Read more →</a>
-      </article>
-
+    <div class="post-card coming-soon" data-tags="operations">
+      <span class="coming-label">Coming May 2025</span>
+      <h3 class="post-title">The outsourcing firm ops audit: what $1M/year companies get wrong</h3>
+      <p class="post-excerpt">Where the leakage happens and how to stop it.</p>
     </div>
-    ── END POST GRID ── -->
-
-  </main>
-
-  <footer>
-    <div class="footer-bar">
-      <p>© 2026 Forta. All rights reserved.</p>
-      <a href="https://forta.partners">forta.partners</a>
+    <div class="post-card coming-soon" data-tags="ai-strategy industry-news">
+      <span class="coming-label">Coming May 2025</span>
+      <h3 class="post-title">AI in recruitment: hype vs. what's actually deployed in 2025</h3>
+      <p class="post-excerpt">Cutting through vendor claims with real deployment data.</p>
     </div>
-  </footer>
+  </div>
+</div>
+
+<div class="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-text">
+      <h3>Get new posts when they land.</h3>
+      <p>One or two articles a month. Only published when there's something worth saying. No newsletter padding, no AI-generated filler.</p>
+    </div>
+    <form class="newsletter-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Newsletter signup coming soon — connect to your email tool.');">
+      <input class="newsletter-input" type="email" placeholder="your@email.com" required />
+      <button type="submit" class="btn-teal">Subscribe →</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <a href="/" class="footer-logo">FORTA</a>
+  <span class="footer-copy">© 2025 FORTA. Operations & AI Consulting.</span>
+</footer>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const allCards   = document.querySelectorAll('[data-tags]');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      allCards.forEach(card => {
+        const tags = (card.dataset.tags || '').split(/\s+/);
+        const show = (filter === 'all') || tags.includes(filter);
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
