@@ -104,10 +104,27 @@
     footer { border-top: 1px solid var(--border); padding: 36px 56px; display: flex; align-items: center; justify-content: space-between; }
     .footer-logo { display: inline-flex; align-items: center; text-decoration: none; }
     .footer-copy { font-size: 12px; color: var(--white-45); }
+    /* MOBILE MENU */
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; padding: 10px; cursor: pointer; background: none; border: none; border-radius: 3px; transition: background 0.2s ease; z-index: 200; touch-action: manipulation; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; appearance: none; }
+    .nav-hamburger:hover { background: var(--navy-card); }
+    .nav-hamburger:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+    .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white); border-radius: 2px; transition: all 0.25s ease; transform-origin: center; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: rgba(13,27,46,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 99; flex-direction: column; padding: 40px 24px; gap: 8px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 22px; font-family: 'Cormorant Garamond', serif; font-weight: 300; color: var(--white-70); padding: 12px 0; border-bottom: 1px solid var(--border); transition: color 0.2s ease; display: block; text-decoration: none; }
+    .mobile-menu a:hover, .mobile-menu a.active { color: var(--white); }
+    .mobile-menu a:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; border-radius: 2px; }
+    .mobile-menu .mobile-cta { margin-top: 24px; display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 500; color: var(--teal); border: 1px solid rgba(75,191,207,0.4); padding: 16px 24px; border-radius: 3px; background: rgba(75,191,207,0.05); transition: all 0.25s ease; }
+    .mobile-menu .mobile-cta:hover { background: rgba(75,191,207,0.15); color: var(--white); }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
       .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-cta { display: none; }
       .breadcrumb, .article-hero, article.body, .mid-cta, .author-bio { padding-left: 24px; padding-right: 24px; }
       .related { padding-left: 24px; padding-right: 24px; }
       .related-grid { grid-template-columns: 1fr; }
@@ -130,7 +147,18 @@
     <li><a href="/blog/" class="active">Insights</a></li>
   </ul>
   <a href="https://forta.zohobookings.eu/#/254933000000048049" class="nav-cta" target="_blank" rel="noopener noreferrer">Book Free Ops Audit →</a>
+  <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
 </nav>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <a href="/#services" class="mobile-nav-link">Services</a>
+  <a href="/#process" class="mobile-nav-link">Process</a>
+  <a href="/#about" class="mobile-nav-link">About</a>
+  <a href="/#faq" class="mobile-nav-link">FAQ</a>
+  <a href="/#contact" class="mobile-nav-link">Contact</a>
+  <a href="/blog/" class="mobile-nav-link active">Insights</a>
+  <a href="https://forta.zohobookings.eu/#/254933000000048049" class="mobile-cta" target="_blank" rel="noopener noreferrer">Book Free Ops Audit →</a>
+</div>
 
 <div class="breadcrumb">
   <a href="/">Home</a><span class="sep">/</span><a href="/blog/">Insights</a><span class="sep">/</span><span>What a real AI hiring audit finds</span>
@@ -249,6 +277,20 @@
   <a href="/" class="footer-logo" aria-label="Forta homepage"><svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forta" role="img"><text y="22" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#EDE8DF">FOR<tspan fill="#4BBFCF">T</tspan>A</text></svg></a>
   <span class="footer-copy">© 2026 FORTA. Operations & AI Consulting.</span>
 </footer>
+
+<script>
+(function() {
+  var btn = document.querySelector('.nav-hamburger');
+  var menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
+  function openMenu() { menu.classList.add('open'); btn.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  function closeMenu() { menu.classList.remove('open'); btn.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+  btn.addEventListener('touchstart', function(e) { e.preventDefault(); menu.classList.contains('open') ? closeMenu() : openMenu(); }, { passive: false });
+  btn.addEventListener('click', function() { menu.classList.contains('open') ? closeMenu() : openMenu(); });
+  var links = menu.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) { links[i].addEventListener('click', closeMenu); }
+})();
+</script>
 
 </body>
 </html>
