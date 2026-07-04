@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forta Process Audit | Free for Recruitment & Staffing</title>
-<meta name="description" content="Find out where your recruitment process leaks time. Get a free AI-powered process audit tailored for agencies, in-house TA teams, and staffing providers.">
+<title>Self-Service Audit | Fixed-Price Process Audit for Recruitment & Staffing</title>
+<meta name="description" content="Find out where your recruitment process leaks time. Get a fixed-price (€290) self-service, AI-assisted process audit tailored for agencies, in-house TA teams, and staffing providers.">
 <link rel="icon" href="favicon_32px.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1292,16 +1292,16 @@
 <!-- ─── HERO ─── -->
 <main id="mainContent">
 <section class="hero" id="heroSection" aria-labelledby="heroTitle">
-  <div class="hero-badge">Free · Built for Recruitment Operations</div>
+  <div class="hero-badge">€290 fixed price · Built for Recruitment Operations</div>
   <h1 id="heroTitle">Your recruitment process is leaking time. <em>Find out exactly where.</em></h1>
-  <p class="hero-lead">A free, AI-assisted process audit for recruitment agencies, in-house TA teams, and staffing providers. Answer six short questions and get a sharp, practical report, with three quick wins you can start on this week.</p>
+  <p class="hero-lead">A fixed-price, AI-assisted self-service audit for recruitment agencies, in-house TA teams, and staffing providers. Answer six short questions and get a sharp, practical report, with three quick wins you can start on this week.</p>
   <p class="hero-sub">4 minutes · No sales call · Tailored to your segment</p>
   <div class="hero-cta-row">
-    <button class="btn btn-primary btn-large" onclick="startAudit()" aria-label="Start your free audit">
-      Start my free audit →
+    <button class="btn btn-primary btn-large" onclick="startAudit()" aria-label="Start your audit"> Start my audit →
     </button>
   </div>
-  <div class="hero-micro" aria-label="What you get">
+  <p style="font-size:13px;color:var(--fg-muted);margin:-36px auto 40px;max-width:640px;">€290, one-time. Complete the questionnaire, pay via secure payment link, and your report is delivered within 48 hours. <a href="mailto:anastasia@forta.partners?subject=Self-Service%20Audit%20order" style="color:var(--teal);">Questions? Email me.</a></p>
+    <div class="hero-micro" aria-label="What you get">
     <span class="hero-micro-item">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
       Process map of your current flow
@@ -1882,7 +1882,7 @@
   // ─── SHARE ON LINKEDIN ───
   function shareLinkedIn() {
     const text = encodeURIComponent(
-      `Just ran a free AI process audit on our ${data.process || 'recruitment'} workflow with @Forta. Surprising insight: the biggest time leak wasn't where I expected. Sharp tool if you run recruitment ops.\n\nTry it: https://forta.com/audit`
+      `Just ran a self-service AI process audit on our ${data.process || 'recruitment'} workflow with @Forta. Surprising insight: the biggest time leak wasn't where I expected. Sharp tool if you run recruitment ops.\n\nTry it: https://forta.com/audit`
     );
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=https://forta.com/audit&summary=${text}`, '_blank', 'noopener');
   }
