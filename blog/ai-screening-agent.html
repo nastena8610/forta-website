@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insights | Forta</title>
-<meta name="description" content="Practical writing on operations, automation and AI for recruitment and outsourcing firms.">
-<link rel="canonical" href="https://forta.partners/blog/">
+<title>How to build an AI agent for candidate screening, step by step | Forta</title>
+<meta name="description" content="Most screening bots get switched off within a month. Here's how to build one your recruiters will actually trust, in six steps.">
+<link rel="canonical" href="https://forta.partners/blog/ai-screening-agent.html">
 <meta name="author" content="Anastasia Vihodtev, Forta">
 <meta property="og:site_name" content="Forta">
 <meta property="og:locale" content="en_GB">
-<meta property="og:url" content="https://forta.partners/blog/">
-<meta property="og:title" content="Insights | Forta">
-<meta property="og:description" content="Practical writing on operations, automation and AI for recruitment and outsourcing firms.">
+<meta property="og:url" content="https://forta.partners/blog/ai-screening-agent.html">
+<meta property="og:title" content="How to build an AI agent for candidate screening, step by step | Forta">
+<meta property="og:description" content="Most screening bots get switched off within a month. Here's how to build one your recruiters will actually trust, in six steps.">
 <meta property="og:image" content="https://forta.partners/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to build an AI agent for candidate screening, step by step", "description": "A practical guide for recruitment firms: from a written scorecard to a live agent, with the safeguards the EU AI Act will require.", "datePublished": "2026-08-12", "author": {"@type": "Person", "name": "Anastasia Vihodtev"}, "publisher": {"@type": "Organization", "name": "Forta Partners S.R.L."}, "mainEntityOfPage": "https://forta.partners/blog/ai-screening-agent.html"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -185,35 +186,77 @@ footer a{margin-left:20px;text-decoration:none}footer a:hover{color:var(--ink)}
   </div>
 </header>
 
-<div class="glow"><div class="w">
-  <section class="intro">
-    <div><span class="eyebrow">Insights</span><h1>Recruitment ops, straight talk.</h1></div>
-    <p>Practical writing and industry news on how recruitment and outsourcing firms are working in the era of AI.</p>
-  </section>
-</div></div>
 <main class="w">
-  <div class="filters" role="group" aria-label="Filter by topic">
-    <button type="button" data-f="All" aria-pressed="true">All</button><button type="button" data-f="AI Strategy" aria-pressed="false">AI Strategy</button><button type="button" data-f="Operations" aria-pressed="false">Operations</button><button type="button" data-f="Recruitment" aria-pressed="false">Recruitment</button><button type="button" data-f="Automation" aria-pressed="false">Automation</button><button type="button" data-f="Industry News" aria-pressed="false">Industry News</button>
+  <div class="post-head">
+    <a class="crumb" href="index.html">← All insights</a>
+    <span class="eyebrow">Automation · Recruitment</span>
+    <h1>How to build an AI agent for candidate screening, step by step</h1>
+    <p class="dek">A practical guide for recruitment firms: from a written scorecard to a live agent, with the safeguards the EU AI Act will require.</p>
+    <div class="byline"><img src="https://forta.partners/images/anastasia.jpg" alt="Anastasia Vihodtev" onerror="this.outerHTML='<div class=ph>AV</div>'"><span><strong>Anastasia Vihodtev</strong> · 12 August 2026 · 4 min read</span></div>
   </div>
-  <a class="feat" href="mckinsey-state-of-ai-2026.html" data-cats="AI Strategy|Industry News">
-    <div class="l"><span class="badge">Featured</span><div class="tags"><span class="t">AI Strategy</span><span class="t">Industry News</span><time datetime="2026-09-20">20 September 2026</time></div>
-      <h2>McKinsey&#x27;s State of AI 2026: the numbers behind the ROI gap</h2><p>89% of companies use AI. Only 37% see any profit from it, unchanged in a year. What the 6% of high performers do differently.</p><span class="read">Read article</span></div>
-    <div class="r"><b>37%</b><span>of companies see any profit impact from AI. Unchanged from 2025.</span></div>
-  </a>
-  <p class="label">Latest</p>
-  <div class="cards"><a class="pc" href="ai-recruitment-hype-2026.html" data-cats="Industry News|Recruitment|AI Strategy"><div class="tags"><span class="t">Industry News</span><span class="t">Recruitment</span><time datetime="2026-09-01">1 September 2026</time></div><h3>AI in recruitment in 2026: the hype, and what firms actually use</h3><p>Autonomous AI recruiters are all over the headlines. The 2026 data shows what&#x27;s actually deployed, and where the returns really come from.</p><span class="read">Read article</span></a><a class="pc" href="ai-screening-agent.html" data-cats="Automation|Recruitment"><div class="tags"><span class="t">Automation</span><span class="t">Recruitment</span><time datetime="2026-08-12">12 August 2026</time></div><h3>How to build an AI agent for candidate screening, step by step</h3><p>Most screening bots get switched off within a month. Here&#x27;s how to build one your recruiters will actually trust, in six steps.</p><span class="read">Read article</span></a><a class="pc" href="outsourcing-ops-audit.html" data-cats="Operations"><div class="tags"><span class="t">Operations</span><time datetime="2026-07-22">22 July 2026</time></div><h3>What an operations audit looks at in an outsourcing firm, and what it usually finds</h3><p>Outsourcing firms lose money in places that never show up as a line on the P&amp;L. The five places I look first, and what you get at the end.</p><span class="read">Read article</span></a></div>
-  <p class="label">Earlier</p>
-  <div class="list"><a class="row" href="forbes-ai-50-2026.html" data-cats="AI Strategy|Industry News"><time datetime="2026-04-23">23 April 2026</time><div><h3>Forbes AI 50 2026: What it actually means for ops leaders</h3><p>The 2026 list dropped this month. 50 companies. The real signal is what your clients now expect from you, and most ops teams haven&#x27;t caught up.</p></div><span class="tag">AI Strategy</span></a><a class="row" href="hiring-process-slower.html" data-cats="Operations"><time datetime="2026-04-18">18 April 2026</time><div><h3>Why your hiring process is slower than your competitors&#x27;, and how to fix it</h3><p>Most recruitment slowdowns get blamed on the team. Look closer and the team is fine. The process behind them was built for a smaller version of the firm.</p></div><span class="tag">Operations</span></a><a class="row" href="three-workflows-staffing.html" data-cats="Automation"><time datetime="2026-04-12">12 April 2026</time><div><h3>The 3 workflows every staffing firm should automate before hiring another coordinator</h3><p>Adding people to a broken process scales the friction across more salaries. These three automations remove the root cause and pay back inside a quarter.</p></div><span class="tag">Automation</span></a><a class="row" href="ai-hiring-audit.html" data-cats="Recruitment"><time datetime="2026-04-07">7 April 2026</time><div><h3>What a real AI hiring audit looks like, and what it finds</h3><p>Most “AI audits” are vendor pitches in disguise. Here&#x27;s what an honest one examines, and the three problems that show up almost every time.</p></div><span class="tag">Recruitment</span></a></div>
+  <article class="body">
+<p class="lead">Every recruitment founder I talk to wants an AI that reads CVs. Very few have written down what that AI should be looking for. That's why most screening bots end up switched off after a month.</p>
+
+<p>A screening agent is not magic. It does one job: it reads what a candidate sends you, compares it with what the role needs, and tells a recruiter what it found and why. If your recruiters can't explain how they screen today, the agent can't either. So the build starts with the process, not with the tool.</p>
+
+<p>Here is how I build one, in the order I build it.</p>
+
+<h2>Step 1. Write the scorecard before you touch any tool</h2>
+<p>For each role type you fill often, write three short lists.</p>
+<ol>
+<li><strong>Knock-outs.</strong> Things that end the conversation: no right to work, no driving licence when the job needs one, not available for months.</li>
+<li><strong>Must-haves.</strong> Things the client will reject a CV for: a certificate, years in a specific trade, a language.</li>
+<li><strong>Nice-to-haves.</strong> Things that move a candidate up the list but don't decide it.</li>
+</ol>
+<p>Sit with your two best recruiters for an hour and ask them how they decide. You'll be surprised how different their answers are. That difference is the real problem the agent exposes, and it's worth fixing even if you never build the agent.</p>
+
+<h2>Step 2. Decide what goes in</h2>
+<p>Candidates don't send tidy CVs. They send PDFs, Word files, a photo of a certificate, a WhatsApp voice note, a LinkedIn link. Decide which inputs the agent accepts and in what form. One simple rule works well: everything becomes text first, then the agent reads the text.</p>
+<p>The first agent I built for my own work does exactly this. It takes a messy CV, a WhatsApp intake or a call transcript and turns it into a clean, anonymised candidate profile. Before anything goes to a client, it checks that no name, phone number or email has slipped through.</p>
+
+<h2>Step 3. Give the agent one narrow job</h2>
+<p>The agent should do four things, and nothing else:</p>
+<ol>
+<li>Pull out the facts: experience, certificates, languages, availability, location.</li>
+<li>Check them against the scorecard for that role.</li>
+<li>Give a result (<em>strong match</em>, <em>possible match</em> or <em>not a match</em>) with one line of reasoning for each point.</li>
+<li>Flag anything it isn't sure about, so a person checks it.</li>
+</ol>
+<p>The fourth point matters most. An agent that says "I couldn't confirm the safety certificate" is useful. An agent that quietly guesses is dangerous.</p>
+
+<h2>Step 4. Keep the decision with a person</h2>
+<p>The agent recommends. The recruiter decides. That isn't only good practice, it's where the law is heading. Under GDPR, candidates have the right not to be subject to a decision based solely on automated processing when it significantly affects them. Under the EU AI Act, AI used to screen or filter job applications counts as high-risk. Since this summer's Digital Omnibus, those high-risk obligations apply from 2 December 2027.</p>
+<p>That sounds far away. It isn't, if you're building now. So build to that standard from day one:</p>
+<ul>
+<li>No protected characteristics in the scorecard. No age, gender, nationality or judgement based on a photo.</li>
+<li>Every result comes with a written reason a recruiter can read.</li>
+<li>Every decision is logged: what the agent suggested, and what the recruiter did.</li>
+<li>Candidates are told that AI helps screen their application.</li>
+</ul>
+
+<h2>Step 5. Put the result where recruiters already work</h2>
+<p>If recruiters have to open a separate tool to see the agent's output, they'll stop using it within a week. The result should land in your ATS or CRM as a note on the candidate, with the status updated. Most ATS platforms have an API, and tools like n8n or Make can connect the pieces without a developer on staff.</p>
+
+<h2>Step 6. Test it against your recruiters</h2>
+<p>Before you trust the agent, run it in the background for two weeks. Recruiters screen as usual, and you compare.</p>
+<ul>
+<li><strong>Agreement rate.</strong> How often does the agent reach the same result as the recruiter?</li>
+<li><strong>Missed candidates.</strong> Check a sample of the ones it rejected. Were any of them good?</li>
+<li><strong>Time per CV.</strong> Before and after.</li>
+</ul>
+<p>When agreement is high and missed candidates are rare, switch it on. Keep checking a sample every month, because roles, clients and candidates change.</p>
+
+<h2>What it's worth</h2>
+<p>In Bullhorn's 2026 GRID report, a survey of nearly 2,300 recruitment professionals, 46% said AI had cut their screening time by half or more. That's the prize. But look at what comes before it: a scorecard, a clear process, and a person who owns the decision.</p>
+<blockquote>The agent doesn't fix your screening. It makes a good screening process faster.</blockquote>
+<p>Process before automation. Write the scorecard this week, even if the agent comes later. Your recruiters will screen more consistently from day one.</p>
+</article>
+  <div class="sources"><h4>Sources</h4><ul><li><a href="https://www.globenewswire.com/news-release/2026/02/25/3244739/0/en/bullhorn-grid-report-staffing-firms-using-ai-see-stronger-growth-faster-placements.html" target="_blank" rel="noopener">Bullhorn: GRID 2026 Industry Trends Report press release (Feb 2026)</a></li><li><a href="https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/" target="_blank" rel="noopener">Gibson Dunn: EU AI Act Omnibus agreement, postponed high-risk deadlines</a></li><li><a href="https://usercentrics.com/knowledge-hub/eu-ai-act-high-risk-delay-article-50-transparency-consent/" target="_blank" rel="noopener">Usercentrics: Digital Omnibus entry into force</a></li></ul></div>
+  <div class="author"><img src="https://forta.partners/images/anastasia.jpg" alt="Anastasia Vihodtev" onerror="this.outerHTML='<div class=ph>AV</div>'"><div><p><strong>Anastasia Vihodtev</strong> is the founder of Forta. She spent 13 years building operations from the inside, including helping scale WorkForce, a Belgian technical staffing and outsourcing firm, from €0 to €10M. Her method: process before automation.</p></div></div>
+  <div class="cta"><div><h3>Want a screening agent your team will actually use?</h3><p>We start with your scorecard and your current process, then build only what earns its place.</p></div>
+    <div class="acts"><a class="btn gold" href="https://forta.zohobookings.eu/#/254933000000048049" target="_blank" rel="noopener">Book a free 30-minute call</a><a class="btn line" href="https://forta.partners/#work">See services</a></div></div>
 </main>
-<script>
-(function(){
- const bs=[...document.querySelectorAll('.filters button')],items=[...document.querySelectorAll('[data-cats]')];
- bs.forEach(b=>b.addEventListener('click',()=>{
-  bs.forEach(x=>x.setAttribute('aria-pressed',x===b));const f=b.dataset.f;
-  items.forEach(i=>{i.style.display=(f==='All'||i.dataset.cats.split('|').includes(f))?'':'none'});
- }));
-})();
-</script>
+<section class="more"><div class="w"><h2>Keep reading</h2><div class="list"><a class="row" href="mckinsey-state-of-ai-2026.html" data-cats="AI Strategy|Industry News"><time datetime="2026-09-20">20 September 2026</time><div><h3>McKinsey&#x27;s State of AI 2026: the numbers behind the ROI gap</h3><p>89% of companies use AI. Only 37% see any profit from it, unchanged in a year. What the 6% of high performers do differently.</p></div><span class="tag">AI Strategy</span></a><a class="row" href="ai-recruitment-hype-2026.html" data-cats="Industry News|Recruitment|AI Strategy"><time datetime="2026-09-01">1 September 2026</time><div><h3>AI in recruitment in 2026: the hype, and what firms actually use</h3><p>Autonomous AI recruiters are all over the headlines. The 2026 data shows what&#x27;s actually deployed, and where the returns really come from.</p></div><span class="tag">Industry News</span></a><a class="row" href="outsourcing-ops-audit.html" data-cats="Operations"><time datetime="2026-07-22">22 July 2026</time><div><h3>What an operations audit looks at in an outsourcing firm, and what it usually finds</h3><p>Outsourcing firms lose money in places that never show up as a line on the P&amp;L. The five places I look first, and what you get at the end.</p></div><span class="tag">Operations</span></a></div></div></section>
 <footer><div class="w"><span>© 2026 Forta Partners S.R.L. Structure that holds as you grow.</span><span><a href="https://forta.partners/">Home</a><a href="https://www.linkedin.com/in/anastasiavihodtev/" target="_blank" rel="noopener">LinkedIn</a><a href="https://forta.partners/privacy.html">Privacy</a></span></div></footer>
 <div class="cookie" id="cookie" role="dialog" aria-label="Cookie consent">
   <p>This site uses Google Analytics to understand how visitors find it. No ads, no third-party tracking. <a href="https://forta.partners/privacy.html">Privacy policy</a>.</p>
