@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
-  <defs>
-    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#0D2040;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#060D1A;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <rect width="400" height="120" fill="url(#navyGrad)" rx="0"/>
-  <rect x="0" y="116" width="400" height="4" fill="#00D2A8"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-        font-family="Lato, Arial, sans-serif" font-weight="400" font-size="72" letter-spacing="2">
-    <tspan fill="#ffffff">FOR</tspan><tspan fill="#00D2A8">T</tspan><tspan fill="#ffffff">A</tspan>
-  </text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9387 2250" width="9387" height="2250" role="img" aria-label="Forta"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0.05" stop-color="#7A5E2E"/><stop offset="0.52" stop-color="#C9A56B"/><stop offset="0.95" stop-color="#B08D57"/></linearGradient></defs><g transform="translate(235.0,1845.0) scale(1,-1)"><path transform="translate(0.0,0)" fill="#101820" d="M140 0V1440H980V1262H318V809H860V631H318V0Z"/><path transform="translate(1660.0,0)" fill="#101820" d="M732 -30Q517 -30 367.0 65.0Q217 160 138.5 329.0Q60 498 60 720Q60 942 138.5 1111.0Q217 1280 367.0 1375.0Q517 1470 732 1470Q948 1470 1098.0 1375.0Q1248 1280 1326.0 1111.0Q1404 942 1404 720Q1404 498 1326.0 329.0Q1248 160 1098.0 65.0Q948 -30 732 -30ZM732 140Q893 139 1000.5 212.5Q1108 286 1161.5 417.0Q1215 548 1215 720Q1215 893 1161.5 1023.0Q1108 1153 1000.5 1226.0Q893 1299 732 1300Q571 1301 464.5 1228.0Q358 1155 304.0 1024.0Q250 893 249 720Q248 548 302.0 418.0Q356 288 463.5 214.5Q571 141 732 140Z"/><path transform="translate(3764.0,0)" fill="#101820" d="M140 0V1440H709Q730 1440 759.0 1438.5Q788 1437 815 1432Q932 1414 1011.5 1352.0Q1091 1290 1131.0 1195.5Q1171 1101 1171 986Q1171 819 1084.0 696.5Q997 574 829 543L761 532H318V0ZM997 0 713 586 889 640 1201 0ZM318 701H703Q722 701 746.5 703.0Q771 705 793 710Q862 726 905.5 768.5Q949 811 969.0 868.5Q989 926 989 986Q989 1046 969.0 1103.5Q949 1161 905.5 1204.0Q862 1247 793 1262Q771 1268 746.5 1269.5Q722 1271 703 1271H318Z"/><path transform="translate(5685.0,0)" fill="url(#g)" d="M511 0V1271H20V1440H1180V1271H689V0Z"/><path transform="translate(7525.0,0)" fill="#101820" d="M40 0 522 1440H770L1252 0H1067L616 1336H672L225 0ZM272 337V504H1020V337Z"/></g></svg>
