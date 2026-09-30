@@ -191,10 +191,11 @@ footer a{margin-left:20px;text-decoration:none}footer a:hover{color:var(--ink)}
 }
 @media(max-width:680px){
   header nav a:not(.btn){display:none}
-  .ctrl{grid-template-columns:1fr}.ctrl .ends{display:none}
+  .ctrl{grid-template-columns:auto 1fr;gap:14px;padding:12px 16px}.ctrl label{font-size:15px}.ctrl .ends{display:none}
   .canvas{overflow:visible}.canvas svg{min-width:0}
-  .foot b{font-size:30px}
-  .foot>div{padding:14px 12px}.foot span{font-size:12.5px}
+  .foot b{font-size:26px}
+  .foot>div{padding:10px 12px}.foot span{font-size:11.5px;line-height:1.3;margin-top:3px}
+  #note{font-size:13.5px;line-height:1.4;padding:10px 14px}#note strong{font-size:15px;margin-bottom:2px}
   .route{grid-template-columns:1fr;gap:6px}
   .route::before{left:31px;right:auto;top:30px;bottom:30px;width:6px;height:auto}
   .stop{display:grid;grid-template-columns:48px 1fr;text-align:left;align-items:center;gap:14px}
@@ -204,7 +205,12 @@ footer a{margin-left:20px;text-decoration:none}footer a:hover{color:var(--ink)}
   section{padding:48px 0}.inputs,.result,.panel{padding:26px}
   .cred div{grid-template-columns:1fr;gap:2px}
   .hero-row .acts{width:100%}.hero-row .acts .btn{flex:1 1 100%;text-align:center}
-  h1.tangle{margin-bottom:28px}
+  h1.tangle{margin-bottom:18px;line-height:1.12}
+  .hero{padding-top:18px}
+  .proof{font-size:15px;line-height:1.4;margin-bottom:12px}
+  .hero-row{gap:14px;margin-bottom:16px}
+  .hero-row p{font-size:16px;line-height:1.5}
+  .hero-row .acts .btn.line{display:none}
 }
 
 /* mobile menu */
@@ -435,7 +441,7 @@ const MOB=matchMedia('(max-width:680px)').matches;
 matchMedia('(max-width:680px)').addEventListener('change',()=>location.reload());
 const lanes=[['Client',0,100],['Recruiter',100,220],['Founder',220,320],['Systems',320,440]];
 /* phone layout: lanes become columns, work flows top to bottom. [column, y] before / after */
-const MC=[52.5,157.5,262.5,367.5],MW=420,MH=790;
+const MC=[52.5,157.5,262.5,367.5],MW=420,MH=540,FY=y=>76+(y-80)*.64;
 const M={intake:[[0,80],[0,80],'Job intake'],email:[[3,120],null,'Email thread'],brief:[[1,160],null,'Brief by\nemail'],
  source:[[1,250],[1,200],'Source'],rates:[[2,270],null,'Founder\nchecks rates'],ats1:[[3,300],null,'Update ATS\nby hand'],
  change:[[0,330],null,'Client\nchanges spec'],screen:[[1,370],[1,320],'Screen'],approve:[[2,430],null,'Founder\napproves'],
@@ -478,7 +484,7 @@ function el(n,a,p){const e=document.createElementNS(NS,n);for(const k in a)e.set
 const defs=el('defs',{});
 [['ah',C.ink],['ahg',C.gold]].forEach(([id,c])=>{const m=el('marker',{id,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:7,markerHeight:7,orient:'auto-start-reverse'},defs);el('path',{d:'M0 0L10 5L0 10z',fill:c},m)});
 if(MOB){svg.setAttribute('viewBox',`0 0 ${MW} ${MH}`);
- for(const k in M){const[b,a,t]=M[k];N[k].mb=b&&[MC[b[0]],b[1]];N[k].ma=a&&[MC[a[0]],a[1]];N[k].mt=t}
+ for(const k in M){const[b,a,t]=M[k];N[k].mb=b&&[MC[b[0]],FY(b[1])];N[k].ma=a&&[MC[a[0]],FY(a[1])];N[k].mt=t}
  lanes.forEach(([name],i)=>{const x0=i*MW/4;el('rect',{x:x0,y:0,width:MW/4,height:MH,fill:i%2?'#F7F8F7':'#FFFFFF'});if(i)el('line',{x1:x0,y1:0,x2:x0,y2:MH,stroke:C.rule});
   const t=el('text',{x:x0+MW/8,y:27,'text-anchor':'middle','font-family':'Manrope, system-ui, sans-serif','font-size':14,'font-weight':700,fill:C.ink});t.textContent=name});
  el('line',{x1:0,y1:44,x2:MW,y2:44,stroke:C.rule});
@@ -486,7 +492,7 @@ if(MOB){svg.setAttribute('viewBox',`0 0 ${MW} ${MH}`);
 lanes.forEach(([name,y0,y1],i)=>{el('rect',{x:0,y:y0,width:920,height:y1-y0,fill:i%2?'#F7F8F7':'#FFFFFF'});el('line',{x1:0,y1:y1,x2:920,y2:y1,stroke:C.rule});const t=el('text',{x:18,y:(y0+y1)/2+5,'font-family':'Manrope, system-ui, sans-serif','font-size':14,'font-weight':600,fill:C.ink});t.textContent=name});
 el('line',{x1:118,y1:0,x2:118,y2:440,stroke:C.rule});}
 const gE=el('g',{}),gN=el('g',{});
-Object.values(N).forEach(n=>{n.w=MOB?94:n.t.length*7+26;n.h=MOB?40:32;n.g=el('g',{},gN);
+Object.values(N).forEach(n=>{n.w=MOB?94:n.t.length*7+26;n.h=MOB?36:32;n.g=el('g',{},gN);
  el('rect',{x:-n.w/2,y:-n.h/2,width:n.w,height:n.h,rx:3,fill:n.auto?C.gold:'#fff',stroke:n.auto?C.gold:(n.a?C.ink:C.red),'stroke-width':1.6,'stroke-dasharray':(!n.a&&!n.auto)?'4 3':'0'},n.g);
  const lines=MOB?n.mt.split('\n'):[n.t],fs=MOB?12:13;
  const tx=el('text',{x:0,y:5-(lines.length-1)*fs*.6,'text-anchor':'middle','font-family':'Manrope, system-ui, sans-serif','font-size':fs,'font-weight':500,fill:C.ink},n.g);
@@ -499,7 +505,7 @@ Object.values(N).forEach(n=>{n.w=MOB?94:n.t.length*7+26;n.h=MOB?40:32;n.g=el('g'
 E.forEach(e=>{e.p=el('path',{fill:'none',stroke:e[2]==='b'?C.ink:C.gold,'stroke-width':e[2]==='a'?2.6:1.4,'stroke-dasharray':e[2]==='x'?'5 4':'0','marker-end':`url(#${e[2]==='b'?'ah':'ahg'})`},gE)});
 
 /* headline tangle offsets: [rotate, y, x] per word */
-const words=[...$('headline').children],off=[[-7,22,0],[5,-16,10],[-3,30,-6],[9,-26,4],[-6,12,-10],[4,-30,6],[-9,18,0],[6,-10,-8]];
+const words=[...$('headline').children],off=MOB?[[-8,3,0],[6,-5,4],[-5,6,-2],[9,-4,3],[-6,5,-4],[8,-6,3],[-9,4,0],[6,-3,-4]]:[[-7,22,0],[5,-16,10],[-3,30,-6],[9,-26,4],[-6,12,-10],[4,-30,6],[-9,18,0],[6,-10,-8]];
 const lerp=(a,b,t)=>a+(b-a)*t,ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
 function draw(v){const k=ease(v);
  for(const n of Object.values(N)){const B=MOB?n.mb:n.b,A=MOB?n.ma:n.a,b=B||A,a=A||B;n.x=lerp(b[0],a[0],k);n.y=lerp(b[1],a[1],k);
@@ -509,7 +515,7 @@ function draw(v){const k=ease(v);
   else{const fw=d.x>s.x;x1=s.x+(fw?s.w/2:-s.w/2);y1=s.y;x2=d.x+(fw?-d.w/2-2:d.w/2+2);y2=d.y;const dx=Math.max(36,Math.abs(x2-x1)/2)*(fw?1:-1);p=`M${x1} ${y1}C${x1+dx} ${y1},${x2-dx} ${y2},${x2} ${y2}`}
   e.p.setAttribute('d',p);e.p.setAttribute('opacity',e[2]==='b'?(1-k)*.55:k)});
  [[22,5],[5,0],[3,0]].forEach(([f,to],i)=>$('m'+(i+1)).textContent=Math.round(lerp(f,to,k)));
- const sm=innerWidth<680?.45:1;words.forEach((w,i)=>{const[r,y,x]=off[i];w.style.transform=`translate(${x*sm*(1-k)}px,${y*sm*(1-k)}px) rotate(${r*(sm<1?.7:1)*(1-k)}deg)`});
+ words.forEach((w,i)=>{const[r,y,x]=off[i];w.style.transform=`translate(${x*(1-k)}px,${y*(1-k)}px) rotate(${r*(1-k)}deg)`});
  const s=$('fix');s.style.setProperty('--v',(v*100)+'%');
  const label=v<.05?'How it runs today':v>.95?'After the redesign':'Redesigning\u2026';$('ends').textContent=label;s.setAttribute('aria-valuetext',label);
  if(v>.95){$('note').className='fixed';$('note').innerHTML='<strong>Leaks closed.</strong>One path, one owner per stage, updates that happen on their own. Drag back to compare.'}
@@ -522,7 +528,7 @@ draw(0);
 new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();if(touched)return;
  if(reduce){slider.value=100;draw(1);return}
  setTimeout(()=>{if(touched)return;const st=performance.now();(function step(now){const p=Math.min(1,(now-st)/2200);slider.value=p*100;draw(p);if(p<1&&!touched)raf=requestAnimationFrame(step)})(st)},1600);
-},{threshold:.3}).observe(document.querySelector('.hero'));
+},{threshold:.9}).observe(document.querySelector('.ctrl'));
 
 /* ---------- calculator ---------- */
 const fmt=n=>'\u20AC'+Math.round(n).toLocaleString('en-GB'),num=n=>Math.round(n).toLocaleString('en-GB');
