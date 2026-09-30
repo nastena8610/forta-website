@@ -1,3 +1,6 @@
 /sitemap.xml
   Content-Type: application/xml
 
+
+/uae/assets/*
+  Cache-Control: public, max-age=604800
