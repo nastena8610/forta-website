@@ -11,7 +11,7 @@
 <link rel="manifest" href="/site.webmanifest?v=f2">
 <meta name="theme-color" content="#101820">
 <title>Forta | Operations redesign for recruitment and outsourcing firms</title>
-<meta name="description" content="Forta redesigns how recruitment and outsourcing firms of up to 50 people run, and adds AI where it earns its place. Book a free 30-minute call.">
+<meta name="description" content="Forta redesigns how recruitment and outsourcing firms of 15–50 people run, and adds AI where it earns its place. Book a free 30-minute call.">
 <link rel="canonical" href="https://forta.partners/">
 <meta name="author" content="Anastasia Vihodtev, Forta">
 <meta property="og:type" content="website">
@@ -67,6 +67,7 @@ h1.tangle{font-size:clamp(40px,5.6vw,76px);font-weight:800;line-height:1;max-wid
 h1.tangle span{display:inline-block;will-change:transform;margin-right:.22em}
 .hero-row{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:24px}
 .hero-row p{font-size:19px;max-width:46ch}
+.proof{font-size:17px;font-weight:600;color:var(--gold-deep);margin:0 0 22px;max-width:none}
 .hero-row .acts{display:flex;gap:12px;flex-wrap:wrap}
 
 .map{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;position:relative}
@@ -120,6 +121,7 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
 .stop:hover .dot{transform:scale(1.12)}
 .stop[aria-selected=true] .dot{background:var(--gold);border-color:var(--gold-deep);transform:scale(1.25)}
 .stop strong{display:block;font:700 20px var(--display);letter-spacing:-.01em}
+.stop .out{display:block;font-size:14px;line-height:1.4;color:var(--soft);margin:6px auto 0;max-width:22ch}
 .stop small{font-size:15px;color:var(--gold-deep);font-weight:600}
 .panel{margin-top:22px;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:26px;display:grid;grid-template-columns:1.2fr 1.2fr .8fr;gap:36px}
 .panel h3{font-size:28px;margin-bottom:8px}
@@ -196,7 +198,8 @@ footer a{margin-left:20px;text-decoration:none}footer a:hover{color:var(--ink)}
   .route{grid-template-columns:1fr;gap:6px}
   .route::before{left:31px;right:auto;top:30px;bottom:30px;width:6px;height:auto}
   .stop{display:grid;grid-template-columns:48px 1fr;text-align:left;align-items:center;gap:14px}
-  .stop .dot{margin:0 6px;grid-row:span 2}
+  .stop .dot{margin:0 6px;grid-row:span 3}
+  .stop{row-gap:2px}.stop .out{margin:2px 0 8px;max-width:none}
   .steps{grid-template-columns:1fr}
   section{padding:48px 0}.inputs,.result,.panel{padding:26px}
   .cred div{grid-template-columns:1fr;gap:2px}
@@ -241,6 +244,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
 <div class="hero">
   <div class="w">
     <h1 class="tangle" id="headline" aria-label="Your company grew. The way it runs didn't."><span>Your</span><span>company</span><span>grew.</span><span>The</span><span>way</span><span>it</span><span>runs</span><span>didn't.</span></h1>
+    <p class="proof">Built from 7+ years inside a staffing business scaled from €0 to €10M.</p>
     <div class="hero-row">
       <p>I redesign how recruitment and outsourcing firms operate, then add AI where it earns its place. Drag the slider to see what that means.</p>
       <div class="acts">
@@ -264,7 +268,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
         <div id="note"><strong>Four red dots, four leaks.</strong>Tap one to see what it costs you.</div>
       </div>
     </figure>
-    <p class="caption">Based on a workflow we mapped for an 18-person recruitment agency with €2M+ revenue. <b>What the engagement aims for: 8+ hours back per recruiter, per week, measured against a day-one baseline.</b></p>
+    <p class="caption">Based on a workflow we mapped for an 18-person recruitment agency with €2M+ revenue. <b>Target identified from the day-one baseline: up to 8 hours per recruiter/week.</b></p>
   </div>
 </div>
 
@@ -291,7 +295,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
           <div><b id="half">€77,000</b><span>back if you remove half</span></div>
         </div>
         <div>
-          <a class="btn gold" style="border-color:var(--gold)" href="audit.html">Find where yours goes, €290 audit</a>
+          <a class="btn gold" style="border-color:var(--gold)" href="audit.html">Find your biggest operational leaks</a>
           <p class="math" style="margin-top:12px">Estimate: recruiters × daily hours × 220 working days × hourly cost. One full-time recruiter = 1,760 hours.</p>
         </div>
       </div>
@@ -320,10 +324,10 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
       <p class="soft">Each stop is credited toward the next, so starting small costs you nothing if you go further.</p>
     </div>
     <div class="route" role="tablist" aria-label="Services">
-      <button class="stop" role="tab" data-i="0" aria-selected="false"><span class="dot"></span><strong>One-Process Audit</strong><small>€290</small></button>
-      <button class="stop" role="tab" data-i="1" aria-selected="true"><span class="dot"></span><strong>Ops Audit</strong><small>€2,500–3,500</small></button>
-      <button class="stop" role="tab" data-i="2" aria-selected="false"><span class="dot"></span><strong>Ops Fix</strong><small>€5–15K</small></button>
-      <button class="stop" role="tab" data-i="3" aria-selected="false"><span class="dot"></span><strong>Ops Partner</strong><small>€3K+/month</small></button>
+      <button class="stop" role="tab" data-i="0" aria-selected="false"><span class="dot"></span><strong>One-Process Audit</strong><small>€290</small><span class="out">See where one process is leaking time.</span></button>
+      <button class="stop" role="tab" data-i="1" aria-selected="true"><span class="dot"></span><strong>Ops Audit</strong><small>€2,500–3,500</small><span class="out">Know what to fix and in what order.</span></button>
+      <button class="stop" role="tab" data-i="2" aria-selected="false"><span class="dot"></span><strong>Ops Fix</strong><small>€5–15K</small><span class="out">Actually rebuild and implement it.</span></button>
+      <button class="stop" role="tab" data-i="3" aria-selected="false"><span class="dot"></span><strong>Ops Partner</strong><small>€3K+/month</small><span class="out">Run continuous operational improvement with us.</span></button>
     </div>
     <div class="panel" role="tabpanel" id="panel" aria-live="polite"></div>
   </div>
@@ -334,7 +338,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
     <div class="head"><div><span class="eyebrow">How it works</span><h2>How an engagement runs.</h2></div><p class="soft">Success is defined before we start, then tracked against a baseline. No slide decks, no gut feel.</p></div>
     <div class="steps">
       <div><h3>Discovery call</h3><p>30 minutes on your biggest bottlenecks and where to start. No pitch.</p></div>
-      <div><h3>Process blueprint</h3><p>I map your workflows, find the waste and price what fixing it is worth.</p></div>
+      <div><h3>Process blueprint</h3><p>I quantify what the bottlenecks are costing you and what fixing them is worth.</p></div>
       <div><h3>Redesign and implement</h3><p>Built with your team, not handed to them. It sticks because they own it.</p></div>
       <div><h3>Measure</h3><p>First checkpoint at 30 days: time saved, cost down, output up.</p></div>
     </div>
@@ -344,7 +348,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
 <section id="about" style="background:var(--sheet);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
   <div class="w about">
     <div>
-      <div><span class="eyebrow">About</span><h2>I think in systems. Most people don't.</h2></div>
+      <div><span class="eyebrow">About</span><h2>I see operations as a system, not a collection of separate problems.</h2></div>
       <p style="margin-top:16px">What comes first, what follows, how each part connects. That's how I can tell where AI earns its place, and where it only makes a broken system fail faster.</p>
       <p class="soft">7+ years inside recruitment and outsourcing operations: the bottlenecks, the tool sprawl, the delivery chaos that grows with every hire. You work directly with me, and I bring in specialists when a project needs them.</p>
       <dl class="cred">
@@ -364,7 +368,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
         <li>Decisions happen reactively, not by design</li>
         <li>You have tools nobody actually connected</li>
       </ul>
-      <p class="who">Works best for recruitment and outsourcing firms with up to 50 people and €1M+ in revenue.</p>
+      <p class="who">Works best for recruitment and outsourcing firms with 15–50 people and €2M–€20M in revenue.</p>
     </div>
   </div>
 </section>
@@ -375,6 +379,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
     <div class="faq">
       <details><summary>How is this different from hiring an advisor?</summary><p>Most advisors hand over a report. I stay through implementation, work with your leadership team rather than around it, and measure every engagement against a real baseline.</p></details>
       <details><summary>Will this disrupt how we work today?</summary><p>Avoiding that is the point. I build on your current setup and bring in change at a pace your team can absorb without losing momentum.</p></details>
+      <details><summary>Will you work with the tools we already have?</summary><p>Usually yes. I first make the existing stack work properly before recommending another tool.</p></details>
       <details><summary>Do we need AI in every process?</summary><p>No, and I'll be the first to say so. AI on a broken process makes it break faster. I recommend automation only when the process is solid, the volume justifies it and the outcome is measurable. Some of the biggest wins have nothing to do with AI.</p></details>
       <details><summary>What results can we realistically expect?</summary><p>Less manual work, faster execution and clear ownership at every stage. We set the baseline on day one, and the first checkpoint is at 30 days.</p></details>
       <details><summary>Where do we start?</summary><p>With the free 30-minute call. If you'd rather look on your own first, the <a href="audit.html">€290 One-Process Audit</a> shows where one process is leaking time.</p></details>
@@ -533,7 +538,7 @@ function calc(){const r=+$('r').value,h=+$('h').value,c=+$('c').value;
 const S=[
  {n:'One-Process Audit',q:'Show me where the work gets stuck. One process, personally reviewed.',l:['Answer six questions about one process','A map of the process, with my review','Three quick fixes to start with','Optional 30-minute call to go through it'],p:'\u20AC290',m:'Report within two business days. Credited toward the Ops Audit.',c:'Start the six questions',u:'audit.html'},
  {n:'Ops Audit',q:'What exactly is broken, and what can I ignore? Where most clients start.',l:['Map of how your operation really runs','Bottlenecks ranked by what they cost','Automation only where it pays back','Prioritised action plan'],p:'\u20AC2,500\u20133,500',m:'2 weeks. Credited if we continue.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'},
- {n:'Ops Fix',q:'Redesign it and make it stick.',l:['Rebuild the flow from lead to placement','Automate reporting, handovers and updates','Cut redundant tools and connect the rest'],p:'\u20AC5\u201315K',m:'8\u201312 weeks, implemented with your team.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'},
+ {n:'Ops Fix',q:'Redesign it and make it stick.',l:['Rebuild the flow from lead to placement','Automate reporting, handovers and updates','Cut redundant tools and connect the rest'],p:'\u20AC5\u201315K',m:'Depends on the number of workflows, systems and teams involved. 8\u201312 weeks, implemented with your team.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'},
  {n:'Ops Partner',q:'A senior ops lead, without the full-time hire.',l:['Weekly review of priorities and blockers','Processes and automations kept current','In the room for hiring and vendor decisions'],p:'\u20AC3K+/mo',m:'Monthly and ongoing.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'}];
 const stops=[...document.querySelectorAll('.stop')];
 function pick(i){stops.forEach((s,j)=>s.setAttribute('aria-selected',i===j));const s=S[i];
