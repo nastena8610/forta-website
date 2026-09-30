@@ -297,7 +297,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
     <a href="#top" class="mark" aria-label="Forta home">FOR<span class="t">T</span>A</a>
     <button class="menu" type="button" aria-label="Menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><nav>
       <a href="#method">Method</a><a href="#work">Services</a><a href="#about">About</a><a href="https://forta.partners/blog/">Insights</a>
-      <a class="btn" href="https://forta.zohobookings.eu/#/254933000000048049" target="_blank" rel="noopener">Book a call</a>
+      <a class="btn" href="https://calendly.com/anastasia-forta/30min" target="_blank" rel="noopener">Book a call</a>
     </nav>
   </div>
 </header>
@@ -310,7 +310,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
     <div class="hero-row">
       <p>I redesign how recruitment and outsourcing firms operate, then add AI where it earns its place. Drag the slider to see what that means.</p>
       <div class="acts">
-        <a class="btn" href="https://forta.zohobookings.eu/#/254933000000048049" target="_blank" rel="noopener">Book a free 30-minute call</a>
+        <a class="btn" href="https://calendly.com/anastasia-forta/30min" target="_blank" rel="noopener">Book a free 30-minute call</a>
         <a class="btn line" href="#cost">Calculate your cost</a>
       </div>
     </div>
@@ -454,7 +454,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
     <div>
       <div><span class="eyebrow">Next step</span><h2>Start with a free 30-minute call.</h2></div>
       <p>I'll map your biggest bottlenecks, tell you what to fix first, and where automation actually makes sense. Useful whether we work together or not.</p>
-      <a class="btn gold" href="https://forta.zohobookings.eu/#/254933000000048049" target="_blank" rel="noopener">Book the call</a>
+      <a class="btn gold" href="https://calendly.com/anastasia-forta/30min" target="_blank" rel="noopener">Book the call</a>
     </div>
     <div class="ways">
       <a href="mailto:hello@forta.partners"><span>Email</span>hello@forta.partners</a>
@@ -598,9 +598,9 @@ function calc(){const r=+$('r').value,h=+$('h').value,c=+$('c').value;
 /* ---------- service route ---------- */
 const S=[
  {n:'One-Process Audit',q:'Show me where the work gets stuck. One process, personally reviewed.',l:['Answer six questions about one process','A map of the process, with my review','Three quick fixes to start with','Optional 30-minute call to go through it'],p:'\u20AC290',m:'Report within two business days. Credited toward the Ops Audit.',c:'Start the six questions',u:'/audit'},
- {n:'Ops Audit',q:'What exactly is broken, and what can I ignore? Where most clients start.',l:['Map of how your operation really runs','Bottlenecks ranked by what they cost','Automation only where it pays back','Prioritised action plan'],p:'\u20AC2,500\u20133,500',m:'2 weeks. Credited if we continue.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'},
- {n:'Ops Fix',q:'Redesign it and make it stick.',l:['Rebuild the flow from lead to placement','Automate reporting, handovers and updates','Cut redundant tools and connect the rest'],p:'\u20AC5\u201315K',m:'Depends on the number of workflows, systems and teams involved. 8\u201312 weeks, implemented with your team.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'},
- {n:'Ops Partner',q:'A senior ops lead, without the full-time hire.',l:['Weekly review of priorities and blockers','Processes and automations kept current','In the room for hiring and vendor decisions'],p:'\u20AC3K+/mo',m:'Monthly and ongoing.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'}];
+ {n:'Ops Audit',q:'What exactly is broken, and what can I ignore? Where most clients start.',l:['Map of how your operation really runs','Bottlenecks ranked by what they cost','Automation only where it pays back','Prioritised action plan'],p:'\u20AC2,500\u20133,500',m:'2 weeks. Credited if we continue.',c:'Book a free call first',u:'https://calendly.com/anastasia-forta/30min'},
+ {n:'Ops Fix',q:'Redesign it and make it stick.',l:['Rebuild the flow from lead to placement','Automate reporting, handovers and updates','Cut redundant tools and connect the rest'],p:'\u20AC5\u201315K',m:'Depends on the number of workflows, systems and teams involved. 8\u201312 weeks, implemented with your team.',c:'Book a free call first',u:'https://calendly.com/anastasia-forta/30min'},
+ {n:'Ops Partner',q:'A senior ops lead, without the full-time hire.',l:['Weekly review of priorities and blockers','Processes and automations kept current','In the room for hiring and vendor decisions'],p:'\u20AC3K+/mo',m:'Monthly and ongoing.',c:'Book a free call first',u:'https://calendly.com/anastasia-forta/30min'}];
 const stops=[...document.querySelectorAll('.stop')];
 function pick(i){stops.forEach((s,j)=>s.setAttribute('aria-selected',i===j));const s=S[i];
  $('panel').innerHTML=`<div><h3>${s.n}</h3><p class="po">${stops[i].querySelector('.out').textContent}</p><p class="soft">${s.q}</p></div><ul>${s.l.map(x=>'<li>'+x+'</li>').join('')}</ul><div><div class="price">${s.p}</div><p class="meta">${s.m}</p><a class="btn" href="${s.u}"${s.u.startsWith('http')?' target="_blank" rel="noopener"':''}>${s.c}</a></div>`}
