@@ -1,2 +1,5 @@
 /sitemap.xml
   Content-Type: application/xml
+
+/uae
+  X-Robots-Tag: noindex, nofollow

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico?v=f2" sizes="48x48">
+<link rel="icon" href="/images/favicon.svg?v=f2" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=f2">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=f2">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=f2">
+<link rel="manifest" href="/site.webmanifest?v=f2">
+<meta name="theme-color" content="#101820">
+<title>Forta | Operations and automation for growing UAE businesses</title>
+<meta name="description" content="Find the work your team repeats, fix the process behind it, then automate it. Operations and automation for growing businesses in the UAE.">
+<link rel="canonical" href="https://forta.partners/uae">
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="Anastasia Vihodtev, Forta">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Forta">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://forta.partners/uae">
+<meta property="og:title" content="If your team does it again and again, a system can do it instead.">
+<meta property="og:description" content="Find the work your team repeats, fix the process, then automate it. Book a free 30-minute call.">
+<meta property="og:image" content="https://forta.partners/images/og-uae.png?v=1">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://forta.partners/images/og-uae.png?v=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Premium palette: ivory paper, ink text, brass accent */
+:root{
+  --ink:#101820;--gold:#B08D57;--gold-deep:#7A5E2E;--gold-light:#C9A56B;--teal:#7A5E2E;--teal-soft:#F2EDE4;
+  --paper:#FAF8F4;--sheet:#FFFFFF;--rule:#E6E0D5;--soft:#4B5560;--friction:#B5412F;
+  --display:"Manrope",system-ui,sans-serif;--body:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.w{max-width:1160px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.03em;font-weight:800}
+h2{font-size:clamp(28px,3vw,42px);font-weight:800;max-width:18ch}
+h3{font-size:20px;font-weight:700;letter-spacing:0}
+p{max-width:62ch}
+.soft{color:var(--soft)}
+.btn{display:inline-block;font:600 15px var(--body);letter-spacing:.01em;padding:15px 24px;border:1px solid var(--ink);background:var(--ink);color:#FAF8F4;text-decoration:none;border-radius:2px;cursor:pointer;transition:background .15s,color .15s}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.btn.line{background:transparent;color:var(--ink);border-color:var(--ink)}.btn.line:hover{background:var(--ink);color:#FAF8F4}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}.btn.gold:hover{background:#C9A56B;border-color:#C9A56B;color:var(--ink)}
+section{padding:72px 0}
+.eyebrow{display:block;font:600 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:28px}
+
+/* header */
+header{padding:16px 0;border-bottom:1px solid var(--rule)}
+header .w{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.mark{font:500 22px var(--display);letter-spacing:.32em;text-decoration:none;display:flex;align-items:center}.mark .t{color:var(--gold)}
+header nav{display:flex;gap:28px;align-items:center;font-size:15px}
+header nav a{text-decoration:none}
+header nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:4px}
+header .btn{padding:10px 16px;font-size:15px}
+
+/* hero */
+.hero{padding:32px 0 0;background:radial-gradient(ellipse 52% 280px at 84% 0%,rgba(176,141,87,.14),rgba(176,141,87,0) 100%),var(--paper)}
+h1.tangle{font-size:clamp(38px,5vw,68px);font-weight:800;line-height:1.02;max-width:17ch;margin-bottom:20px}
+h1.tangle span{display:inline-block;will-change:transform;margin-right:.22em}
+.hero-row{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:24px}
+.hero-row p{font-size:19px;max-width:46ch}
+.proof{font-size:17px;font-weight:600;color:var(--gold-deep);margin:0 0 22px;max-width:none}
+.hero-row .acts{display:flex;gap:12px;flex-wrap:wrap}
+
+.map{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;position:relative}
+.ctrl{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:18px 22px;border-bottom:1px solid var(--rule)}
+.ctrl label{font:700 17px var(--display)}
+.ctrl .ends{font-size:14px;color:var(--soft);white-space:nowrap}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--gold) var(--v,0%),var(--rule) var(--v,0%));cursor:grab}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:var(--ink);border:4px solid var(--gold);box-shadow:0 0 0 6px rgba(201,162,75,.18)}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--ink);border:4px solid var(--gold)}
+.canvas{overflow-x:auto}
+.canvas svg{display:block;width:100%;min-width:760px;height:auto}
+.swipe{display:none;font-size:13px;color:var(--soft);padding:8px 22px 0}
+.sig img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;max-width:560px;margin:0 auto;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;box-shadow:0 10px 30px rgba(14,27,44,.15);padding:18px 20px;display:none;gap:14px;align-items:center;font-size:14px;z-index:50}
+.cookie.show{display:flex;flex-wrap:wrap}
+.cookie p{flex:1 1 260px}
+.cookie .btn{padding:9px 14px;font-size:14px}
+.pinhit{cursor:pointer}
+.pinhit:hover circle,.pinhit:focus circle{r:13}
+.foot{display:grid;grid-template-columns:repeat(3,1fr) 1.4fr;border-top:1px solid var(--rule)}
+.foot>div{padding:18px 22px}
+.foot>div+div{border-left:1px solid var(--rule)}
+.foot b{font:600 42px/1 var(--display);display:block;font-variant-numeric:tabular-nums}
+.foot span{font-size:14px;color:var(--soft);line-height:1.35;display:block;margin-top:6px}
+#note{font-size:15px;background:#FAF1EE;min-height:100%}
+#note strong{display:block;font:700 17px var(--display);margin-bottom:4px;color:var(--ink)}
+#note.fixed{background:var(--teal-soft)}
+.caption{font-size:15px;color:var(--soft);padding:14px 2px 0}
+.caption b{color:var(--ink);font-weight:600}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--sheet)}
+.inputs{padding:28px}
+.field{margin-bottom:20px}
+.field:last-child{margin-bottom:0}
+.field .lab{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;font-weight:500}
+.field output{font:700 26px var(--display);letter-spacing:-.02em}
+.result{background:var(--ink);color:#FAF8F4;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.big{font:600 clamp(44px,5vw,64px)/.95 var(--display);white-space:nowrap;letter-spacing:-.02em;color:#C9A56B;font-variant-numeric:tabular-nums}
+.result p{color:rgba(250,248,244,.78)}
+.result .row{display:flex;gap:36px;flex-wrap:wrap}
+.result .row b{display:block;font:600 30px var(--display);color:#FAF8F4}
+.result .row span{font-size:14px;color:rgba(250,248,244,.65)}
+.math{font-size:13px;color:rgba(250,248,244,.55)}
+
+/* route */
+.route{position:relative;display:grid;grid-template-columns:repeat(3,1fr);margin:12px 0 0}
+.route::before{content:"";position:absolute;left:16.66%;right:16.66%;top:28px;height:3px;background:var(--gold);border-radius:2px}
+.stop{position:relative;background:none;border:0;font:inherit;color:inherit;text-align:center;cursor:pointer;padding:0 8px}
+.stop .dot{display:block;margin:12px auto 10px;width:36px;height:36px;border-radius:50%;background:var(--paper);border:3px solid var(--ink);transition:transform .2s}
+.stop:hover .dot{transform:scale(1.12)}
+.stop[aria-selected=true] .dot{background:var(--gold);border-color:var(--gold-deep);transform:scale(1.25)}
+.stop strong{display:block;font:700 20px var(--display);letter-spacing:-.01em}
+.stop .out{display:block;font-size:14px;line-height:1.4;color:var(--soft);margin:6px auto 0;max-width:22ch}
+.stop small{font-size:15px;color:var(--gold-deep);font-weight:600}
+.panel{margin-top:22px;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:26px;display:grid;grid-template-columns:1.2fr 1.2fr .8fr;gap:36px}
+.panel h3{font-size:28px;margin-bottom:8px}
+.panel ul{list-style:none}
+.panel li{padding:7px 0 7px 20px;position:relative;border-bottom:1px solid var(--rule);font-size:16px}
+.panel li::before{content:"";position:absolute;left:0;top:18px;width:9px;height:2px;background:var(--gold)}
+.panel .price{font:800 34px/1 var(--display);letter-spacing:-.03em;color:var(--gold-deep);white-space:nowrap}
+.panel .meta{font-size:15px;color:var(--soft);margin:8px 0 18px}
+
+
+/* method */
+.method{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule);border-radius:4px;background:var(--sheet)}
+.method>div{padding:26px 26px;position:relative}
+.method>div+div{border-left:1px solid var(--rule)}
+.method>div+div::before{content:"";position:absolute;left:-9px;top:50px;width:16px;height:16px;background:var(--sheet);border-top:1px solid var(--rule);border-right:1px solid var(--rule);transform:rotate(45deg)}
+.method .n{font:500 15px var(--body);letter-spacing:.14em;color:var(--gold-deep)}
+.method h3{font-size:28px;margin:6px 0 8px}
+.method .q{font-weight:600;margin-bottom:8px}
+.method p{font-size:16px;color:var(--soft)}
+.method .ex{margin-top:14px;padding-top:10px;border-top:1px solid var(--rule);font-size:14.5px;color:var(--soft)}
+.method .ex b{display:block;font:600 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:4px}
+.method>div:last-child{background:var(--teal-soft)}
+/* how + about */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.steps div{border-top:2px solid var(--ink);padding-top:16px;counter-increment:s}
+.steps div::before{content:"0" counter(s);font:500 40px/1 var(--display);color:var(--gold-deep);display:block;margin-bottom:10px}
+.steps p{font-size:15.5px;color:var(--soft);margin-top:6px}
+.about{display:grid;grid-template-columns:1.25fr 1fr;gap:48px}
+.about p{margin-bottom:16px}
+.cred{margin-top:18px;border-top:2px solid var(--ink)}
+.cred div{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15.5px}
+.cred dt{color:var(--soft)}
+.fit{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:26px;align-self:start}
+.fit h3{margin-bottom:16px}
+.fit ul{list-style:none}
+.fit li{padding:7px 0 7px 28px;position:relative;border-bottom:1px solid var(--rule);font-size:16px}
+.fit li::before{content:"";position:absolute;left:0;top:17px;width:14px;height:8px;border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
+.fit .who{margin-top:18px;font-size:15px;color:var(--soft)}
+.sig{display:flex;align-items:center;gap:14px;margin-top:20px}
+.sig .ph{width:56px;height:56px;border-radius:50%;background:var(--teal-soft);color:var(--gold-deep);display:grid;place-items:center;font:700 20px var(--display)}
+.sig a{font-size:15px;font-weight:600;color:var(--teal)}
+.faq{max-width:820px;border-top:2px solid var(--ink)}
+details{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;list-style:none;padding:16px 40px 16px 0;font:700 19px/1.25 var(--display);position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:22px;width:12px;height:12px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:rotate(225deg);top:28px}
+details p{padding:0 0 16px;color:var(--soft)}
+
+.contact{background:var(--teal-soft);color:var(--ink);padding:64px 0}
+.contact .w{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:end}
+.contact h2{color:var(--ink);font-size:clamp(32px,4vw,48px);max-width:16ch}
+.contact p{color:var(--soft);margin:14px 0 22px}
+.ways a{display:block;padding:12px 0;border-bottom:1px solid #DDD5C6;text-decoration:none;font-size:17px}
+.ways a:hover{color:var(--teal)}
+.ways span{display:block;font-size:14px;color:var(--soft)}
+.ways small{display:block;margin-top:16px;font-size:14px;color:var(--soft)}
+footer{background:var(--teal-soft);color:var(--soft);font-size:14px;padding:0 0 36px}
+footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #DDD5C6;padding-top:24px}
+footer a{margin-left:20px;text-decoration:none}footer a:hover{color:var(--ink)}
+
+@media(max-width:960px){
+  .head,.about,.contact .w,.calc,.panel{grid-template-columns:1fr;gap:28px}
+  .foot{grid-template-columns:repeat(3,1fr)}#note{grid-column:1/-1;border-left:0!important;border-top:1px solid var(--rule)}
+  .steps{grid-template-columns:1fr 1fr}
+  .method{grid-template-columns:1fr}.method>div+div{border-left:0;border-top:1px solid var(--rule)}.method>div+div::before{left:40px;top:-9px;transform:rotate(135deg)}
+}
+@media(max-width:680px){
+  header nav a:not(.btn){display:none}
+  .ctrl{grid-template-columns:auto 1fr;gap:14px;padding:12px 16px}.ctrl label{font-size:15px}.ctrl .ends{display:none}
+  .canvas{overflow:visible}.canvas svg{min-width:0}
+  .foot b{font-size:26px}
+  .foot>div{padding:10px 12px}.foot span{font-size:11.5px;line-height:1.3;margin-top:3px}
+  #note{font-size:13.5px;line-height:1.4;padding:10px 14px}#note strong{font-size:15px;margin-bottom:2px}
+  .route{grid-template-columns:1fr;gap:6px}
+  .route::before{left:31px;right:auto;top:30px;bottom:30px;width:6px;height:auto}
+  .stop{display:grid;grid-template-columns:48px 1fr;text-align:left;align-items:center;gap:14px}
+  .stop .dot{margin:0 6px;grid-row:span 3}
+  .stop{row-gap:2px}.stop .out{margin:2px 0 8px;max-width:none}
+  .steps{grid-template-columns:1fr}
+  section{padding:48px 0}.inputs,.result,.panel{padding:26px}
+  .cred div{grid-template-columns:1fr;gap:2px}
+  .hero-row .acts{width:100%}.hero-row .acts .btn{flex:1 1 100%;text-align:center}
+  h1.tangle{margin-bottom:16px;line-height:1.12;font-size:32px;max-width:none}
+  .hero{padding-top:18px}
+  .proof{font-size:15px;line-height:1.4;margin-bottom:12px}
+  .hero-row{gap:14px;margin-bottom:16px}
+  .hero-row p{font-size:16px;line-height:1.5}
+  .hero-row .acts .btn.line{display:none}
+}
+
+/* mobile menu */
+.menu{display:none;background:none;border:1px solid var(--rule);border-radius:2px;width:44px;height:44px;padding:0;cursor:pointer;color:var(--ink);align-items:center;justify-content:center}
+.menu svg{display:block}
+@media(max-width:680px){
+  .menu{display:inline-flex;order:3}
+  header .w{position:relative;flex-wrap:wrap}
+  header nav{gap:10px}
+  header.open nav a:not(.btn){display:block}
+  header.open nav{position:absolute;top:calc(100% + 16px);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#F2EDE4;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:6px 16px 16px;z-index:40;box-shadow:0 12px 24px -16px rgba(16,24,32,.25)}
+  header.open nav a:not(.btn){padding:14px 0;border-bottom:1px solid var(--rule);font-size:17px}
+  header.open nav .btn{margin-top:14px;text-align:center}
+  header{position:relative}
+}
+
+/* frame: soft top, ink bottom */
+header{background:#F2EDE4}
+footer{background:#101820;color:rgba(250,248,244,.7);padding:26px 0}
+footer .w{border-top:0;padding-top:0}
+footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
+
+.mb{display:none}
+.po{display:none}
+/* phone: cost, method and engagement each fit one screen */
+@media(max-width:680px){
+  .dk{display:none}.mb{display:inline}
+  #cost .head,#method .head,#how .head,#work .head{gap:10px;margin-bottom:16px}
+  #cost .head p,#method .head p,#work .head p{font-size:15px;line-height:1.5}
+  #how .head p{font-size:16px;line-height:1.5}
+  .inputs{padding:14px 18px}
+  .field{margin-bottom:6px}
+  .field .lab{margin-bottom:0;font-size:14.5px;gap:10px;align-items:center}
+  .field output{font-size:20px}
+  .result{padding:14px 18px;gap:10px}
+  .result p{font-size:13.5px;line-height:1.4}
+  .big{font-size:42px}
+  .result .row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .result .row b{font-size:19px;white-space:nowrap}
+  .result .row span{font-size:11.5px;line-height:1.3;display:block;margin-top:2px}
+  .result .btn{display:block;text-align:center;padding:12px 10px;font-size:14px}
+  .math{font-size:11px;line-height:1.4}.result .math{margin-top:8px!important}
+  .method{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .method>div{padding:14px 7px 12px}
+  .method>div+div{border-left:1px solid var(--rule);border-top:0}
+  .method>div+div::before{left:-7px;top:22px;width:12px;height:12px;transform:rotate(45deg)}
+  .method .n{font-size:12.5px}
+  .method h3{font-size:17px;margin:4px 0 6px;letter-spacing:-.035em}
+  .method .q{font-size:14.5px;line-height:1.35;margin-bottom:0}
+  .method>div>p:not(.q):not(.ex){display:none}
+  .method .ex{font-size:13.5px;line-height:1.4;margin-top:10px;padding-top:8px}
+  .method .ex b{font-size:10.5px;letter-spacing:.08em}
+  .steps{grid-template-columns:1fr 1fr;gap:24px 18px}
+  .route{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:4px;align-items:start}
+  .route::before{left:16.66%;right:16.66%;top:17px;bottom:auto;width:auto;height:3px}
+  .stop{display:block;text-align:center;padding:0 2px}
+  .stop .dot{margin:6px auto 8px;width:22px;height:22px;grid-row:auto}
+  .stop strong{font-size:13px;line-height:1.2;letter-spacing:-.01em}
+  .stop small{display:block;font-size:12px;margin-top:2px}
+  .stop .out{display:none}
+  .stop[aria-selected=true] strong{color:var(--gold-deep)}
+  .panel{margin-top:14px;padding:18px;gap:12px}
+  .panel h3{font-size:22px;margin-bottom:4px}
+  .po{display:block;font-weight:600;font-size:15px;color:var(--ink);margin-bottom:4px}
+  .panel p.soft{display:none}
+  .panel li{padding:5px 0 5px 18px;font-size:14.5px;line-height:1.35}
+  .panel li::before{top:16px}
+  .panel .price{font-size:26px}
+  .panel>div:last-child{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center}
+  .panel .meta{font-size:13px;line-height:1.35;margin:0}
+  .panel>div:last-child .btn{grid-column:1/-1;margin-top:8px}
+  .panel .btn{display:block;text-align:center}
+  .steps div{padding-top:10px}
+  .steps div::before{font-size:32px;margin-bottom:6px}
+  .steps h3{font-size:18px;line-height:1.25}
+  .steps p{font-size:15px;line-height:1.45;margin-top:6px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="w">
+    <a href="#top" class="mark" aria-label="Forta home">FOR<span class="t">T</span>A</a>
+    <button class="menu" type="button" aria-label="Menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><nav>
+      <a href="#method">Method</a><a href="#work">Services</a><a href="#about">About</a>
+      <a class="btn" href="https://forta.zohobookings.eu/#/254933000000048049" target="_blank" rel="noopener">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="w">
+    <h1 class="tangle" id="headline" aria-label="If your team does it again and again, a system can do it instead."><span>If</span><span>your</span><span>team</span><span>does</span><span>it</span><span>again</span><span>and</span><span>again,</span><span>a</span><span>system</span><span>can</span><span>do</span><span>it</span><span>instead.</span></h1>
+    <p class="proof">Built by someone who spent 13 years in operations.</p>
+    <div class="hero-row">
+      <p>I help growing businesses in the UAE find the work that repeats, fix the process behind it, then automate it. Drag the slider to see what that means.</p>
+      <div class="acts">
+        <a class="btn" href="https://forta.zohobookings.eu/#/254933000000048049" target="_blank" rel="noopener">Book a free 30-minute call</a>
+        <a class="btn line" href="#cost">Calculate your cost</a>
+      </div>
+    </div>
+
+    <figure class="map">
+      <div class="ctrl">
+        <label for="fix">Redesign</label>
+        <input type="range" id="fix" min="0" max="100" value="0" aria-valuetext="How it runs today">
+        <span class="ends" id="ends">How it runs today</span>
+      </div>
+      <div class="canvas"><svg id="flow" viewBox="0 0 920 440" role="img" aria-label="Swimlane map of a growing business from customer enquiry to payment"></svg></div>
+      <div class="foot" aria-live="polite">
+        <div><b id="m1">22</b><span>handoffs per order</span></div>
+        <div><b id="m2">5</b><span>times the same data is typed</span></div>
+        <div><b id="m3">3</b><span>times the owner is pulled in</span></div>
+        <div id="note"><strong>Four red dots, four leaks.</strong>Tap one to see what it costs you.</div>
+      </div>
+    </figure>
+    <p class="caption">Illustrative map of a typical growing business, from customer enquiry to payment. <b>Every red box is work a person repeats that a system could do.</b></p>
+  </div>
+</div>
+
+<section id="cost">
+  <div class="w">
+    <div class="head">
+      <div><span class="eyebrow">The cost of manual work</span><h2>What is manual work costing you this year?</h2></div>
+      <p class="soft">Move the sliders to match your team.<span class="dk"> Most owners underestimate this number, because it's spread across everyone's day and never shows up on an invoice.</span></p>
+    </div>
+    <div class="calc">
+      <div class="inputs">
+        <div class="field"><div class="lab"><label for="r">People on your team</label><output id="rO">10</output></div><input type="range" id="r" min="2" max="100" value="10"></div>
+        <div class="field"><div class="lab"><label for="h"><span class="dk">Hours each spends daily on repeat admin and re-typing</span><span class="mb">Daily admin hours per person</span></label><output id="hO">2</output></div><input type="range" id="h" min="0.5" max="4" step="0.5" value="2"></div>
+        <div class="field"><div class="lab"><label for="c">Cost of one staff hour, in AED</label><output id="cO">60</output></div><input type="range" id="c" min="20" max="250" step="5" value="60"></div>
+      </div>
+      <div class="result">
+        <div>
+          <p><span class="dk">Spent every year on work a system could do</span><span class="mb">Spent every year on repeat work</span></p>
+          <div class="big" id="total">AED 288,000</div>
+        </div>
+        <div class="row">
+          <div><b id="hrs">4,800</b><span>hours a year</span></div>
+          <div><b id="fte">2.5</b><span>full-time staff</span></div>
+          <div><b id="half">AED 144,000</b><span>back if you remove half</span></div>
+        </div>
+        <div>
+          <a class="btn gold" style="border-color:var(--gold)" href="https://forta.zohobookings.eu/#/254933000000048049" target="_blank" rel="noopener"><span class="dk">Find your biggest leaks: book a free call</span><span class="mb">Find your leaks: book a call</span></a>
+          <p class="math" style="margin-top:12px"><span class="dk">Estimate: people × daily hours × 240 working days × hourly cost. One full-time person = 1,920 hours.</span><span class="mb">Estimate: people × daily hours × 240 days × hourly cost.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="method" style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div><span class="eyebrow">My method</span><h2>Process before automation.</h2></div>
+      <p class="soft">AI on a broken process only makes it break faster. So every process I touch goes through three questions, always in this order.</p>
+    </div>
+    <div class="method">
+      <div><span class="n">01</span><h3>Keep</h3><p class="q">What already works?</p><p>Protect it. Not everything needs changing, and your team's good habits are an asset, not a problem to fix.</p><p class="ex"><b>For example</b>The way your best person handles a new customer.</p></div>
+      <div><span class="n">02</span><h3>Systemise</h3><p class="q">What depends on who does it?</p><p>Standardise it: one path, one owner, one template. Quality stops depending on who's in the office that day.</p><p class="ex"><b>For example</b>Every quote goes out from one template.</p></div>
+      <div><span class="n">03</span><h3>Automate</h3><p class="q">What's repetitive, high-volume and stable?</p><p>Only now add automation or AI, with a clear number it has to move. If it can't be measured, it waits.</p><p class="ex"><b>For example</b>Invoices go out the moment an order is delivered.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
+  <div class="w">
+    <div class="head">
+      <div><span class="eyebrow">Services</span><h2>Three stages. Start where you are.</h2></div>
+      <p class="soft">Start with the audit<span class="dk">, and go further only when the numbers justify it</span>.</p>
+    </div>
+    <div class="route" role="tablist" aria-label="Services">
+      <button class="stop" role="tab" data-i="0" aria-selected="true"><span class="dot"></span><strong>Ops Audit</strong><small>2 weeks</small><span class="out">Know what to fix and in what order.</span></button>
+      <button class="stop" role="tab" data-i="1" aria-selected="false"><span class="dot"></span><strong>Ops Fix</strong><small>8–12 weeks</small><span class="out">Actually rebuild and implement it.</span></button>
+      <button class="stop" role="tab" data-i="2" aria-selected="false"><span class="dot"></span><strong>Ops Partner</strong><small>Monthly</small><span class="out">Run continuous operational improvement with us.</span></button>
+    </div>
+    <div class="panel" role="tabpanel" id="panel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="how" style="padding-top:0">
+  <div class="w">
+    <div class="head"><div><span class="eyebrow">How it works</span><h2>How an engagement runs.</h2></div><p class="soft">Success is defined before we start, then tracked against a baseline. No slide decks, no gut feel.</p></div>
+    <div class="steps">
+      <div><h3><span class="dk">Discovery call</span><span class="mb">Free 30-minute call</span></h3><p><span class="dk">30 minutes on your biggest bottlenecks and where to start. No pitch.</span><span class="mb">Your biggest bottlenecks and where to start. No pitch.</span></p></div>
+      <div><h3>Process blueprint</h3><p>I quantify what the bottlenecks are costing you and what fixing them is worth.</p></div>
+      <div><h3>Redesign and implement</h3><p>Built with your team, not handed to them. It sticks because they own it.</p></div>
+      <div><h3>Measure</h3><p>First checkpoint at 30 days: time saved, cost down, output up.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:var(--sheet);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+  <div class="w about">
+    <div>
+      <div><span class="eyebrow">About</span><h2>Built by someone who spent 13 years in operations.</h2></div>
+      <p style="margin-top:16px">I see a business as one system: what comes first, what follows, how each part connects. That's how I can tell which work can be automated, and which needs fixing first.</p>
+      <p class="soft">Growing companies in every industry hit the same wall: the team repeats the same tasks, information lives in WhatsApp and Excel, and the owner becomes the bottleneck. You work directly with me, and I bring in specialists when a project needs them.</p>
+      <dl class="cred">
+        <div><dt>Experience</dt><dd>13 years in operations</dd></div>
+        <div><dt>Works with</dt><dd>Growing businesses, in any industry</dd></div>
+        <div><dt>Method</dt><dd>Process before automation: Keep, Systemise, Automate</dd></div>
+        <div><dt>Approach</dt><dd>Diagnose, redesign, implement, measure</dd></div>
+      </dl>
+      <div class="sig"><img src="https://forta.partners/images/anastasia.jpg" alt="Anastasia Vihodtev" onerror="this.outerHTML='<div class=ph>AV</div>'"><div><strong>Anastasia Vihodtev</strong>, founder<br><a href="https://www.linkedin.com/in/anastasiavihodtev/" target="_blank" rel="noopener">Connect on LinkedIn</a></div></div>
+    </div>
+    <div class="fit">
+      <h3>This is for you if</h3>
+      <ul>
+        <li>Your team repeats the same tasks every day</li>
+        <li>Orders, quotes or invoices are typed in more than once</li>
+        <li>Information lives in WhatsApp, email and Excel</li>
+        <li>The owner approves almost everything</li>
+        <li>You bought tools, but work didn't get easier</li>
+      </ul>
+      <p class="who">Works best for growing businesses in the UAE, in any industry.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="w">
+    <div class="head"><div><span class="eyebrow">Questions</span><h2>What owners ask me.</h2></div><p class="soft">Straight answers.</p></div>
+    <div class="faq">
+      <details><summary>Which industries do you work with?</summary><p>Any business where the same work repeats: trading, services, clinics, agencies, contracting, retail. The patterns are the same across industries; only the words change.</p></details>
+      <details><summary>How is this different from hiring an advisor?</summary><p>Most advisors hand over a report. I stay through implementation, work with your leadership team rather than around it, and measure every engagement against a real baseline.</p></details>
+      <details><summary>Will this disrupt how we work today?</summary><p>Avoiding that is the point. I build on your current setup and bring in change at a pace your team can absorb without losing momentum.</p></details>
+      <details><summary>Will you work with the tools we already have?</summary><p>Usually yes. I first make the existing stack work properly before recommending another tool.</p></details>
+      <details><summary>Do we need AI in every process?</summary><p>No, and I'll be the first to say so. AI on a broken process makes it break faster. I recommend automation only when the process is solid, the volume justifies it and the outcome is measurable. Some of the biggest wins have nothing to do with AI.</p></details>
+      <details><summary>What results can we realistically expect?</summary><p>Less manual work, faster execution and clear ownership at every stage. We set the baseline on day one, and the first checkpoint is at 30 days.</p></details>
+      <details><summary>Where do we start?</summary><p>With the free 30-minute call. I'll tell you which process to look at first, and whether it's worth fixing.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="contact" id="contact">
+  <div class="w">
+    <div>
+      <div><span class="eyebrow">Next step</span><h2>Start with a free 30-minute call.</h2></div>
+      <p>I'll map your biggest bottlenecks, tell you what to fix first, and where automation actually makes sense. Useful whether we work together or not.</p>
+      <a class="btn gold" href="https://forta.zohobookings.eu/#/254933000000048049" target="_blank" rel="noopener">Book the call</a>
+    </div>
+    <div class="ways">
+      <a href="mailto:hello@forta.partners"><span>Email</span>hello@forta.partners</a>
+      <!-- UAE WhatsApp: add when the number is ready, e.g.
+      <a href="https://wa.me/9715XXXXXXXX" target="_blank" rel="noopener"><span>WhatsApp</span>+971 5X XXX XXXX</a> -->
+      <a href="https://www.linkedin.com/company/fortapartners" target="_blank" rel="noopener"><span>LinkedIn</span>Forta Partners</a>
+      <small>I reply within 24 hours on business days.</small>
+    </div>
+  </div>
+</div>
+<footer><div class="w"><span>© 2026 Forta Partners S.R.L. Structure that holds as you grow.</span><span><a href="https://www.linkedin.com/in/anastasiavihodtev/" target="_blank" rel="noopener">LinkedIn</a><a href="https://forta.partners/privacy">Privacy</a></span></div></footer>
+
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookie consent">
+  <p>This site uses Google Analytics to understand how visitors find it. No ads, no third-party tracking. <a href="https://forta.partners/privacy">Privacy policy</a>.</p>
+  <button class="btn line" id="ckNo">Decline</button><button class="btn" id="ckYes">Accept</button>
+</div>
+
+<script>
+/* Analytics: replace with your GA4 ID from the current site. Loads only after "Accept". */
+(function(){
+ const GA_ID='G-Y8HZ39T8JZ',box=document.getElementById('cookie');
+ const get=()=>{try{return localStorage.getItem('forta-consent')}catch(e){return null}};
+ const set=v=>{try{localStorage.setItem('forta-consent',v)}catch(e){}};
+ function loadGA(){if(GA_ID.includes('XXXX'))return;const s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true})}
+ const c=get();if(c==='yes')loadGA();else if(!c)box.classList.add('show');
+ document.getElementById('ckYes').onclick=()=>{set('yes');box.classList.remove('show');loadGA()};
+ document.getElementById('ckNo').onclick=()=>{set('no');box.classList.remove('show')};
+})();
+</script>
+<script>
+(function(){
+const $=id=>document.getElementById(id),reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const css=getComputedStyle(document.documentElement),V=n=>css.getPropertyValue(n).trim();
+const C={ink:V('--ink'),gold:V('--gold'),red:V('--friction'),rule:V('--rule')};
+
+/* ---------- process map ---------- */
+const svg=$('flow'),NS='http://www.w3.org/2000/svg';
+const MOB=matchMedia('(max-width:680px)').matches;
+matchMedia('(max-width:680px)').addEventListener('change',()=>location.reload());
+const lanes=[['Customer',0,100],['Team',100,220],['Owner',220,320],['Systems',320,440]];
+/* phone layout: lanes become columns, work flows top to bottom. [column, y] before / after */
+const MC=[52.5,157.5,262.5,367.5],MW=420,MH=540,FY=y=>76+(y-80)*.64;
+const M={intake:[[0,80],[0,80],'Customer\nenquiry'],email:[[3,120],null,'WhatsApp\nthread'],brief:[[1,160],null,'Details by\nphone'],
+ source:[[1,250],[1,200],'Prepare\nquote'],rates:[[2,270],null,'Owner checks\nprices'],ats1:[[3,300],null,'Copy into\nExcel'],
+ change:[[0,330],null,'Customer\nchanges order'],screen:[[1,370],[1,320],'Confirm\norder'],approve:[[2,430],null,'Owner\napproves'],
+ ats2:[[3,450],null,'Re-type into\naccounting'],submit:[[1,500],[1,440],'Deliver'],sheet:[[3,560],null,'Update\nspreadsheet'],
+ chase:[[1,580],null,'Chase\nsign-off'],interview:[[0,630],[0,560],'Invoice\nreceived'],resend:[[1,660],null,'Re-send\ninvoice'],
+ signoff:[[2,700],null,'Owner chases\npayment'],excel:[[3,700],null,'Copy to\nExcel'],place:[[1,745],[1,680],'Paid'],
+ sync:[null,[3,320],'Systems\nsync'],review:[null,[2,680],'Weekly\nnumbers']};
+const N={
+ intake:{t:'Customer enquiry',b:[195,50],a:[195,50]},
+ brief:{t:'Details by phone',b:[250,180],a:null,f:3},
+ source:{t:'Prepare quote',b:[365,140],a:[335,160]},
+ ats1:{t:'Copy into Excel',b:[330,385],a:null,f:1},
+ screen:{t:'Confirm order',b:[485,190],a:[465,160]},
+ ats2:{t:'Re-type into accounting',b:[505,405],a:null},
+ approve:{t:'Owner approves',b:[575,262],a:null,f:4},
+ submit:{t:'Deliver',b:[640,130],a:[595,160]},
+ chase:{t:'Chase sign-off',b:[735,205],a:null},
+ sheet:{t:'Update spreadsheet',b:[690,372],a:null,f:2},
+ interview:{t:'Invoice received',b:[775,50],a:[715,50]},
+ signoff:{t:'Owner chases payment',b:[815,290],a:null},
+ place:{t:'Paid',b:[855,150],a:[835,160]},
+ change:{t:'Customer changes order',b:[470,45],a:null},
+ email:{t:'WhatsApp thread',b:[195,382],a:null},
+ rates:{t:'Owner checks prices',b:[340,280],a:null},
+ resend:{t:'Re-send invoice',b:[855,212],a:null},
+ excel:{t:'Copy to Excel',b:[860,405],a:null},
+ sync:{t:'Systems sync automatically',b:null,a:[515,380],auto:1},
+ review:{t:'Weekly numbers',b:null,a:[835,270],auto:1}
+};
+const NOTES={
+ 1:['People doing a system\u2019s job','Orders, quotes and payments typed into Excel, then again into accounting. Every re-type costs time and invites mistakes.'],
+ 2:['Tools nobody connected','WhatsApp, email, Excel and the accounting system, none of them talking to each other. You pay for software, then pay people to copy between it.'],
+ 3:['No standard process','Enquiries arrive by phone, WhatsApp and email, in any shape. Missing details show up later, when they cost the most.'],
+ 4:['One person holds it together','Usually the owner. Every quote and price waits for one person, and nothing moves while they\u2019re busy.']
+};
+const E=[['intake','brief','b'],['brief','source','b'],['source','ats1','b'],['ats1','screen','b'],['screen','ats2','b'],['screen','approve','b'],['approve','source','b'],['approve','submit','b'],['submit','chase','b'],['chase','sheet','b'],['sheet','submit','b'],['chase','interview','b'],['interview','signoff','b'],['signoff','place','b'],['intake','email','b'],['email','brief','b'],['change','source','b'],['change','brief','b'],['source','rates','b'],['rates','approve','b'],['chase','change','b'],['submit','resend','b'],['resend','chase','b'],['sheet','excel','b'],['excel','signoff','b'],['place','excel','b'],['rates','ats1','b'],
+ ['intake','source','a'],['source','screen','a'],['screen','submit','a'],['submit','interview','a'],['interview','place','a'],
+ ['source','sync','x'],['screen','sync','x'],['submit','sync','x'],['place','review','x']];
+function el(n,a,p){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
+const defs=el('defs',{});
+[['ah',C.ink],['ahg',C.gold]].forEach(([id,c])=>{const m=el('marker',{id,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:7,markerHeight:7,orient:'auto-start-reverse'},defs);el('path',{d:'M0 0L10 5L0 10z',fill:c},m)});
+if(MOB){svg.setAttribute('viewBox',`0 0 ${MW} ${MH}`);
+ for(const k in M){const[b,a,t]=M[k];N[k].mb=b&&[MC[b[0]],FY(b[1])];N[k].ma=a&&[MC[a[0]],FY(a[1])];N[k].mt=t}
+ lanes.forEach(([name],i)=>{const x0=i*MW/4;el('rect',{x:x0,y:0,width:MW/4,height:MH,fill:i%2?'#F7F8F7':'#FFFFFF'});if(i)el('line',{x1:x0,y1:0,x2:x0,y2:MH,stroke:C.rule});
+  const t=el('text',{x:x0+MW/8,y:27,'text-anchor':'middle','font-family':'Manrope, system-ui, sans-serif','font-size':14,'font-weight':700,fill:C.ink});t.textContent=name});
+ el('line',{x1:0,y1:44,x2:MW,y2:44,stroke:C.rule});
+}else{
+lanes.forEach(([name,y0,y1],i)=>{el('rect',{x:0,y:y0,width:920,height:y1-y0,fill:i%2?'#F7F8F7':'#FFFFFF'});el('line',{x1:0,y1:y1,x2:920,y2:y1,stroke:C.rule});const t=el('text',{x:18,y:(y0+y1)/2+5,'font-family':'Manrope, system-ui, sans-serif','font-size':14,'font-weight':600,fill:C.ink});t.textContent=name});
+el('line',{x1:118,y1:0,x2:118,y2:440,stroke:C.rule});}
+const gE=el('g',{}),gN=el('g',{});
+Object.values(N).forEach(n=>{n.w=MOB?94:n.t.length*7+26;n.h=MOB?36:32;n.g=el('g',{},gN);
+ el('rect',{x:-n.w/2,y:-n.h/2,width:n.w,height:n.h,rx:3,fill:n.auto?C.gold:'#fff',stroke:n.auto?C.gold:(n.a?C.ink:C.red),'stroke-width':1.6,'stroke-dasharray':(!n.a&&!n.auto)?'4 3':'0'},n.g);
+ const lines=MOB?n.mt.split('\n'):[n.t],fs=MOB?12:13;
+ const tx=el('text',{x:0,y:5-(lines.length-1)*fs*.6,'text-anchor':'middle','font-family':'Manrope, system-ui, sans-serif','font-size':fs,'font-weight':500,fill:C.ink},n.g);
+ lines.forEach((l,i)=>{const ts=el('tspan',{x:0,dy:i?fs*1.2:0},tx);ts.textContent=l});
+ if(n.f){const p=el('g',{class:'pinhit',tabindex:0,role:'button','aria-label':'Leak '+n.f+': '+NOTES[n.f][0]},n.g);
+  const px=MOB?n.w/2-8:n.w/2,py=-n.h/2;el('circle',{cx:px,cy:py,r:11,fill:C.red},p);const f=el('text',{x:px,y:py+4.5,'text-anchor':'middle','font-family':'Manrope, system-ui, sans-serif','font-weight':700,'font-size':12,fill:'#fff','pointer-events':'none'},p);f.textContent=n.f;
+  const show=()=>{$('note').className='';$('note').innerHTML='<strong>'+n.f+'. '+NOTES[n.f][0]+'</strong>'+NOTES[n.f][1]};
+  p.addEventListener('click',show);p.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}});}
+});
+E.forEach(e=>{e.p=el('path',{fill:'none',stroke:e[2]==='b'?C.ink:C.gold,'stroke-width':e[2]==='a'?2.6:1.4,'stroke-dasharray':e[2]==='x'?'5 4':'0','marker-end':`url(#${e[2]==='b'?'ah':'ahg'})`},gE)});
+
+/* headline tangle offsets: [rotate, y, x] per word */
+const words=[...$('headline').children],BASE=[[-7,22,0],[5,-16,10],[-3,30,-6],[9,-26,4],[-6,12,-10],[4,-30,6],[-9,18,0],[6,-10,-8],[-5,26,6],[8,-20,-6],[-4,16,8],[7,-24,-4],[-8,20,4],[5,-14,-8]],off=MOB?BASE.map(([r,y,x])=>[r,Math.round(y/5),Math.round(x/2.5)]):BASE;
+const lerp=(a,b,t)=>a+(b-a)*t,ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+function draw(v){const k=ease(v);
+ for(const n of Object.values(N)){const B=MOB?n.mb:n.b,A=MOB?n.ma:n.a,b=B||A,a=A||B;n.x=lerp(b[0],a[0],k);n.y=lerp(b[1],a[1],k);
+  n.g.setAttribute('transform',`translate(${n.x},${n.y})`);n.g.setAttribute('opacity',!n.a?1-k:!n.b?k:1);n.g.style.pointerEvents=(!n.a&&k>.5)?'none':''}
+ E.forEach(e=>{const s=N[e[0]],d=N[e[1]];let x1,y1,x2,y2,p;
+  if(MOB?Math.abs(d.y-s.y)>(s.h+d.h)/2+10:Math.abs(d.x-s.x)<(s.w+d.w)/2-10){const dn=d.y>s.y;x1=s.x;y1=s.y+(dn?s.h/2:-s.h/2);x2=d.x;y2=d.y+(dn?-d.h/2-2:d.h/2+2);const m=(y1+y2)/2;p=`M${x1} ${y1}C${x1} ${m},${x2} ${m},${x2} ${y2}`}
+  else{const fw=d.x>s.x;x1=s.x+(fw?s.w/2:-s.w/2);y1=s.y;x2=d.x+(fw?-d.w/2-2:d.w/2+2);y2=d.y;const dx=Math.max(36,Math.abs(x2-x1)/2)*(fw?1:-1);p=`M${x1} ${y1}C${x1+dx} ${y1},${x2-dx} ${y2},${x2} ${y2}`}
+  e.p.setAttribute('d',p);e.p.setAttribute('opacity',e[2]==='b'?(1-k)*.55:k)});
+ [[22,5],[5,0],[3,0]].forEach(([f,to],i)=>$('m'+(i+1)).textContent=Math.round(lerp(f,to,k)));
+ words.forEach((w,i)=>{const[r,y,x]=off[i];w.style.transform=`translate(${x*(1-k)}px,${y*(1-k)}px) rotate(${r*(1-k)}deg)`});
+ const s=$('fix');s.style.setProperty('--v',(v*100)+'%');
+ const label=v<.05?'How it runs today':v>.95?'After the redesign':'Redesigning\u2026';$('ends').textContent=label;s.setAttribute('aria-valuetext',label);
+ if(v>.95){$('note').className='fixed';$('note').innerHTML='<strong>Leaks closed.</strong>One path, one owner per stage, data entered once. Drag back to compare.'}
+ else if($('note').className==='fixed'){$('note').className='';$('note').innerHTML='<strong>Four red dots, four leaks.</strong>Tap one to see what it costs you.'}
+}
+const slider=$('fix');let touched=false,raf;
+slider.addEventListener('input',()=>{touched=true;cancelAnimationFrame(raf);draw(slider.value/100)});
+draw(0);
+/* one orchestrated moment: when first seen, the page redesigns itself once */
+new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();if(touched)return;
+ if(reduce){slider.value=100;draw(1);return}
+ setTimeout(()=>{if(touched)return;const st=performance.now();(function step(now){const p=Math.min(1,(now-st)/2200);slider.value=p*100;draw(p);if(p<1&&!touched)raf=requestAnimationFrame(step)})(st)},1600);
+},{threshold:.9}).observe(document.querySelector('.ctrl'));
+
+/* ---------- calculator ---------- */
+const fmt=n=>'AED '+Math.round(n).toLocaleString('en-GB'),num=n=>Math.round(n).toLocaleString('en-GB');
+function calc(){const r=+$('r').value,h=+$('h').value,c=+$('c').value;
+ $('rO').textContent=r;$('hO').textContent=h;$('cO').textContent=c;
+ const hrs=r*h*240,tot=hrs*c;
+ $('total').textContent=fmt(tot);$('hrs').textContent=num(hrs);$('fte').textContent=(hrs/1920).toFixed(1);$('half').textContent=fmt(tot/2);
+ ['r','h','c'].forEach(id=>{const e=$(id);e.style.setProperty('--v',((e.value-e.min)/(e.max-e.min)*100)+'%')});
+}
+['r','h','c'].forEach(id=>$(id).addEventListener('input',calc));calc();
+
+/* ---------- service route ---------- */
+const S=[
+ {n:'Ops Audit',q:'What exactly is broken, and what can I ignore? Where every engagement starts.',l:['Map of how your business really runs','Bottlenecks ranked by what they cost','Automation only where it pays back','Prioritised action plan'],p:'2 weeks',m:'A clear, costed plan. Credited if we continue.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'},
+ {n:'Ops Fix',q:'Redesign it and make it stick.',l:['Rebuild the flow from enquiry to payment','Automate reporting, handovers and updates','Cut redundant tools and connect the rest'],p:'8\u201312 weeks',m:'Scoped on the number of workflows, systems and teams involved. Implemented with your team.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'},
+ {n:'Ops Partner',q:'A senior operations lead, without the full-time hire.',l:['Weekly review of priorities and blockers','Processes and automations kept current','In the room for hiring and vendor decisions'],p:'Monthly',m:'Ongoing, with a weekly review.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'}];
+const stops=[...document.querySelectorAll('.stop')];
+function pick(i){stops.forEach((s,j)=>s.setAttribute('aria-selected',i===j));const s=S[i];
+ $('panel').innerHTML=`<div><h3>${s.n}</h3><p class="po">${stops[i].querySelector('.out').textContent}</p><p class="soft">${s.q}</p></div><ul>${s.l.map(x=>'<li>'+x+'</li>').join('')}</ul><div><div class="price">${s.p}</div><p class="meta">${s.m}</p><a class="btn" href="${s.u}"${s.u.startsWith('http')?' target="_blank" rel="noopener"':''}>${s.c}</a></div>`}
+stops.forEach((s,i)=>s.addEventListener('click',()=>pick(i)));pick(0);
+})();
+</script>
+<script>(function(){var h=document.querySelector('header'),b=h&&h.querySelector('.menu');if(!b)return;b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o)});h.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');b.setAttribute('aria-expanded','false')})})})();</script>
+</body>
+</html>
