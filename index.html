@@ -234,11 +234,13 @@ footer .w{border-top:0;padding-top:0}
 footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
 
 .mb{display:none}
+.po{display:none}
 /* phone: cost, method and engagement each fit one screen */
 @media(max-width:680px){
   .dk{display:none}.mb{display:inline}
-  #cost .head,#method .head,#how .head{gap:10px;margin-bottom:16px}
-  #cost .head p,#method .head p,#how .head p{font-size:15px;line-height:1.5}
+  #cost .head,#method .head,#how .head,#work .head{gap:10px;margin-bottom:16px}
+  #cost .head p,#method .head p,#work .head p{font-size:15px;line-height:1.5}
+  #how .head p{font-size:16px;line-height:1.5}
   .inputs{padding:14px 18px}
   .field{margin-bottom:6px}
   .field .lab{margin-bottom:0;font-size:14.5px;gap:10px;align-items:center}
@@ -252,20 +254,39 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
   .result .btn{display:block;text-align:center;padding:12px 10px;font-size:14px}
   .math{font-size:11px;line-height:1.4}.result .math{margin-top:8px!important}
   .method{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .method>div{padding:14px 10px 12px}
+  .method>div{padding:14px 7px 12px}
   .method>div+div{border-left:1px solid var(--rule);border-top:0}
   .method>div+div::before{left:-7px;top:22px;width:12px;height:12px;transform:rotate(45deg)}
-  .method .n{font-size:11.5px}
-  .method h3{font-size:16px;margin:4px 0 6px;letter-spacing:-.02em}
-  .method .q{font-size:13px;line-height:1.35;margin-bottom:0}
+  .method .n{font-size:12.5px}
+  .method h3{font-size:17px;margin:4px 0 6px;letter-spacing:-.035em}
+  .method .q{font-size:14.5px;line-height:1.35;margin-bottom:0}
   .method>div>p:not(.q):not(.ex){display:none}
-  .method .ex{font-size:12px;line-height:1.4;margin-top:10px;padding-top:8px}
-  .method .ex b{font-size:9.5px;letter-spacing:.1em}
-  .steps{grid-template-columns:1fr 1fr;gap:18px 16px}
+  .method .ex{font-size:13.5px;line-height:1.4;margin-top:10px;padding-top:8px}
+  .method .ex b{font-size:10.5px;letter-spacing:.08em}
+  .steps{grid-template-columns:1fr 1fr;gap:24px 18px}
+  .route{grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:4px;align-items:start}
+  .route::before{left:12.5%;right:12.5%;top:17px;bottom:auto;width:auto;height:3px}
+  .stop{display:block;text-align:center;padding:0 2px}
+  .stop .dot{margin:6px auto 8px;width:22px;height:22px;grid-row:auto}
+  .stop strong{font-size:13px;line-height:1.2;letter-spacing:-.01em}
+  .stop small{display:block;font-size:12px;margin-top:2px}
+  .stop .out{display:none}
+  .stop[aria-selected=true] strong{color:var(--gold-deep)}
+  .panel{margin-top:14px;padding:18px;gap:12px}
+  .panel h3{font-size:22px;margin-bottom:4px}
+  .po{display:block;font-weight:600;font-size:15px;color:var(--ink);margin-bottom:4px}
+  .panel p.soft{display:none}
+  .panel li{padding:5px 0 5px 18px;font-size:14.5px;line-height:1.35}
+  .panel li::before{top:16px}
+  .panel .price{font-size:26px}
+  .panel>div:last-child{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center}
+  .panel .meta{font-size:13px;line-height:1.35;margin:0}
+  .panel>div:last-child .btn{grid-column:1/-1;margin-top:8px}
+  .panel .btn{display:block;text-align:center}
   .steps div{padding-top:10px}
-  .steps div::before{font-size:26px;margin-bottom:6px}
-  .steps h3{font-size:16px;line-height:1.25}
-  .steps p{font-size:13.5px;line-height:1.45;margin-top:4px}
+  .steps div::before{font-size:32px;margin-bottom:6px}
+  .steps h3{font-size:18px;line-height:1.25}
+  .steps p{font-size:15px;line-height:1.45;margin-top:6px}
 }
 </style>
 </head>
@@ -362,7 +383,7 @@ footer a{color:rgba(250,248,244,.85)}footer a:hover{color:#C9A56B}
   <div class="w">
     <div class="head">
       <div><span class="eyebrow">Services</span><h2>Four stops. Start at any of them.</h2></div>
-      <p class="soft">Each stop is credited toward the next, so starting small costs you nothing if you go further.</p>
+      <p class="soft">Each stop is credited toward the next<span class="dk">, so starting small costs you nothing if you go further</span>.</p>
     </div>
     <div class="route" role="tablist" aria-label="Services">
       <button class="stop" role="tab" data-i="0" aria-selected="false"><span class="dot"></span><strong>One-Process Audit</strong><small>€290</small><span class="out">See where one process is leaking time.</span></button>
@@ -583,7 +604,7 @@ const S=[
  {n:'Ops Partner',q:'A senior ops lead, without the full-time hire.',l:['Weekly review of priorities and blockers','Processes and automations kept current','In the room for hiring and vendor decisions'],p:'\u20AC3K+/mo',m:'Monthly and ongoing.',c:'Book a free call first',u:'https://forta.zohobookings.eu/#/254933000000048049'}];
 const stops=[...document.querySelectorAll('.stop')];
 function pick(i){stops.forEach((s,j)=>s.setAttribute('aria-selected',i===j));const s=S[i];
- $('panel').innerHTML=`<div><h3>${s.n}</h3><p class="soft">${s.q}</p></div><ul>${s.l.map(x=>'<li>'+x+'</li>').join('')}</ul><div><div class="price">${s.p}</div><p class="meta">${s.m}</p><a class="btn" href="${s.u}"${s.u.startsWith('http')?' target="_blank" rel="noopener"':''}>${s.c}</a></div>`}
+ $('panel').innerHTML=`<div><h3>${s.n}</h3><p class="po">${stops[i].querySelector('.out').textContent}</p><p class="soft">${s.q}</p></div><ul>${s.l.map(x=>'<li>'+x+'</li>').join('')}</ul><div><div class="price">${s.p}</div><p class="meta">${s.m}</p><a class="btn" href="${s.u}"${s.u.startsWith('http')?' target="_blank" rel="noopener"':''}>${s.c}</a></div>`}
 stops.forEach((s,i)=>s.addEventListener('click',()=>pick(i)));pick(1);
 })();
 </script>
